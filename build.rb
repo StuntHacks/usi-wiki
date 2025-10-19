@@ -82,7 +82,7 @@ end
 css = File.read("../usi.css")
 if old.body != css
     puts "Updating usi.css on wiki..."
-    client.action :edit, title: "MediaWiki:Common.css", text: minified, summary: "[BOT] Updating to newest usi.css", bot: true
+    client.action :edit, title: "MediaWiki:Common.css", text: css, summary: "[BOT] Updating to newest usi.css", bot: true
 else
     puts "CSS file is up to date."
 end
