@@ -20,7 +20,13 @@ end
 
 minified = Uglifier.compile(File.read("../usi.js").gsub("/* {ICON_PLACEHOLDER} */", js))
 
-client.action :edit, title: "MediaWiki:Common.js", text: minified, summary: "[BOT] Updating to newest usi.js", bot: true
+old = client.get_wikitext "MediaWiki:Common.js"
+if old.body != minified
+    puts "Updating usi.js on wiki..."
+    client.action :edit, title: "MediaWiki:Common.js", text: minified, summary: "[BOT] Updating to newest usi.js", bot: true
+else
+    puts "JS file is up to date."
+end
 
 # icon showcase
 general = ""
@@ -64,4 +70,19 @@ files.each do |f|
 end
 
 showcase = "== All Icons ==\n<div class=\"showcase-container\">\n#{general}\n#{base}\n#{shards}\n#{materials}\n#{achievements}\n#{alien}\n#{ui}<div class=\"icon-showcase\"><strong>UISalvage</strong>{{Icon|UISalvage}}{{C|<nowiki>{{Icon|UISalvage}}</nowiki>}}</div>\n<div class=\"icon-showcase\"><strong>UIVoidMatter</strong>{{Icon|UIVoidMatter}}{{C|<nowiki>{{Icon|UIVoidMatter}}</nowiki>}}</div>\n</div>"
-client.action :edit, title: "Template:IconShowcase", text: showcase, summary: "[BOT] Updating to show newest icons", bot: true
+old = client.get_wikitext "Template:IconShowcase"
+if old.body != showcase
+    puts "Updating icon showcase on wiki..."
+    client.action :edit, title: "Template:IconShowcase", text: showcase, summary: "[BOT] Updating to show newest icons", bot: true
+else
+    puts "Icon showcase is up to date."
+end
+
+# css
+css = File.read("../usi.css")
+if old.body != css
+    puts "Updating usi.css on wiki..."
+    client.action :edit, title: "MediaWiki:Common.css", text: minified, summary: "[BOT] Updating to newest usi.css", bot: true
+else
+    puts "CSS file is up to date."
+end
