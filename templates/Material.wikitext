@@ -1,0 +1,45 @@
+<includeonly>
+<span class="synth-material">
+{{Icon|{{{1}}}|Class=synth-tier-{{{Tier|1}}}|Size=inline|NoBG=True}}
+{{#ifeq:{{{Tier|}}}|1|{{#ifeq:{{{1}}}|Alloy|Refined&nbsp;|}}}}
+{{#ifeq:{{{Tier|}}}|2|{{#ifeq:{{{1}}}|ConductiveAlloy||Enhanced&nbsp;}}}}
+{{#ifeq:{{{Tier|}}}|3|{{#ifeq:{{{1}}}|Regulator||Powered&nbsp;}}}}
+{{#ifeq:{{{Tier|}}}|4|Special&nbsp;}}
+{{#ifeq:{{{Tier|}}}|5|Ultra&nbsp;}}
+{{#ifeq:{{{Tier|}}}|6|Pristine&nbsp;}}
+{{#ifeq:{{{Tier|}}}|7|Imbued&nbsp;}}
+{{#ifeq:{{{Tier|}}}|8|Void&nbsp;}}
+{{#ifeq:{{{Tier|}}}|9|Ultima&nbsp;}}
+{{#ifeq:{{{Tier|}}}|11|T11&nbsp;}}
+{{#ifeq:{{{Tier|}}}|12|T12&nbsp;}}
+{{#ifeq:{{{Tier|}}}|13|T13&nbsp;}}
+{{#ifeq:{{{Tier|}}}|14|T14&nbsp;}}
+{{#ifeq:{{{Tier|}}}|15|T15&nbsp;}}
+{{#ifeq:{{{Tier|}}}|16|T16&nbsp;}}
+{{#ifeq:{{{1}}}|AutomationChip|Automation Chip}}
+{{#ifeq:{{{1}}}|CombinationAlloy|Combination Alloy}}
+{{#ifeq:{{{1}}}|ConductiveAlloy|Conductive Alloy}}
+{{#ifeq:{{{1}}}|ControlSurface|Control Surface}}
+{{#ifeq:{{{1}}}|CryogenicModulator|Cryogenic Modulator}}
+{{#ifeq:{{{1}}}|DenseContainer|Dense Container}}
+{{#ifeq:{{{1}}}|ExperimentalMaterial|Experimental Material}}
+{{#ifeq:{{{1}}}|FlexibleRod|Flexible Rod}}
+{{#ifeq:{{{1}}}|GravityPlate|Gravity Plate}}
+{{#ifeq:{{{1}}}|HardenedProcessor|Hardened Processor}}
+{{#ifeq:{{{1}}}|JointMaterial|Joint Material}}
+{{#ifeq:{{{1}}}|MassiveStabilizer|Massive Stabilizer}}
+{{#ifeq:{{{1}}}|MicroHousing|Micro Housing}}
+{{#ifeq:{{{1}}}|MicroRod|Micro Rod}}
+{{#ifeq:{{{1}}}|NanoFluid|Nano Fluid}}
+{{#ifeq:{{{1}}}|PotentSerum|Potent Serum}}
+{{#ifeq:{{{1}}}|ReinforcedHousing|Reinforced Housing}}
+{{#ifeq:{{{1}}}|ResistantRelay|Resistant Relay}}
+{{#ifeq:{{{1}}}|StructuralMaterial|Structural Material}}
+{{#ifeq:{{{1}}}|SuperAlloy|Super Alloy}}
+{{#ifeq:{{{1}}}|SuperconductiveRod|Superconductive Rod}}
+{{#ifeq:{{{1}}}|VeilRefractor|Veil Refractor}}
+{{#ifeq:{{{1}}}|VersatileMaterial|Versatile Material}}
+{{#ifeq:{{{1}}}|VoidCulture|Void Culture}}
+{{#ifeq:{{{1}}}|VoidResistor|Void Resistor}}
+{{#ifeq:{{{1}}}|LiminalTincture|Liminal Tincture}}
+</span></includeonly><nowiki />
