@@ -80,6 +80,7 @@ end
 
 # css
 css = File.read("../usi.css")
+old = client.get_wikitext "MediaWiki:Common.css"
 if old.body != css
     puts "Updating usi.css on wiki..."
     client.action :edit, title: "MediaWiki:Common.css", text: css, summary: "[BOT] Updating to newest usi.css", bot: true
