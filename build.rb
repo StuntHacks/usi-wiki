@@ -1,6 +1,28 @@
-require "clipboard"
+require "uglifier"
+require "mediawiki_api"
+
+client = MediawikiApi::Client.new "https://spaceidle.game-vault.net/w/api.php"
+client.log_in "Stunthacks@IconBot", ENV["BOT_TOKEN"]
 
 files = []
+js = ""
+
+Dir.entries(".").each do |f|
+    files.push f
+end
+
+files.each do |f|
+    if f != "." and f != ".."
+        split = f.split("_")
+        js += "icons_svgs[\"#{split[1].split(".")[0]}\"] = '#{File.read("./" + f).strip}';\n".gsub(' style="height: 512px; width: 512px;"', "").gsub('<?xml version="1.0" encoding="utf-8"?>', "")
+    end
+end
+
+minified = Uglifier.compile(File.read("../usi.js").gsub("/* {ICON_PLACEHOLDER} */", js))
+
+client.action :edit, title: "MediaWiki:Common.js", text: minified, summary: "[BOT] Updating to newest usi.js", bot: true
+
+# icon showcase
 general = ""
 base = "=== Base Tiles ===\n"
 shards = "=== Shards ===\n"
@@ -19,12 +41,7 @@ base += "<div class=\"icon-showcase\"><strong>MatsBooster</strong>{{Icon|MatsBoo
 base += "<div class=\"icon-showcase\"><strong>PartsBooster</strong>{{Icon|PartsBooster|Class=base-icon parts-booster}}{{C|<nowiki>{{Icon|PartsBooster}}</nowiki>}}</div>\n"
 base += "<div class=\"icon-showcase\"><strong>CompsBooster</strong>{{Icon|CompsBooster|Class=base-icon comps-booster}}{{C|<nowiki>{{Icon|CompsBooster}}</nowiki>}}</div>\n"
 
-Dir.entries(".").each do |f|
-    files.push f
-end
-
 files.each do |f|
-    puts f
     if f != "." and f != ".."
         split = f.split("_")
         out = "<div class=\"icon-showcase\"><strong>#{split[1].split(".")[0]}</strong>{{Icon|#{split[1].split(".")[0]}|Class=core-icon}}{{C|<nowiki>{{Icon|#{split[1].split(".")[0]}}}</nowiki>}}</div>\n"
@@ -46,4 +63,5 @@ files.each do |f|
     end
 end
 
-Clipboard.copy "== All Icons ==\n<div class=\"showcase-container\">\n#{general}\n#{base}\n#{shards}\n#{materials}\n#{achievements}\n#{alien}\n#{ui}<div class=\"icon-showcase\"><strong>UISalvage</strong>{{Icon|UISalvage}}{{C|<nowiki>{{Icon|UISalvage}}</nowiki>}}</div>\n<div class=\"icon-showcase\"><strong>UIVoidMatter</strong>{{Icon|UIVoidMatter}}{{C|<nowiki>{{Icon|UIVoidMatter}}</nowiki>}}</div>\n</div>"
+showcase = "== All Icons ==\n<div class=\"showcase-container\">\n#{general}\n#{base}\n#{shards}\n#{materials}\n#{achievements}\n#{alien}\n#{ui}<div class=\"icon-showcase\"><strong>UISalvage</strong>{{Icon|UISalvage}}{{C|<nowiki>{{Icon|UISalvage}}</nowiki>}}</div>\n<div class=\"icon-showcase\"><strong>UIVoidMatter</strong>{{Icon|UIVoidMatter}}{{C|<nowiki>{{Icon|UIVoidMatter}}</nowiki>}}</div>\n</div>"
+client.action :edit, title: "Template:IconShowcase", text: showcase, summary: "[BOT] Updating to show newest icons", bot: true
