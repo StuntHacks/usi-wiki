@@ -30,22 +30,22 @@ end
 
 # icon showcase
 general = ""
-base = "=== Base Tiles ===\n"
 shards = "=== Shards ===\n"
 materials = "=== Synth Materials ===\n"
 achievements = "=== Achievement Exclusive ===\n"
 alien = "=== Specimen & Alien Mats ===\n"
 ui = "=== Wiki UI Icons ===\n"
 
-base += "<div class=\"icon-showcase\"><strong>Materials</strong>{{Icon|Materials|Class=base-icon mats}}{{C|<nowiki>{{Icon|Materials}}</nowiki>}}</div>\n"
-base += "<div class=\"icon-showcase\"><strong>Parts</strong>{{Icon|Parts|Class=base-icon parts}}{{C|<nowiki>{{Icon|Parts}}</nowiki>}}</div>\n"
-base += "<div class=\"icon-showcase\"><strong>Components</strong>{{Icon|Components|Class=base-icon comps}}{{C|<nowiki>{{Icon|Components}}</nowiki>}}</div>\n"
-base += "<div class=\"icon-showcase\"><strong>BaseBooster</strong>{{Icon|BaseBooster|Class=base-icon booster}}{{C|<nowiki>{{Icon|BaseBooster}}</nowiki>}}</div>\n"
-base += "<div class=\"icon-showcase\"><strong>DoubleBooster</strong>{{Icon|DoubleBooster|Class=base-icon double-booster}}{{C|<nowiki>{{Icon|DoubleBooster}}</nowiki>}}</div>\n"
-base += "<div class=\"icon-showcase\"><strong>DrainReducer</strong>{{Icon|DrainReducer|Class=base-icon drain-reducer}}{{C|<nowiki>{{Icon|DrainReducer}}</nowiki>}}</div>\n"
-base += "<div class=\"icon-showcase\"><strong>MatsBooster</strong>{{Icon|MatsBooster|Class=base-icon mats-booster}}{{C|<nowiki>{{Icon|MatsBooster}}</nowiki>}}</div>\n"
-base += "<div class=\"icon-showcase\"><strong>PartsBooster</strong>{{Icon|PartsBooster|Class=base-icon parts-booster}}{{C|<nowiki>{{Icon|PartsBooster}}</nowiki>}}</div>\n"
-base += "<div class=\"icon-showcase\"><strong>CompsBooster</strong>{{Icon|CompsBooster|Class=base-icon comps-booster}}{{C|<nowiki>{{Icon|CompsBooster}}</nowiki>}}</div>\n"
+base = "=== Base Tiles ===
+<div class=\"icon-showcase\"><strong>Materials</strong>{{Icon|Materials|Class=base-icon mats}}{{C|<nowiki>{{Icon|Materials}}</nowiki>}}</div>
+<div class=\"icon-showcase\"><strong>Parts</strong>{{Icon|Parts|Class=base-icon parts}}{{C|<nowiki>{{Icon|Parts}}</nowiki>}}</div>
+<div class=\"icon-showcase\"><strong>Components</strong>{{Icon|Components|Class=base-icon comps}}{{C|<nowiki>{{Icon|Components}}</nowiki>}}</div>
+<div class=\"icon-showcase\"><strong>BaseBooster</strong>{{Icon|BaseBooster|Class=base-icon booster}}{{C|<nowiki>{{Icon|BaseBooster}}</nowiki>}}</div>
+<div class=\"icon-showcase\"><strong>DoubleBooster</strong>{{Icon|DoubleBooster|Class=base-icon double-booster}}{{C|<nowiki>{{Icon|DoubleBooster}}</nowiki>}}</div>
+<div class=\"icon-showcase\"><strong>DrainReducer</strong>{{Icon|DrainReducer|Class=base-icon drain-reducer}}{{C|<nowiki>{{Icon|DrainReducer}}</nowiki>}}</div>
+<div class=\"icon-showcase\"><strong>MatsBooster</strong>{{Icon|MatsBooster|Class=base-icon mats-booster}}{{C|<nowiki>{{Icon|MatsBooster}}</nowiki>}}</div>
+<div class=\"icon-showcase\"><strong>PartsBooster</strong>{{Icon|PartsBooster|Class=base-icon parts-booster}}{{C|<nowiki>{{Icon|PartsBooster}}</nowiki>}}</div>
+<div class=\"icon-showcase\"><strong>CompsBooster</strong>{{Icon|CompsBooster|Class=base-icon comps-booster}}{{C|<nowiki>{{Icon|CompsBooster}}</nowiki>}}</div>\n"
 
 files.each do |f|
     if f != "." and f != ".."
@@ -69,7 +69,17 @@ files.each do |f|
     end
 end
 
-showcase = "== All Icons ==\n<div class=\"showcase-container\">\n#{general}\n#{base}\n#{shards}\n#{materials}\n#{achievements}\n#{alien}\n#{ui}<div class=\"icon-showcase\"><strong>UISalvage</strong>{{Icon|UISalvage}}{{C|<nowiki>{{Icon|UISalvage}}</nowiki>}}</div>\n<div class=\"icon-showcase\"><strong>UIVoidMatter</strong>{{Icon|UIVoidMatter}}{{C|<nowiki>{{Icon|UIVoidMatter}}</nowiki>}}</div>\n</div>"
+showcase = "== All Icons ==
+<div class=\"showcase-container\">
+#{general}
+#{base}
+#{shards}
+#{materials}
+#{achievements}
+#{alien}
+#{ui}<div class=\"icon-showcase\"><strong>UISalvage</strong>{{Icon|UISalvage}}{{C|<nowiki>{{Icon|UISalvage}}</nowiki>}}</div>
+<div class=\"icon-showcase\"><strong>UIVoidMatter</strong>{{Icon|UIVoidMatter}}{{C|<nowiki>{{Icon|UIVoidMatter}}</nowiki>}}</div>
+</div>"
 old = client.get_wikitext "Template:IconShowcase"
 if old.body != showcase
     puts "Updating icon showcase on wiki..."
