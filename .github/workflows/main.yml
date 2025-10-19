@@ -1,0 +1,29 @@
+name: Build & Update
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checking out repository
+        uses: actions/checkout@v4
+
+      - name: Setting up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2.3'
+
+      - name: Installing gems
+        run: |
+          gem install uglifier mediawiki_api
+
+      - name: Running build script
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+        run: ruby ../build.rb
+        working-directory: svg
