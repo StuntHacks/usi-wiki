@@ -602,6 +602,10 @@ pre {
     align-items: center;
 }
 
+.mw-headline#All_Icons {
+    margin-bottom: 2rem;
+}
+
 .icon svg {
     width: var(--size);
     height: var(--size);
