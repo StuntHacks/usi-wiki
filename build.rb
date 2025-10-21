@@ -67,8 +67,8 @@ files.each do |f|
 
         if classes[split[0]].nil?
             output[:general] += out
-        else
-            output[:"#{split[0].downcase}"] += out.gsub("core-icon", classes[split[0]])
+        elsif !output["#{split[0].downcase}"].nil?
+            output["#{split[0].downcase}"] += out.gsub("core-icon", classes[split[0]])
         end
     end
 end
