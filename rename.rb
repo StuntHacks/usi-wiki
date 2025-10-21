@@ -24,5 +24,5 @@ Dir.entries(".").each do |filename|
   }
 
   next if (types[number].nil? || classes[color].nil?)
-  File.rename filename, "Enemy_#{types[number]}#{classes[color]}.png"
+  File.rename filename, "Enemy_#{types[number]}_#{classes[color]}.png"
 end

@@ -1,29 +1,41 @@
 require "uglifier"
 require "mediawiki_api"
+require "dotenv"
+
+Dotenv.load "../.env"
+
+local = ENV["LOCAL_RUN"] == "true"
 
 client = MediawikiApi::Client.new "https://spaceidle.game-vault.net/w/api.php"
 client.log_in "Stunthacks@IconBot", ENV["BOT_TOKEN"]
 
-files = []
+svgs = []
+pngs = []
 js = ""
 
+# svgs
 Dir.entries(".").each do |f|
-    files.push f
-end
-
-files.each do |f|
+    svgs.push f
     if f != "." and f != ".."
         split = f.split("_")
         js += "icons_svgs[\"#{split[1].split(".")[0]}\"] = '#{File.read("./" + f).strip}';\n".gsub(' style="height: 512px; width: 512px;"', "").gsub('<?xml version="1.0" encoding="utf-8"?>', "")
     end
 end
 
+# pngs
+Dir.entries("../png").each do |f|
+    pngs.push f
+
+    puts f
+end
+
+# js
 minified = Uglifier.compile(File.read("../usi.js").gsub("/* {ICON_PLACEHOLDER} */", js))
 
 old = client.get_wikitext "MediaWiki:Common.js"
 if old.body != minified
     puts "Updating usi.js on wiki..."
-    client.action :edit, title: "MediaWiki:Common.js", text: minified, summary: "[BOT] Updating to newest usi.js", bot: true
+    client.action :edit, title: "MediaWiki:Common.js", text: minified, summary: "[BOT] Updating to newest usi.js", bot: true unless local
 else
     puts "JS file is up to date."
 end
@@ -46,12 +58,12 @@ output = {
     "Synth" => "=== Synth Materials ===\n",
     "Achievement" => "=== Achievement Exclusive ===\n",
     "Alien" => "=== Specimen & Alien Mats ===\n",
-    "UIIcon" => "=== Wiki UI Icons ===\n",
     :base => base,
-    :enemies => "== Enemies ==\n",
+    :enemies => "=== Enemies ===\n",
+    "UIIcon" => "=== Wiki UI Icons ===\n",
 }
 
-files.each do |f|
+svgs.each do |f|
     if f != "." and f != ".."
         split = f.split("_")
         out = "<div class=\"icon-showcase\"><strong>#{split[1].split(".")[0]}</strong>{{Icon|#{split[1].split(".")[0]}|Class=core-icon}}{{C|<nowiki>{{Icon|#{split[1].split(".")[0]}}}</nowiki>}}</div>\n"
@@ -73,22 +85,24 @@ files.each do |f|
     end
 end
 
-showcase = "== All Icons ==
-<div class=\"showcase-container\">
-#{output.map{|k, v| v}.join "\n"}" \
-"<div class=\"icon-showcase\">" \
+output["UIIcon"] += "<div class=\"icon-showcase\">" \
 "<strong>UISalvage</strong>" \
 "{{Icon|UISalvage}}{{C|<nowiki>{{Icon|UISalvage}}</nowiki>}}" \
 "</div>
 <div class=\"icon-showcase\">" \
 "<strong>UIVoidMatter</strong>" \
 "{{Icon|UIVoidMatter}}{{C|<nowiki>{{Icon|UIVoidMatter}}</nowiki>}}" \
-"</div></div>"
+"</div>"
+
+showcase = "== All Icons ==
+<div class=\"showcase-container\">
+#{output.map{|k, v| v}.join "\n"}" \
+"</div>"
 
 old = client.get_wikitext "Template:IconShowcase"
 if old.body != showcase
     puts "Updating icon showcase on wiki..."
-    client.action :edit, title: "Template:IconShowcase", text: showcase, summary: "[BOT] Updating to show newest icons", bot: true
+    client.action :edit, title: "Template:IconShowcase", text: showcase, summary: "[BOT] Updating to show newest icons", bot: true unless local
 else
     puts "Icon showcase is up to date."
 end
@@ -98,7 +112,7 @@ css = File.read("../usi.css")
 old = client.get_wikitext "MediaWiki:Common.css"
 if old.body != css.strip
     puts "Updating usi.css on wiki..."
-    client.action :edit, title: "MediaWiki:Common.css", text: css, summary: "[BOT] Updating to newest usi.css", bot: true
+    client.action :edit, title: "MediaWiki:Common.css", text: css, summary: "[BOT] Updating to newest usi.css", bot: true unless local
 else
     puts "CSS file is up to date."
 end

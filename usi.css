@@ -66,11 +66,11 @@
 }
 
 .tile-icon.black {
-    background: #00000;
+    background: #000000;
 }
 
-.tile-icon.while {
-    background: #fffff;
+.tile-icon.white {
+    background: #ffffff;
 }
 
 .tile-icon.gray {
@@ -1677,10 +1677,6 @@ img.fullwidth {
 }
 
 @media screen and (max-width: 775px) {
-    .icon-with-tooltip .tooltip {
-        /*left: 10px;*/
-    }
-
     .flexbox.responsive {
         align-items: flex-start;
     }
@@ -1907,7 +1903,7 @@ ul.tile-icons {
 
 @media screen and (max-width: 775px) {
     .loadout-box-slim {
-        fl flex-direction: column;
+        flex-direction: column;
     }
 }
 
