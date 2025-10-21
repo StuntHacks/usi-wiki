@@ -65,10 +65,10 @@ files.each do |f|
             "UIIcon" => "icon-ui"
         }
 
-        if classes[split[0]].nil?
+        if output[split[0]].nil?
             output[:general] += out
-        elsif !output["#{split[0].downcase}"].nil?
-            output["#{split[0].downcase}"] += out.gsub("core-icon", classes[split[0]])
+        elsif !output["#{split[0]}"].nil?
+            output["#{split[0]}"] += out.gsub("core-icon", classes[split[0]])
         end
     end
 end
