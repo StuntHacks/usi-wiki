@@ -2,7 +2,11 @@ require "uglifier"
 require "mediawiki_api"
 require "dotenv"
 
-Dotenv.load "../.env"
+begin
+    Dotenv.load "../.env"
+rescue
+    puts ".env file not found, proceeding without it."
+end
 
 local = ENV["LOCAL_RUN"] == "true"
 
