@@ -29,13 +29,6 @@ else
 end
 
 # icon showcase
-general = ""
-shards = "=== Shards ===\n"
-materials = "=== Synth Materials ===\n"
-achievements = "=== Achievement Exclusive ===\n"
-alien = "=== Specimen & Alien Mats ===\n"
-ui = "=== Wiki UI Icons ===\n"
-
 base = "=== Base Tiles ===
 <div class=\"icon-showcase\"><strong>Materials</strong>{{Icon|Materials|Class=base-icon mats}}{{C|<nowiki>{{Icon|Materials}}</nowiki>}}</div>
 <div class=\"icon-showcase\"><strong>Parts</strong>{{Icon|Parts|Class=base-icon parts}}{{C|<nowiki>{{Icon|Parts}}</nowiki>}}</div>
@@ -47,39 +40,51 @@ base = "=== Base Tiles ===
 <div class=\"icon-showcase\"><strong>PartsBooster</strong>{{Icon|PartsBooster|Class=base-icon parts-booster}}{{C|<nowiki>{{Icon|PartsBooster}}</nowiki>}}</div>
 <div class=\"icon-showcase\"><strong>CompsBooster</strong>{{Icon|CompsBooster|Class=base-icon comps-booster}}{{C|<nowiki>{{Icon|CompsBooster}}</nowiki>}}</div>\n"
 
+output = {
+    general => "",
+    "Shards" => "=== Shards ===\n",
+    "Synth" => "=== Synth Materials ===\n",
+    "Achievement" => "=== Achievement Exclusive ===\n",
+    "Alien" => "=== Specimen & Alien Mats ===\n",
+    "UIIcon" => "=== Wiki UI Icons ===\n",
+    base => base,
+    enemies => "== Enemies ==\n",
+}
+
 files.each do |f|
     if f != "." and f != ".."
         split = f.split("_")
         out = "<div class=\"icon-showcase\"><strong>#{split[1].split(".")[0]}</strong>{{Icon|#{split[1].split(".")[0]}|Class=core-icon}}{{C|<nowiki>{{Icon|#{split[1].split(".")[0]}}}</nowiki>}}</div>\n"
-        case split[0]
-        when "Shards"
-            shards += out.gsub("core-icon", "shard-tier-7")
-        when "Synth"
-            materials += out.gsub("core-icon", "synth-tier-10")
-        when "Alien"
-            alien += out.gsub("core-icon", "alien-synth")
-        when "Achievement"
-            achievements += out.gsub("Class=core-icon", "Color=#B26600")
-        when "UIIcon"
-            ui += out.gsub("core-icon", "icon-ui")
-        when "Base"
+
+        next if split[0] == "Base"
+        classes = {
+            "Shards" => "shard-tier-7",
+            "Synth" => "synth-tier-10",
+            "Alien" => "alien-synth",
+            "Achievement" => "synth-tier-5",
+            "UIIcon" => "icon-ui"
+        }
+
+        if classes[split[0]].nil?
+            output[:general] += out
         else
-            general += out
+            output[:"#{split[0].downcase}"] += out.gsub("core-icon", classes[split[0]])
         end
     end
 end
 
 showcase = "== All Icons ==
 <div class=\"showcase-container\">
-#{general}
-#{base}
-#{shards}
-#{materials}
-#{achievements}
-#{alien}
-#{ui}<div class=\"icon-showcase\"><strong>UISalvage</strong>{{Icon|UISalvage}}{{C|<nowiki>{{Icon|UISalvage}}</nowiki>}}</div>
-<div class=\"icon-showcase\"><strong>UIVoidMatter</strong>{{Icon|UIVoidMatter}}{{C|<nowiki>{{Icon|UIVoidMatter}}</nowiki>}}</div>
-</div>"
+#{output.map{|k, v| v}.join "\n"}" \
+"<div class=\"icon-showcase\">" \
+"<strong>UISalvage</strong>" \
+"{{Icon|UISalvage}}{{C|<nowiki>{{Icon|UISalvage}}</nowiki>}}" \
+"</div>
+<div class=\"icon-showcase\">" \
+"<strong>UIVoidMatter</strong>" \
+"{{Icon|UIVoidMatter}}{{C|<nowiki>{{Icon|UIVoidMatter}}</nowiki>}}" \
+"</div></div>"
+
 old = client.get_wikitext "Template:IconShowcase"
 if old.body != showcase
     puts "Updating icon showcase on wiki..."
