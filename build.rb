@@ -41,14 +41,14 @@ base = "=== Base Tiles ===
 <div class=\"icon-showcase\"><strong>CompsBooster</strong>{{Icon|CompsBooster|Class=base-icon comps-booster}}{{C|<nowiki>{{Icon|CompsBooster}}</nowiki>}}</div>\n"
 
 output = {
-    general => "",
+    :general => "",
     "Shards" => "=== Shards ===\n",
     "Synth" => "=== Synth Materials ===\n",
     "Achievement" => "=== Achievement Exclusive ===\n",
     "Alien" => "=== Specimen & Alien Mats ===\n",
     "UIIcon" => "=== Wiki UI Icons ===\n",
-    base => base,
-    enemies => "== Enemies ==\n",
+    :base => base,
+    :enemies => "== Enemies ==\n",
 }
 
 files.each do |f|
