@@ -1,8 +1,9 @@
 // Base 6 breakpoint calculator made by ciryll
 function initBreakpointCalculator(element) {
-    var layoutInput = element.querySelector("#layout-input");
-    var boosterLevel = element.querySelector("#booster-level");
-    var calculate = element.querySelector("#calculate");
+    var layoutInput = document.getElementById("#layout-input");
+    var boosterLevel = document.getElementById("#booster-level");
+    var calculate = document.getElementById("#calculate");
+    console.log(calculate, layoutInput, boosterLevel);
 
     var button = createNodeFromHTML(
         '<button type="button" id="calculate">' +
