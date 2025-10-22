@@ -17,6 +17,9 @@ function initBreakpointCalculator() {
     var layoutIndexLabel = createNodeFromHTML(
       '<label for="LayoutIdx">Layout Index: </label>'
     );
+    var layoutIndexPreview = createNodeFromHTML(
+      '<div class="layout"></div>'
+    );
 
     var boosterLevelInput = createNodeFromHTML(
         '<input type="number" id="CurMB" min="1" step="1" value="8" />'
@@ -31,6 +34,7 @@ function initBreakpointCalculator() {
 
     calculate.appendChild(button);
     layoutIndex.appendChild(layoutIndexLabel);
+    layoutIndex.appendChild(layoutIndexPreview);
     layoutIndex.appendChild(layoutIndexInput);
     boosterLevel.appendChild(boosterLevelLabel);
     boosterLevel.appendChild(boosterLevelInput);

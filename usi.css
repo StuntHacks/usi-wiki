@@ -2214,10 +2214,67 @@ ul.tile-icons .tile-item.buffer:hover {
     margin-bottom: 20px;
 }
 
+button {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--border-radius--medium);
+    font-size: 0.9rem;
+    transition: background 100ms ease, color 100ms ease;
+    background-color: var(--color-primary);
+    color: #fff;
+    border: 2px solid transparent;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+button:hover,
+button:focus {
+    background-color: var(--color-primary--hover);
+}
+
+button:active {
+    background-color: var(--color-primary--active);
+}
+
 #base-6-breakpoints {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 600px;
+    margin: auto;
+}
+
+#base-6-breakpoints > div:not(.template-info-box) {
+    display: flex;
+    flex-direction: row;
+    align-self: stretch;
+}
+
+#base-6-breakpoints input {
+    width: 100px;
+}
+
+#base-6-breakpoints label {
+    flex-grow: 1;
+}
+
+@media screen and (max-width: 500px) {
+    #base-6-breakpoints > div:not(.template-info-box) {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    #base-6-breakpoints label {
+        text-align: center;
+    }
+
+    #base-6-breakpoints input {
+        width: 100%;
+    }
 }
 
 #base-6-breakpoints .layout {
