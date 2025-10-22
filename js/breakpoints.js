@@ -12,7 +12,7 @@ function initBreakpointCalculator() {
     );
 
     var layoutIndexInput = createNodeFromHTML(
-      '<input type="number" id="LayoutIdx" min="0" max="9" step="1" value="9" />'
+      '<input type="number" id="LayoutIdx" min="0" max="9" step="1" value="9" / >'
     );
     var layoutIndexLabel = createNodeFromHTML(
       '<label for="LayoutIdx">Layout Index: </label>'
