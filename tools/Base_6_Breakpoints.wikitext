@@ -4,7 +4,10 @@
 Finds the next 5 material booster breakpoints.<br />
 Assumes Base 6 has been fully unlocked.
 
+<div id="base-6-breakpoints">
 <div id="layout-input" class="flexbox"></div>
+{{Info|Layouts can be inspected in detail here: https://docs.google.com/spreadsheets/d/1WxJEY5_taXlAU7kobcn6dEiOCWGtTHaKO1q_gON7I1M/edit?gid=0#gid=0}}
 <div id="booster-level" data-text="Current Mats Booster Level:" class="flexbox"></div>
 <div id="calculate" data-text="Find Breakpoints" class="flexbox"></div>
-<div id="base-6-breakpoints"></div>
+<div id="output"></div>
+</div>

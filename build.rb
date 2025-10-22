@@ -194,6 +194,7 @@ Dir.entries("../tools").each do |f|
         if old.body != content.strip
             puts "Updating Tool:#{f} on wiki..."
             client.action(:edit, title: "Tool:#{name}", text: content, summary: "[BOT] Updating to newest #{f}", bot: true) unless local
+            upToDate = false
         end
     end
 end

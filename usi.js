@@ -83,7 +83,7 @@ function init() {
 
   var breakpointCalculator = document.getElementById("base-6-breakpoints");
   if (breakpointCalculator) {
-    initBreakpointCalculator(breakpointCalculator);
+    initBreakpointCalculator();
   }
 
   // collapsible cores
