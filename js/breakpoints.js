@@ -208,8 +208,7 @@ function initBreakpointCalculator() {
   );
   var layoutIndexPreview = createNodeFromHTML('<div class="layout"></div>');
 
-  // layout index
-  layoutIndexInput.addEventListener("change", function () {
+  function updateLayout() {
     var index = parseInt(layoutIndexInput.value);
 
     if (index < 0) {
@@ -223,7 +222,10 @@ function initBreakpointCalculator() {
     layoutIndexPreview.className = "";
     layoutIndexPreview.classList.add("layout");
     layoutIndexPreview.classList.add("l" + index);
-  });
+  }
+
+  // layout index
+  layoutIndexInput.addEventListener("change", updateLayout);
 
   // booster levels
   var boosterLevelInput = createNodeFromHTML(
@@ -251,4 +253,7 @@ function initBreakpointCalculator() {
   layoutIndex.appendChild(layoutIndexInput);
   boosterLevel.appendChild(boosterLevelLabel);
   boosterLevel.appendChild(boosterLevelInput);
+
+  updateLayout();
+  calculateBreakpoints(output, layoutIndexInput, boosterLevelInput);
 }
