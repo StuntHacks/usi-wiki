@@ -22,7 +22,7 @@ js = ""
 Dir.entries(".").each do |f|
     svgs.push f
     if f != "." and f != ".."
-        f = f.gsub(".png", "")
+        f = f.gsub(".svg", "")
         split = f.split("_")
         markup = File.read("./" + f).strip
         name = split[1]
@@ -35,6 +35,7 @@ end
 puts "Verifying enemy PNGs..."
 upToDate = true
 Dir.entries("../png/enemies").each do |f|
+    break if ENV["SKIP_ENEMY_PNGS"] == "true"
     enemies.push f
     if f != "." and f != ".."
         f = f.gsub(".png", "")
@@ -77,7 +78,9 @@ if upToDate
 end
 
 # js
-minified = Uglifier.compile(File.read("../usi.js").gsub("/* {ICON_PLACEHOLDER} */", js))
+newJs = File.read("../usi.js").gsub("/* {ICON_PLACEHOLDER} */", js)
+minified = Uglifier.compile(newJs)
+File.write("../usi.build.js", newJs)
 
 old = client.get_wikitext "MediaWiki:Common.js"
 if old.body != minified
