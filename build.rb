@@ -102,6 +102,7 @@ end
 
 # icon showcase
 base = File.read "../html/base_showcase.html"
+enemies = File.read "../html/enemy_showcase.html"
 
 output = {
     :general => "",
@@ -110,7 +111,7 @@ output = {
     "Achievement" => "=== Achievement Exclusive ===\n",
     "Alien" => "=== Specimen & Alien Mats ===\n",
     :base => base,
-    :enemies => "=== Enemies ===\n",
+    :enemies => enemies,
     "UIIcon" => "=== Wiki & UI Icons ===\n",
 }
 
