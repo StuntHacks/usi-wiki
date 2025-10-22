@@ -590,6 +590,10 @@ pre {
     position: relative;
 }
 
+.enemy-icon {
+    height: auto;
+}
+
 .enemy-icon img {
     width: var(--size);
     height: auto;
@@ -609,7 +613,7 @@ pre {
 }
 
 .icon-showcase .enemy-icon {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .icon-showcase p {
