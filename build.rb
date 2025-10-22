@@ -34,6 +34,7 @@ end
 # enemies
 puts "Verifying enemy PNGs..."
 upToDate = true
+toPurge = []
 Dir.entries("../png/enemies").each do |f|
     break if ENV["SKIP_ENEMY_PNGS"] == "true"
     enemies.push f
@@ -69,6 +70,7 @@ Dir.entries("../png/enemies").each do |f|
             upToDate = false
             changed = true
         end
+        toPurge.push "File:#{wikiPath}"
 
         if changed
             response = client.query titles: "File:#{wikiPath}", prop: "imageinfo", iiprop: "url"
@@ -85,6 +87,9 @@ end
 
 if upToDate
     puts "Enemy PNGs are up to date."
+else
+    client.action :purge, titles: "#{toPurge.join "|"}"
+    puts "Purging #{toPurge.length} images from cache..."
 end
 
 # js
