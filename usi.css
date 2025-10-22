@@ -2304,7 +2304,7 @@ button:active {
     }
 
     #base-6-breakpoints .layout {
-        margin: none;
+        margin: 0;
         margin-bottom: 1rem;
     }
 
@@ -2316,7 +2316,8 @@ button:active {
 #base-6-breakpoints .layout {
     width: 80px;
     height: 64px;
-    margin-right: 1rem;
+    margin-right: 3.5rem;
+    margin-left: 3.5rem;
     align-self: center;
     image-rendering: pixelated;
     background-size: cover;
@@ -2362,8 +2363,8 @@ button:active {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAABg2lDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AcxV9TRSkVQauIOGSoTnZREcdSxSJYKG2FVh1MLv2CJg1Jiouj4Fpw8GOx6uDirKuDqyAIfoC4C06KLlLi/5JCixgPjvvx7t7j7h0gNCpMNbuigKpZRioeE7O5VbHnFQEMYwDAkMRMPZFezMBzfN3Dx9e7CM/yPvfn6FPyJgN8InGU6YZFvEE8u2npnPeJQ6wkKcTnxJMGXZD4keuyy2+ciw4LPDNkZFLzxCFisdjBcgezkqESzxCHFVWjfCHrssJ5i7NaqbHWPfkLg3ltJc11mmOIYwkJJCFCRg1lVGAhQqtGiokU7cc8/KOOP0kumVxlMHIsoAoVkuMH/4Pf3ZqF6Sk3KRgDul9s+2Mc6NkFmnXb/j627eYJ4H8GrrS2v9oA5j5Jr7e18BHQvw1cXLc1eQ+43AFGnnTJkBzJT1MoFID3M/qmHDB4CwTW3N5a+zh9ADLU1fINcHAITBQpe93j3b2dvf17ptXfD3IKcqZSOkG6AAAABmJLR0QApgD/AKkXtv7oAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH6QoWEgssDNMyPgAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAABGSURBVBjTjY9BCgAgCASHwP+/IsFXbpeCMg96EUd2dXGFXCEApunMmQFwL1whpilzSmUh4HGq3HcfdKt9+nv6EvxhUsqKLUekh3GNkumdAAAAAElFTkSuQmCC);
 }
 
-.prev-layout,
-.next-layout {
+#prev-layout,
+#next-layout {
     content: "";
     position: absolute;
     display: block;
@@ -2378,32 +2379,32 @@ button:active {
     transition: border-color 100ms;
 }
 
-.prev-layout:hover,
-.next-layout:hover {
+#prev-layout:hover,
+#next-layout:hover {
     --c: var(--color-primary--hover);
 }
 
-.prev-layout:active,
-.next-layout:active {
+#prev-layout:active,
+#next-layout:active {
     --c: var(--color-primary--active);    
 }
 
-.prev-layout {
+#prev-layout {
     right: calc(100% + 15px);
     transform: translateY(-50%) rotate(0deg);
     border-width: 12px 25px 12px 0;
     border-color: transparent var(--c) transparent transparent;
 }
 
-.next-layout {
+#next-layout {
     left: calc(100% + 15px);
     transform: translateY(-50%);
     border-width: 12px 0 12px 25px;
     border-color: transparent transparent transparent var(--c);
 }
 
-.prev-layout.disabled,
-.next-layout.disabled {
+#prev-layout.disabled,
+#next-layout.disabled {
     display: none;    
 }
 

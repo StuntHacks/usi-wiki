@@ -218,14 +218,23 @@ function initBreakpointCalculator() {
         if (index < 0) index = 0;
         if (index > 9) index = 9;
 
+        var prev = document.getElementById("prev-layout");
+        var next = document.getElementById("next-layout");
+
+        if (index <= 0) prev.classList.add("disabled");
+        else prev.classList.remove("disabled");
+
+        if (index >= 9) next.classList.add("disabled");
+        else next.classList.remove("disabled");
+
         layoutIndexInput.value = index;
         layoutIndexPreview.className = "";
         layoutIndexPreview.classList.add("layout");
         layoutIndexPreview.classList.add("l" + index);
     }
 
-    var prevLayoutButton = createNodeFromHTML("<span class='prev-layout'></span>");
-    var nextLayoutButton = createNodeFromHTML("<span class='next-layout'></span>");
+    var prevLayoutButton = createNodeFromHTML("<span id='prev-layout'></span>");
+    var nextLayoutButton = createNodeFromHTML("<span id='next-layout'></span>");
     layoutIndexPreview.appendChild(prevLayoutButton);
     layoutIndexPreview.appendChild(nextLayoutButton);
 
