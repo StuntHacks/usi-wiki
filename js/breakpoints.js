@@ -209,7 +209,7 @@ function initBreakpointCalculator() {
   var layoutIndexPreview = createNodeFromHTML('<div class="layout"></div>');
 
   function updateLayout() {
-    var index = parseInt(layoutIndexInput.value);
+    var index = parseFloat(layoutIndexInput.value);
 
     if (isNaN(index) || index < 0 || !Number.isInteger(index)) {
         layoutIndexInput.value = "0";
@@ -221,7 +221,7 @@ function initBreakpointCalculator() {
 
     layoutIndexPreview.className = "";
     layoutIndexPreview.classList.add("layout");
-    layoutIndexPreview.classList.add("l" + index);
+    layoutIndexPreview.classList.add("l" + parseInt(index));
   }
 
   // layout index
