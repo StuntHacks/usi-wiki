@@ -2245,16 +2245,31 @@ button:active {
     align-items: center;
     max-width: 600px;
     margin: auto;
+    font-size: 1.2rem;
 }
 
 #base-6-breakpoints > div:not(.template-info-box) {
     display: flex;
     flex-direction: row;
     align-self: stretch;
+    flex-direction: row;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+}
+
+#base-6-breakpoints > p {
+    text-align: center;
+}
+
+#base-6-breakpoints .template-info-box {
+    font-size: 1rem;
 }
 
 #base-6-breakpoints input {
     width: 200px;
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
 }
 
 #base-6-breakpoints label {
@@ -2278,8 +2293,11 @@ button:active {
 }
 
 #base-6-breakpoints .layout {
-    width: 20px;
-    height: 16px;
+    width: 80px;
+    height: 64px;
+    margin-right: 1rem;
+    align-self: center;
+    image-rendering: pixelated;
     background-size: cover;
 }
 

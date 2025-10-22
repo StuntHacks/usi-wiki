@@ -2,8 +2,7 @@
 {{Backlink|Bases|bases}}
 {{Backlink|Guide:Contents|all guides}}
 <div id="base-6-breakpoints" class="flexbox">
-Finds the next 5 material booster breakpoints.<br />
-Assumes Base 6 has been fully unlocked.
+Finds the next 5 material booster breakpoints.
 
 <div id="booster-level" data-text="Current Mats Booster Level:"></div>
 <div id="layout-input"></div>
