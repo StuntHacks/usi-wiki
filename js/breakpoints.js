@@ -211,12 +211,10 @@ function initBreakpointCalculator() {
   function updateLayout() {
     var index = parseInt(layoutIndexInput.value);
 
-    if (index < 0) {
+    if (isNaN(index) || index < 0 || !Number.isInteger(index)) {
         layoutIndexInput.value = "0";
         index = 0;
-    }
-
-    if (index > 9) {
+    } else if (index > 9) {
         layoutIndexInput.value = "9";
         index = 9;
     }
