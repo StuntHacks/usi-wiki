@@ -219,7 +219,7 @@ function initBreakpointCalculator() {
 
     layoutIndexPreview.className = "";
     layoutIndexPreview.classList.add("layout");
-    layoutIndexPreview.classList.add("l" + parseInt(layoutIndexInput.value));
+    layoutIndexPreview.classList.add("l" + parseInt(index));
   }
 
   // layout index
