@@ -20,7 +20,7 @@ function initBreakpointCalculator(element) {
 
     button.addEventListener("click", function () {});
 
-    layoutInput.parentNode.appendChild(button);
-    boosterLevel.parentNode.appendChild(boosterLevelLabel);
-    boosterLevel.parentNode.appendChild(boosterLevelInput);
+    layoutInput.appendChild(button);
+    boosterLevel.appendChild(boosterLevelLabel);
+    boosterLevel.appendChild(boosterLevelInput);
 }
