@@ -13,21 +13,25 @@ function roundToN(number, numDecimalPlaces) {
   return Math.round(number * multiplier) / multiplier;
 }
 
-function getMPCost(levelMP, buildingCostDivider = 1.0) {
+function getMPCost(levelMP, buildingCostDivider) {
+  buildingCostDivider = buildingCostDivider !== undefined ? buildingCostDivider : 1.0;
   var curLevel = Math.max(levelMP, 1);
   return (
     (MP_Cost_Mult * Math.pow(MP_Cost_Pow, curLevel - 1)) / buildingCostDivider
   );
 }
 
-function getMBCost(levelMB, buildingCostDivider = 1.0) {
+function getMBCost(levelMB, buildingCostDivider) {
+  buildingCostDivider = buildingCostDivider !== undefined ? buildingCostDivider : 1.0;
   var curLevel = Math.max(levelMB, 1);
   return (
     (MB_Cost_Mult * Math.pow(MB_Cost_Pow, curLevel - 1)) / buildingCostDivider
   );
 }
 
-function getMatIncome(levelMP, matMult = 1.0, prodMult = 1.0) {
+function getMatIncome(levelMP, matMult, prodMult) {
+  matMult = matMult !== undefined ? matMult : 1.0;
+  buildingCostDivider = buildingCostDivider !== undefined ? buildingCostDivider : 1.0;
   var curLevel = Math.max(levelMP, 1);
   return (
     matMult * prodMult * roundToN(1 + Math.pow(Mat_Income_Pow, curLevel - 1), 2)
