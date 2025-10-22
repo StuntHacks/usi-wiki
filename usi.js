@@ -49,6 +49,8 @@ function renderEnemies(selector) {
           type = "_Hull";
           break;
       }
+    } else {
+      type = "_" + type;
     }
 
     var name = icons[i].dataset.name + type;
