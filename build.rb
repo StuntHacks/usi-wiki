@@ -1,6 +1,7 @@
 require "uglifier"
 require "mediawiki_api"
 require "dotenv"
+require "digest"
 
 begin
     Dotenv.load "../.env"
@@ -14,23 +15,65 @@ client = MediawikiApi::Client.new "https://spaceidle.game-vault.net/w/api.php"
 client.log_in "Stunthacks@IconBot", ENV["BOT_TOKEN"]
 
 svgs = []
-pngs = []
+enemies = []
 js = ""
 
 # svgs
 Dir.entries(".").each do |f|
     svgs.push f
     if f != "." and f != ".."
+        f = f.gsub(".png", "")
         split = f.split("_")
-        js += "icons_svgs[\"#{split[1].split(".")[0]}\"] = '#{File.read("./" + f).strip}';\n".gsub(' style="height: 512px; width: 512px;"', "").gsub('<?xml version="1.0" encoding="utf-8"?>', "")
+        markup = File.read("./" + f).strip
+        name = split[1]
+        tmp = "icons_svgs[\"#{name}\"] = '#{markup}';\n"
+        js += tmp.gsub(' style="height: 512px; width: 512px;"', "").gsub('<?xml version="1.0" encoding="utf-8"?>', "")
     end
 end
 
-# pngs
-Dir.entries("../png").each do |f|
-    pngs.push f
+# enemies
+puts "Verifying enemy PNGs..."
+upToDate = true
+Dir.entries("../png/enemies").each do |f|
+    enemies.push f
+    if f != "." and f != ".."
+        f = f.gsub(".png", "")
+        split = f.split("_")
+        name = split[0]
+        type = split[1]
+        if split.length == 1
+            combined = "#{name}"
+        else
+            combined = "#{name}_#{type}"
+        end
+        path = "../png/enemies/#{f}.png"
+        wikiPath = "Enemy_#{f}.png"
 
-    puts f
+        response = client.query titles: "File:#{wikiPath}", prop: "imageinfo", iiprop: "url|sha1"
+
+        pages = response.data["pages"]
+        page = pages.values.first
+
+        if page["imageinfo"] and !page.key?("missing")
+            if page.dig('imageinfo', 0, 'sha1') != Digest::SHA1.file(path).hexdigest
+                puts "Updating #{wikiPath}..."
+                client.delete_page wikiPath, "[BOT] Deleting outdated icon" unless local
+                client.upload_image wikiPath, path, "[BOT] Updating enemy icon", "ignorewarnings" unless local
+                upToDate = false
+            end
+        else
+            puts "Adding #{wikiPath}..."
+            client.upload_image wikiPath, path, "[BOT] Adding new enemy icon", false unless local
+            upToDate = false
+        end
+
+        markup = "<img src=\"#{}\" alt=\"#{type} #{name}\" />"
+        js += "enemy_pngs[\"#{name}\"] = '#{markup}';\n"
+    end
+end
+
+if upToDate
+    puts "Enemy PNGs are up to date."
 end
 
 # js
@@ -45,16 +88,7 @@ else
 end
 
 # icon showcase
-base = "=== Base Tiles ===
-<div class=\"icon-showcase\"><strong>Materials</strong>{{Icon|Materials|Class=base-icon mats}}{{C|<nowiki>{{Icon|Materials}}</nowiki>}}</div>
-<div class=\"icon-showcase\"><strong>Parts</strong>{{Icon|Parts|Class=base-icon parts}}{{C|<nowiki>{{Icon|Parts}}</nowiki>}}</div>
-<div class=\"icon-showcase\"><strong>Components</strong>{{Icon|Components|Class=base-icon comps}}{{C|<nowiki>{{Icon|Components}}</nowiki>}}</div>
-<div class=\"icon-showcase\"><strong>BaseBooster</strong>{{Icon|BaseBooster|Class=base-icon booster}}{{C|<nowiki>{{Icon|BaseBooster}}</nowiki>}}</div>
-<div class=\"icon-showcase\"><strong>DoubleBooster</strong>{{Icon|DoubleBooster|Class=base-icon double-booster}}{{C|<nowiki>{{Icon|DoubleBooster}}</nowiki>}}</div>
-<div class=\"icon-showcase\"><strong>DrainReducer</strong>{{Icon|DrainReducer|Class=base-icon drain-reducer}}{{C|<nowiki>{{Icon|DrainReducer}}</nowiki>}}</div>
-<div class=\"icon-showcase\"><strong>MatsBooster</strong>{{Icon|MatsBooster|Class=base-icon mats-booster}}{{C|<nowiki>{{Icon|MatsBooster}}</nowiki>}}</div>
-<div class=\"icon-showcase\"><strong>PartsBooster</strong>{{Icon|PartsBooster|Class=base-icon parts-booster}}{{C|<nowiki>{{Icon|PartsBooster}}</nowiki>}}</div>
-<div class=\"icon-showcase\"><strong>CompsBooster</strong>{{Icon|CompsBooster|Class=base-icon comps-booster}}{{C|<nowiki>{{Icon|CompsBooster}}</nowiki>}}</div>\n"
+base = File.read "../html/base_showcase.html"
 
 output = {
     :general => "",
@@ -64,7 +98,7 @@ output = {
     "Alien" => "=== Specimen & Alien Mats ===\n",
     :base => base,
     :enemies => "=== Enemies ===\n",
-    "UIIcon" => "=== Wiki UI Icons ===\n",
+    "UIIcon" => "=== Wiki & UI Icons ===\n",
 }
 
 svgs.each do |f|
@@ -89,13 +123,14 @@ svgs.each do |f|
     end
 end
 
-output["UIIcon"] += "<div class=\"icon-showcase\">" \
-"<strong>UISalvage</strong>" \
-"{{Icon|UISalvage}}{{C|<nowiki>{{Icon|UISalvage}}</nowiki>}}" \
+output["UIIcon"] +=
+"<div class=\"icon-showcase\">" \
+    "<strong>UISalvage</strong>" \
+    "{{Icon|UISalvage}}{{C|<nowiki>{{Icon|UISalvage}}</nowiki>}}" \
 "</div>
 <div class=\"icon-showcase\">" \
-"<strong>UIVoidMatter</strong>" \
-"{{Icon|UIVoidMatter}}{{C|<nowiki>{{Icon|UIVoidMatter}}</nowiki>}}" \
+    "<strong>UIVoidMatter</strong>" \
+    "{{Icon|UIVoidMatter}}{{C|<nowiki>{{Icon|UIVoidMatter}}</nowiki>}}" \
 "</div>"
 
 showcase = "== All Icons ==

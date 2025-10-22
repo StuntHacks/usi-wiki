@@ -7,6 +7,7 @@ function createNodeFromHTML(htmlString) {
 }
 
 var icons_svgs = new Array();
+var enemy_pngs = new Array();
 icons_svgs["UIVoidMatter"] =
   '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 96 96" enable-background="new 0 0 96 96" xml:space="preserve"><g id="Resources"><circle fill="#78888C" cx="48" cy="48" r="48"/><circle fill="#A1B6BB" cx="48" cy="48" r="40.9802589"/><circle fill="#DE532C" cx="48" cy="48" r="30.6410122"/></g></svg>';
 icons_svgs["UISalvage"] =
