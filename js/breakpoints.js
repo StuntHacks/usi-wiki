@@ -247,7 +247,7 @@ function initBreakpointCalculator() {
 
   boosterLevelInput.addEventListener("change", function () {
     var index = parseInt(boosterLevelInput.value);
-    if (index < 1) {
+    if (isNaN(index) || index < 1) {
       index = 1;
     }
     boosterLevelInput.value = index;
