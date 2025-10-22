@@ -238,8 +238,8 @@ function initBreakpointCalculator() {
   boosterLevelInput.addEventListener("change", function () {
     var index = parseInt(boosterLevelInput.value);
 
-    if (index < 0) {
-      boosterLevelInput.value = "0";
+    if (index < 1) {
+      boosterLevelInput.value = "1";
     }
   });
 
