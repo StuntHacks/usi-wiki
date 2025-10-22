@@ -35,7 +35,25 @@ function renderSVGs(selector) {
 function renderEnemies(selector) {
   var icons = document.querySelectorAll(selector !== undefined ? selector : ".icon.enemy-icon");
   for (var i = 0; i < icons.length; i++) {
-    var name = icons[i].dataset.name + "_" + icons[i].dataset.type;
+    var type = icons[i].dataset.type;
+
+    if (type === undefined || type === "") {
+      switch (icons[i].dataset.name) {
+        case "Capital":
+          type = "";
+          break;
+        case "Veiled":
+          type = "";
+          break;
+        default:
+          type = "_Hull";
+          break;
+      }
+    }
+
+    type = "_" + type;
+
+    var name = icons[i].dataset.name + type;
     if (enemy_pngs[name]) {
       var node = createNodeFromHTML(enemy_pngs[name]);
       icons[i].appendChild(node);
@@ -57,6 +75,8 @@ function init() {
   renderImages();
   // svgs
   renderSVGs();
+  // enemies
+  renderEnemies();
 
   // collapsible cores
   var cores = document.getElementsByClassName("core-name");
