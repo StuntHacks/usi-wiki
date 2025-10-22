@@ -15,9 +15,7 @@ icons_svgs["UISalvage"] =
 /* {ICON_PLACEHOLDER} */
 
 function renderSVGs(selector) {
-  var icons = document.querySelectorAll(
-    selector !== undefined ? selector : ".icon"
-  );
+  var icons = document.querySelectorAll(selector !== undefined ? selector : ".icon");
   for (var i = 0; i < icons.length; i++) {
     if (icons_svgs[icons[i].dataset.icon]) {
       var node = createNodeFromHTML(icons_svgs[icons[i].dataset.icon]);
@@ -29,6 +27,17 @@ function renderSVGs(selector) {
         }
       }
 
+      icons[i].appendChild(node);
+    }
+  }
+}
+
+function renderEnemies(selector) {
+  var icons = document.querySelectorAll(selector !== undefined ? selector : ".icon.enemy-icon");
+  for (var i = 0; i < icons.length; i++) {
+    var name = icons[i].dataset.name + "_" + icons[i].dataset.type;
+    if (enemy_pngs[name]) {
+      var node = createNodeFromHTML(enemy_pngs[name]);
       icons[i].appendChild(node);
     }
   }

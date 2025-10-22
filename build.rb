@@ -49,9 +49,9 @@ Dir.entries("../png/enemies").each do |f|
         end
         path = "../png/enemies/#{f}.png"
         wikiPath = "Enemy_#{f}.png"
+        changed = false
 
-        response = client.query titles: "File:#{wikiPath}", prop: "imageinfo", iiprop: "url|sha1"
-
+        response = client.query titles: "File:#{wikiPath}", prop: "imageinfo", iiprop: "sha1|url"
         pages = response.data["pages"]
         page = pages.values.first
 
@@ -61,15 +61,25 @@ Dir.entries("../png/enemies").each do |f|
                 client.delete_page "File:#{wikiPath}", "[BOT] Deleting outdated icon" unless local
                 client.upload_image wikiPath, path, "[BOT] Updating enemy icon", "ignorewarnings" unless local
                 upToDate = false
+                changed = true
             end
         else
             puts "Adding #{wikiPath}..."
             client.upload_image wikiPath, path, "[BOT] Adding new enemy icon", false unless local
             upToDate = false
+            changed = true
         end
 
-        markup = "<img src=\"#{}\" alt=\"#{type} #{name}\" />"
-        js += "enemy_pngs[\"#{name}\"] = '#{markup}';\n"
+        if changed
+            response = client.query titles: "File:#{wikiPath}", prop: "imageinfo", iiprop: "url"
+        end
+
+        pages = response.data["pages"]
+        page = pages.values.first
+        url = page.dig('imageinfo', 0, 'url')
+
+        markup = "<img src=\"#{url}\" alt=\"#{type} #{name}\" />"
+        js += "enemy_pngs[\"#{combined}\"] = '#{markup}';\n"
     end
 end
 
