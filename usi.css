@@ -2254,6 +2254,10 @@ button:active {
     margin-top: 1rem;
 }
 
+#booster-level {
+    margin-bottom: 1.6rem;
+}
+
 #base-6-breakpoints > div:not(.template-info-box) {
     display: flex;
     flex-direction: row;
