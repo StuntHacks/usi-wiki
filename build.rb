@@ -174,3 +174,21 @@ if old.body != css.strip
 else
     puts "CSS file is up to date."
 end
+
+# tools
+upToDate = true
+Dir.entries("../tools").each do |f|
+    if f != "." and f != ".."
+        name = f.split(".")[0]
+        content = File.read("../tools/#{f}")
+        old = client.get_wikitext "Tool:#{name}"
+        if old.body != content.strip
+            puts "Updating Tool:#{f} on wiki..."
+            client.action(:edit, title: "Tool:#{name}", text: content, summary: "[BOT] Updating to newest #{f}", bot: true)
+        end
+    end
+end
+
+if upToDate
+    puts "Tools are up to date."  
+end
