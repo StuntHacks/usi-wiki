@@ -213,8 +213,10 @@ function initBreakpointCalculator() {
 
     if (isNaN(index) || index < 0 || !Number.isInteger(index)) {
         layoutIndexInput.value = "0";
+        index = 0;
     } else if (index > 9) {
         layoutIndexInput.value = "9";
+        index = 9;
     }
 
     layoutIndexPreview.className = "";
