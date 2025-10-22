@@ -2,7 +2,9 @@
 {{Backlink|Bases|bases}}
 {{Backlink|Guide:Contents|all guides}}
 <div id="base-6-breakpoints" class="flexbox">
-Finds the next 5 material booster breakpoints.
+Finds the next 5 material booster breakpoints. Requires some progress in Base 6 before being useful.
+
+Select your mats layout from the index, enter your mats level, and you will get a list of when to purchase a booster level instead of just levelling mats.
 
 <div id="booster-level" data-text="Current Mats Booster Level:"></div>
 <div id="layout-input"></div>
