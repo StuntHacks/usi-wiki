@@ -31,7 +31,7 @@ function getMBCost(levelMB, buildingCostDivider) {
 
 function getMatIncome(levelMP, matMult, prodMult) {
   matMult = matMult !== undefined ? matMult : 1.0;
-  buildingCostDivider = buildingCostDivider !== undefined ? buildingCostDivider : 1.0;
+  prodMult = prodMult !== undefined ? prodMult : 1.0;
   var curLevel = Math.max(levelMP, 1);
   return (
     matMult * prodMult * roundToN(1 + Math.pow(Mat_Income_Pow, curLevel - 1), 2)
