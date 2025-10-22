@@ -1,11 +1,5 @@
 // - - - This file MUST be valid ES5 - otherwise the wiki won't accept it and won't render it! - - -
 // - - - var instead of let, no for-of loops, semicolons after every statement, etc
-function createNodeFromHTML(htmlString) {
-  var div = document.createElement("div");
-  div.innerHTML = htmlString.trim();
-  return div.firstChild;
-}
-
 var icons_svgs = new Array();
 var enemy_pngs = new Array();
 icons_svgs["UIVoidMatter"] =
@@ -13,6 +7,15 @@ icons_svgs["UIVoidMatter"] =
 icons_svgs["UISalvage"] =
   '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 96 96" enable-background="new 0 0 96 96" xml:space="preserve"><g id="Resources"><path fill="#78888C" d="M76,96H20C9,96,0,87,0,76V20C0,9,9,0,20,0h56c11,0,20,9,20,20v56C96,87,87,96,76,96z"/><path fill="#A1B6BB" d="M74.6252365,91.4533997h-53.250473c-9.2554874,0-16.8281593-7.5726776-16.8281593-16.8281631v-53.250473c0-9.2554874,7.5726719-16.8281593,16.8281593-16.8281593h53.250473c9.2554855,0,16.8281631,7.5726719,16.8281631,16.8281593v53.250473C91.4533997,83.880722,83.880722,91.4533997,74.6252365,91.4533997z"/><rect x="13.8840675" y="13.8840675" fill="#BDD6DB" width="68.2318649" height="68.2318649"/><rect x="20.4385815" y="20.4385815" fill="#AC3939" width="55.1228371" height="55.1228371"/><line fill="none" stroke="#BDD6DB" stroke-width="11" stroke-miterlimit="10" x1="18.7990608" y1="77.200943" x2="77.200943" y2="18.7990608"/></g></svg>';
 /* {ICON_PLACEHOLDER} */
+
+/* {JS_PLACEHOLDER} */
+
+// main usi.js
+function createNodeFromHTML(htmlString) {
+  var div = document.createElement("div");
+  div.innerHTML = htmlString.trim();
+  return div.firstChild;
+}
 
 function renderSVGs(selector) {
   var icons = document.querySelectorAll(selector !== undefined ? selector : ".icon");
@@ -77,6 +80,11 @@ function init() {
   renderSVGs();
   // enemies
   renderEnemies();
+
+  var breakpointCalculator = document.getElementById("base-6-breakpoints");
+  if (breakpointCalculator) {
+    initBreakpointCalculator(breakpointCalculator);
+  }
 
   // collapsible cores
   var cores = document.getElementsByClassName("core-name");
