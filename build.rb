@@ -57,7 +57,7 @@ Dir.entries("../png/enemies").each do |f|
         if page["imageinfo"] and !page.key?("missing")
             if page.dig('imageinfo', 0, 'sha1') != Digest::SHA1.file(path).hexdigest
                 puts "Updating #{wikiPath}..."
-                client.delete_page wikiPath, "[BOT] Deleting outdated icon" unless local
+                client.delete_page "File:#{wikiPath}", "[BOT] Deleting outdated icon" unless local
                 client.upload_image wikiPath, path, "[BOT] Updating enemy icon", "ignorewarnings" unless local
                 upToDate = false
             end
