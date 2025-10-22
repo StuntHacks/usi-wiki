@@ -51,8 +51,6 @@ function renderEnemies(selector) {
       }
     }
 
-    type = "_" + type;
-
     var name = icons[i].dataset.name + type;
     if (enemy_pngs[name]) {
       var node = createNodeFromHTML(enemy_pngs[name]);
