@@ -238,7 +238,6 @@ function initBreakpointCalculator() {
     layoutIndexPreview.appendChild(prevLayoutButton);
     layoutIndexPreview.appendChild(nextLayoutButton);
 
-    updateLayout();
     function changeLayout(delta) {
         var index = parseInt(layoutIndexInput.value);
         index += delta;
