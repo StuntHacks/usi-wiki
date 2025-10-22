@@ -10,3 +10,4 @@ Finds the next 5 material booster breakpoints.
 <div id="calculate" data-text="Find Breakpoints"></div>
 <div id="output"></div>
 </div>
+{{DISPLAYTITLE:Base 6 Breakpoint Calculator}}
