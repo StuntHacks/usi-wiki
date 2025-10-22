@@ -14,7 +14,8 @@ function roundToN(number, numDecimalPlaces) {
 }
 
 function getMPCost(levelMP, buildingCostDivider) {
-  buildingCostDivider = buildingCostDivider !== undefined ? buildingCostDivider : 1.0;
+  buildingCostDivider =
+    buildingCostDivider !== undefined ? buildingCostDivider : 1.0;
   var curLevel = Math.max(levelMP, 1);
   return (
     (MP_Cost_Mult * Math.pow(MP_Cost_Pow, curLevel - 1)) / buildingCostDivider
@@ -22,7 +23,8 @@ function getMPCost(levelMP, buildingCostDivider) {
 }
 
 function getMBCost(levelMB, buildingCostDivider) {
-  buildingCostDivider = buildingCostDivider !== undefined ? buildingCostDivider : 1.0;
+  buildingCostDivider =
+    buildingCostDivider !== undefined ? buildingCostDivider : 1.0;
   var curLevel = Math.max(levelMB, 1);
   return (
     (MB_Cost_Mult * Math.pow(MB_Cost_Pow, curLevel - 1)) / buildingCostDivider
@@ -211,17 +213,25 @@ function initBreakpointCalculator() {
   function updateLayout() {
     var index = parseFloat(layoutIndexInput.value);
 
-    if (isNaN(index) || index < 0 || !Number.isInteger(index)) {
-        layoutIndexInput.value = "0";
-        index = 0;
+    if (isNaN(index)) {
+      layoutIndexInput.value = "0";
+      index = 0;
+    } else if (!Number.isInteger(index)) {
+      index = parseInt(index);
+      layoutIndexInput.value = index;
+    }
+
+    if (index < 0) {
+      layoutIndexInput.value = "0";
+      index = 0;
     } else if (index > 9) {
-        layoutIndexInput.value = "9";
-        index = 9;
+      layoutIndexInput.value = "9";
+      index = 9;
     }
 
     layoutIndexPreview.className = "";
     layoutIndexPreview.classList.add("layout");
-    layoutIndexPreview.classList.add("l" + parseInt(index));
+    layoutIndexPreview.classList.add("l" + index);
   }
 
   // layout index
