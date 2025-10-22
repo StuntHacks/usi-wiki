@@ -33,7 +33,7 @@ function renderSVGs(selector) {
 }
 
 function renderEnemies(selector) {
-  var icons = document.querySelectorAll(selector !== undefined ? selector : ".icon.enemy-icon");
+  var icons = document.querySelectorAll(selector !== undefined ? selector : ".enemy-icon");
   for (var i = 0; i < icons.length; i++) {
     var type = icons[i].dataset.type;
 

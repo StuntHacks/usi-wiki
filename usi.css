@@ -543,43 +543,56 @@ pre {
     background: #FFF;
 }
 
-.icon.inline {
+.icon.inline,
+.enemy-icon.inline {
     --size: 1.4rem;
     margin-right: 5px;
 }
 
-.icon.inline svg {
+.icon.inline svg,
+.icon.inline img {
     top: -1px;
     vertical-align: middle;
 }
 
-.icon.tiny {
+.icon.tiny,
+.enemy-icon.tiny {
     --size: 1.2rem;
 }
 
-.icon.small {
+.icon.small,
+.enemy-icon.small {
     --size: 50px;
 }
 
-.icon.medium {
+.icon.medium,
+.enemy-icon.medium {
     --size: 75px;
 }
 
-.icon.large {
+.icon.large,
+.enemy-icon.large {
     --size: 150px;
 }
 
-.icon.huge {
+.icon.huge,
+.enemy-icon.huge {
     --size: 200px;
 }
 
-.icon {
+.icon,
+.enemy-icon {
     --size: 100px;
     width: var(--size);
     height: var(--size);
     display: inline-block;
     fill: #FFF;
     position: relative;
+}
+
+.enemy-icon img {
+    width: var(--size);
+    height: auto;
 }
 
 .tile-icon .icon {
