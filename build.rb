@@ -184,7 +184,7 @@ Dir.entries("../tools").each do |f|
         old = client.get_wikitext "Tool:#{name}"
         if old.body != content.strip
             puts "Updating Tool:#{f} on wiki..."
-            client.action(:edit, title: "Tool:#{name}", text: content, summary: "[BOT] Updating to newest #{f}", bot: true)
+            client.action(:edit, title: "Tool:#{name}", text: content, summary: "[BOT] Updating to newest #{f}", bot: true) unless local
         end
     end
 end
