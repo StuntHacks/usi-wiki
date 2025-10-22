@@ -591,12 +591,12 @@ pre {
 }
 
 .enemy-icon {
-    height: auto;
+    width: auto;
 }
 
 .enemy-icon img {
-    width: var(--size);
-    height: auto;
+    height: var(--size);
+    width: auto;
 }
 
 .tile-icon .icon {
