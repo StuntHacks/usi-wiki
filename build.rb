@@ -24,7 +24,7 @@ Dir.entries(".").each do |f|
     if f != "." and f != ".."
         f = f.gsub(".svg", "")
         split = f.split("_")
-        markup = File.read("./" + f).strip
+        markup = File.read("./#{f}.svg").strip
         name = split[1]
         tmp = "icons_svgs[\"#{name}\"] = '#{markup}';\n"
         js += tmp.gsub(' style="height: 512px; width: 512px;"', "").gsub('<?xml version="1.0" encoding="utf-8"?>', "")
