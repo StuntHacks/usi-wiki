@@ -9,7 +9,8 @@ Dir.entries(".").each do |filename|
     "Green"   => "Mixed",
     "Black"   => "Hull",
     "DeepRed" => "Phasing",
-    "Purple"  => "MixedPhasing"
+    "Purple"  => "MixedPhasing",
+    "Teal"    => "Regen",
   }
 
   types = {
@@ -24,5 +25,5 @@ Dir.entries(".").each do |filename|
   }
 
   next if (types[number].nil? || classes[color].nil?)
-  File.rename filename, "Enemy_#{types[number]}_#{classes[color]}.png"
+  File.rename filename, "#{types[number]}_#{classes[color]}.png"
 end

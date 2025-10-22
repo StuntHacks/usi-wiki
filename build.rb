@@ -58,14 +58,14 @@ Dir.entries("../png/enemies").each do |f|
         if page["imageinfo"] and !page.key?("missing")
             if page.dig('imageinfo', 0, 'sha1') != Digest::SHA1.file(path).hexdigest
                 puts "Updating #{wikiPath}..."
-                client.delete_page "File:#{wikiPath}", "[BOT] Deleting outdated icon" unless local
-                client.upload_image wikiPath, path, "[BOT] Updating enemy icon", "ignorewarnings" unless local
+                client.delete_page("File:#{wikiPath}", "[BOT] Deleting outdated icon") unless local
+                client.upload_image(wikiPath, path, "[BOT] Updating enemy icon", "ignorewarnings") unless local
                 upToDate = false
                 changed = true
             end
         else
             puts "Adding #{wikiPath}..."
-            client.upload_image wikiPath, path, "[BOT] Adding new enemy icon", false unless local
+            client.upload_image(wikiPath, path, "[BOT] Adding new enemy icon", "ignorewarnings") unless local
             upToDate = false
             changed = true
         end
@@ -95,7 +95,7 @@ File.write("../usi.build.js", newJs)
 old = client.get_wikitext "MediaWiki:Common.js"
 if old.body != minified
     puts "Updating usi.js on wiki..."
-    client.action :edit, title: "MediaWiki:Common.js", text: minified, summary: "[BOT] Updating to newest usi.js", bot: true unless local
+    client.action(:edit, title: "MediaWiki:Common.js", text: minified, summary: "[BOT] Updating to newest usi.js", bot: true) unless local
 else
     puts "JS file is up to date."
 end
@@ -155,7 +155,7 @@ showcase = "== All Icons ==
 old = client.get_wikitext "Template:IconShowcase"
 if old.body != showcase
     puts "Updating icon showcase on wiki..."
-    client.action :edit, title: "Template:IconShowcase", text: showcase, summary: "[BOT] Updating to show newest icons", bot: true unless local
+    client.action(:edit, title: "Template:IconShowcase", text: showcase, summary: "[BOT] Updating to show newest icons", bot: true) unless local
 else
     puts "Icon showcase is up to date."
 end
@@ -165,7 +165,7 @@ css = File.read("../usi.css")
 old = client.get_wikitext "MediaWiki:Common.css"
 if old.body != css.strip
     puts "Updating usi.css on wiki..."
-    client.action :edit, title: "MediaWiki:Common.css", text: css, summary: "[BOT] Updating to newest usi.css", bot: true unless local
+    client.action(:edit, title: "MediaWiki:Common.css", text: css, summary: "[BOT] Updating to newest usi.css", bot: true) unless local
 else
     puts "CSS file is up to date."
 end

@@ -608,6 +608,10 @@ pre {
     align-items: center;
 }
 
+.icon-showcase .enemy-icon {
+    margin-bottom: 1.5rem;
+}
+
 .icon-showcase p {
     display: inline-flex;
     flex-direction: column;
