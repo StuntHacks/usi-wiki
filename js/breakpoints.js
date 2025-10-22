@@ -21,6 +21,24 @@ function initBreakpointCalculator() {
       '<div class="layout"></div>'
     );
 
+    layoutIndexInput.addEventListener("change", function () {
+        var index = parseInt(layoutIndexInput.value);
+
+        if (index < 0) {
+            index = 0;
+            layoutIndexInput.value = "0";
+        }
+
+        if (index > 9) {
+          index = 9;
+          layoutIndexInput.value = "9";
+        }
+
+        layoutIndexPreview.className = "";
+        layoutIndexPreview.classList.add("layout");
+        layoutIndexPreview.classList.add("l" + index);
+    });
+
     var boosterLevelInput = createNodeFromHTML(
         '<input type="number" id="CurMB" min="1" step="1" value="8" />'
     );
