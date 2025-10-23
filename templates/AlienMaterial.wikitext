@@ -1,4 +1,32 @@
-<includeonly><span class="synth-material">{{#ifeq:{{{1}}}|Biomaterial|{{Icon|Specimen|Class=alien-synth|Size=inline|NoBG=True|Text={{{Species|}}}}}|{{Icon|{{{1}}}|Class=alien-synth|Size=inline|NoBG=True|Text={{{Species|}}}}}}}T{{{Tier|1}}} {{{Species|}}} {{#ifeq:{{{1}}}|Biomaterial|Biomaterial}}{{#ifeq:{{{1}}}|Concentrate|Concentrate}}{{#ifeq:{{{1}}}|Evolucyst|Evolucyst}}{{#ifeq:{{{1}}}|Heliogenitor|Heliogenitor}}{{#ifeq:{{{1}}}|Memnolith|Memnolith}}{{#ifeq:{{{1}}}|Neurogelid|Neurogelid}}{{#ifeq:{{{1}}}|Phagemesh|Phagemesh}}{{#ifeq:{{{1}}}|PlasmonDistillation|Plasmon Distillation}}{{#ifeq:{{{1}}}|RefinedPlasmon|Refined Plasmon}}{{#ifeq:{{{1}}}|VerdantexOre|Verdantex Ore}}{{#ifeq:{{{1}}}|WraithquantCompound|Wraithquant Compound}}{{#ifeq:{{{1}}}|XyltaldarFiber|Xyltaldar Fiber}}{{#ifeq:{{{1}}}|YtthyrionAlloy|Ytthyrion Alloy}}{{#ifeq:{{{1}}}|ZephdanixCrystal|Zephdanix Crystal}}{{#ifeq:{{{1}}}|Cytovault|Cytovault}}{{#ifeq:{{{1}}}|Cryospindle|Cryospindle}}{{#ifeq:{{{1}}}|Spindlecore|Spindlecore}}{{#ifeq:{{{1}}}|Slurry|Slurry}}</span></includeonly><nowiki /><noinclude>
+<includeonly><span class="synth-material">
+{{#ifeq:{{{1}}}|Biomaterial|
+{{Icon|Specimen|Class=alien-synth|Size=inline|NoBG=True|Text={{{Species|}}}}}|
+{{Icon|{{{1}}}|Class=alien-synth|Size=inline|NoBG=True|Text={{{Species|}}}}}
+}}
+T{{{Tier|1}}} 
+{{{Species|}}} 
+{{#switch:{{{1}}}
+|Biomaterial=Biomaterial
+|Concentrate=Concentrate
+|Evolucyst=Evolucyst
+|Heliogenitor=Heliogenitor
+|Memnolith=Memnolith
+|Neurogelid=Neurogelid
+|Phagemesh=Phagemesh
+|PlasmonDistillation=Plasmon Distillation
+|RefinedPlasmon=Refined Plasmon
+|VerdantexOre=Verdantex Ore
+|WraithquantCompound=Wraithquant Compound
+|XyltaldarFiber=Xyltaldar Fiber
+|YtthyrionAlloy=Ytthyrion Alloy
+|ZephdanixCrystal=Zephdanix Crystal
+|Cytovault=Cytovault
+|Cryospindle=Cryospindle
+|Spindlecore=Spindlecore
+|Slurry=Slurry
+|#default={{{1}}}
+}}
+</span></includeonly><nowiki /><noinclude>
 Uses [[Internal:Icons#Specimen_.26_Alien_Mats|icon names]] to refer to synth materials, with a few exceptions:
 * ZYXVW Slurries simply use "Slurry" in combination with the {{C|Species}} paramater (uses the full name of the species)
 * Concentrate simply uses "Concentrate" in combination with the {{C|Species}} parameter (uses the Z, Y, X, V, or W instead of full name)

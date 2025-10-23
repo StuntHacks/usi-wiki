@@ -11,6 +11,7 @@ Dir.entries(".").each do |filename|
     "DeepRed" => "Phasing",
     "Purple"  => "MixedPhasing",
     "Teal"    => "Regen",
+    "Pink"    => "ShieldPhasing",
   }
 
   types = {
