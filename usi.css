@@ -2439,3 +2439,8 @@ button:active {
     display: flex;
     align-items: center;
 }
+
+/* hacky way to hide labels from toc */
+.toctext > span {
+    display: none;
+}
