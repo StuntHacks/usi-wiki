@@ -2423,3 +2423,13 @@ button:active {
 .layout {
     position: relative;
 }
+
+.label-template {
+    background-color: rgb(92 133 214 / 30%);
+    color: #7ca7fe;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.1rem;
+}
