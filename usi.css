@@ -2432,4 +2432,10 @@ button:active {
     font-weight: bold;
     font-style: italic;
     font-size: 1.1rem;
+    margin-left: 0.5rem;
+}
+
+.mw-headline:has(.label-template) {
+    display: flex;
+    align-items: center;
 }
