@@ -132,7 +132,7 @@ The following enemies are supported ('''please note that some enemies can have v
 * {{C|SkirmisherPlus}} {{EnemyInfo|SkirmisherPlus|Size=small}}
 * {{C|Sniper}} {{EnemyInfo|Sniper|Size=small}}
 * {{C|ChargeSkirmisher}} {{EnemyInfo|ChargeSkirmisher|Size=small}}
-* {{C|ShieldJuggernaut}} {{EnemyInfo|ShieldJuggernaut|Size=small}}
+* {{C|ShieldedJuggernaut}} {{EnemyInfo|ShieldedJuggernaut|Size=small}}
 * {{C|RegenFrigateSniper}} {{EnemyInfo|RegenFrigateSniper|Size=small}}
 * {{C|ShieldRegenFighter}} {{EnemyInfo|ShieldRegenFighter|Size=small}}
 * {{C|RegenJuggernaut}} {{EnemyInfo|RegenJuggernaut|Size=small}}
