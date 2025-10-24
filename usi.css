@@ -560,6 +560,11 @@ pre {
     --size: 1.2rem;
 }
 
+.icon.xsmall,
+.enemy-icon.xsmall {
+    --size: 30px;
+}
+
 .icon.small,
 .enemy-icon.small {
     --size: 50px;

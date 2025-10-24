@@ -24,8 +24,9 @@
 |MegaJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Regen|Size={{{Size|}}}}}|Mega Juggernaut|Large enemy with rapid shield regen}}
 |BeamFighter={{TooltipIcon|{{Enemy|Frigate|Shield|Size={{{Size|}}}}}|Beam Fighter|Fighter with beam weapon that prevents shields from recharging}}
 |BeamSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Shield|Size={{{Size|}}}}}|Beam Skirmisher|Small fighter with beam weapon that prevents shields from recharging}}
+|BeamSkirmisherPlus={{TooltipIcon|{{Enemy|Sniper|Shield|Size={{{Size|}}}}}|Beam Skirmisher +|Small fighter with beam weapon that prevents shields from recharging}}
 |ShieldBeamSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Shield|Size={{{Size|}}}}}|Shield Beam Skirmisher|Small fighter with beam weapon that prevents shields from recharging}}
-|ShieldJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Regen|Size={{{Size|}}}}}|Shield Juggernaut|Large shielded enemy}}
+|ShieldedJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Regen|Size={{{Size|}}}}}|Shield Juggernaut|Large shielded enemy}}
 |RegenSniper={{TooltipIcon|{{Enemy|Sniper|Regen|Size={{{Size|}}}}}|Shielded Sniper|Sniper with high shields and recovery}}
 |DualLaserFighter={{TooltipIcon|{{Enemy|Fighter|Shield|Size={{{Size|}}}}}|Dual Laser Fighter|Dual laser fighter}}
 |DualLaserFighterPlus={{TooltipIcon|{{Enemy|Fighter|Shield|Size={{{Size|}}}}}|Dual Laser Fighter +|Dual laser fighter}}
@@ -39,7 +40,7 @@
 |HullJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Hull|Size={{{Size|}}}}}|Hull Juggernaut|Large high damage enemy}}
 |HullLaserJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Hull|Size={{{Size|}}}}}|Hull Laser Juggernaut|Large high damage enemy with several lasers}}
 |SniperPlus={{TooltipIcon|{{Enemy|Sniper|Hull|Size={{{Size|}}}}}|Sniper +|Sniper with long range}}
-|ArmoredSniperPlus={{TooltipIcon|{{Enemy|Sniper|Hull|Size={{{Size|}}}}}|Armored Sniper +|Armored Sniper with long range}}
+|ArmoredSniperPlus={{TooltipIcon|{{Enemy|Sniper|Armor|Size={{{Size|}}}}}|Armored Sniper +|Armored Sniper with long range}}
 |MixedRegenFighter={{TooltipIcon|{{Enemy|Fighter|Mixed|Size={{{Size|}}}}}|Armored Shield Regen Fighter|Fighter with armor, reduced damage taken from lasers and fast regen}}
 |BeamFighterPlus={{TooltipIcon|{{Enemy|Frigate|Shield|Size={{{Size|}}}}}|Beam Fighter +|Fighter with beam weapon that prevents shields from recharging}}
 |BeamJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Hull|Size={{{Size|}}}}}|Beam Juggernaut|Juggernaut with beam weapon that prevents shields from recharging}}
@@ -80,8 +81,8 @@
 |ArmoredFighterPlus={{TooltipIcon|{{Enemy|Fighter|Armor|Size={{{Size|}}}}}|Armored Fighter +|Armored fighter}}
 |PhasingArmoredRegenFighter={{TooltipIcon|{{Enemy|Fighter|MixedPhasing|Size={{{Size|}}}}}|Phasing Armored Regen Fighter|Phasing fighter with armor and fast regen shields}}
 |PhasingArmoredSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|MixedPhasing|Size={{{Size|}}}}}|Phasing Armored Skirmisher|Phasing skirmisher with armor and fast regen shields}}
-|PhasingArmoredRegenJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Mixed|Size={{{Size|}}}}}|Phasing Armored Regen Juggernaut|Phasing Armored Regen Large high damage enemy with several lasers}}
-|PhasingArmoredRegenHugeWeapon={{TooltipIcon|{{Enemy|Juggernaut|Mixed|Size={{{Size|}}}}}|Phasing Armored Regen Huge Weapon|Phasing large armored regen enemy with a massive weapon and other armaments}}
+|PhasingArmoredRegenJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|MixedPhasing|Size={{{Size|}}}}}|Phasing Armored Regen Juggernaut|Phasing Armored Regen Large high damage enemy with several lasers}}
+|PhasingArmoredRegenHugeWeapon={{TooltipIcon|{{Enemy|Juggernaut|MixedPhasing|Size={{{Size|}}}}}|Phasing Armored Regen Huge Weapon|Phasing large armored regen enemy with a massive weapon and other armaments}}
 |ShieldedSniperPlus={{TooltipIcon|{{Enemy|Sniper|Regen|Size={{{Size|}}}}}|Shielded Sniper +|Sniper with high shields and recovery}}
 |HullCarrier={{TooltipIcon|{{Enemy|Frigate|Hull|Size={{{Size|}}}}}|Hull Carrier|Carrier that periodically launches a wave of fighters}}
 |HullHuge={{TooltipIcon|{{Enemy|Juggernaut|Hull|Size={{{Size|}}}}}|Hull Huge|Huge Enemy}}
@@ -104,7 +105,7 @@
 |BarrierShieldRegenCarrier={{TooltipIcon|{{Enemy|Frigate|Barrier|Size={{{Size|}}}}}|Barrier Shield Regen Carrier|Barrier shield regen carrier with mix}}
 |BarrierRegenHuge={{TooltipIcon|{{Enemy|Juggernaut|Barrier|Size={{{Size|}}}}}|Barrier Regen Huge|Barrier regen huge enemy}}
 |BarrierArmoredRegenFighter={{TooltipIcon|{{Enemy|Fighter|Barrier|Size={{{Size|}}}}}|Barrier Armored Regen Fighter|Barrier fighter with armor and regen}}
-|BarrierArmoredRegenCarrier={{TooltipIcon|{{Enemy|Frigate|Barrier|Size={{{Size|}}}}}|Barrier Armored Regen Carrier|barrier armored regen carrier with mix}}
+|BarrierArmoredRegenCarrier={{TooltipIcon|{{Enemy|Frigate|Barrier|Size={{{Size|}}}}}|Barrier Armored Regen Carrier|Barrier armored regen carrier with mix}}
 |LargeBarrierArmoredRegenCarrier={{TooltipIcon|{{Enemy|Frigate|Barrier|Size={{{Size|}}}}}|Large Barrier Armored Regen Carrier|Large barrier armored regen carrier with mix}}
 |HugeBarrierPhasingCarrier={{TooltipIcon|{{Enemy|Frigate|Barrier|Size={{{Size|}}}}}|Huge Barrier Phasing Carrier|Huge barrier phasing carrier}}
 |BarrierPhasingFighter={{TooltipIcon|{{Enemy|Fighter|Barrier|Size={{{Size|}}}}}|Barrier Phasing Fighter|Barrier phasing fighter}}
@@ -113,116 +114,118 @@
 }}
 </includeonly>
 <nowiki/>
+<noinclude>
 Renders the corresponding enemy icon and their in-game description in a tooltip. The {{C|Size}} parameter is supported.
 
 The following enemies are supported ('''please note that some enemies can have vastly different names despite looking identical'''):
-* {{C|NAME}}
-* {{C|Fighter}} {{EnemyInfo|Fighter|Size=Small}}
-* {{C|ShieldBoss}} {{EnemyInfo|ShieldBoss|Size=Small}}
-* {{C|FrigateBoss}} {{EnemyInfo|FrigateBoss|Size=Small}}
-* {{C|HullBoss}} {{EnemyInfo|HullBoss|Size=Small}}
-* {{C|RegenBoss}} {{EnemyInfo|RegenBoss|Size=Small}}
-* {{C|ArmorBoss}} {{EnemyInfo|ArmorBoss|Size=Small}}
-* {{C|MixedBoss}} {{EnemyInfo|MixedBoss|Size=Small}}
-* {{C|PhasingBoss}} {{EnemyInfo|PhasingBoss|Size=Small}}
-* {{C|ShieldPhasingBoss}} {{EnemyInfo|ShieldPhasingBoss|Size=Small}}
-* {{C|Skirmisher}} {{EnemyInfo|Skirmisher|Size=Small}}
-* {{C|ShieldedFighter}} {{EnemyInfo|ShieldedFighter|Size=Small}}
-* {{C|SkirmisherPlus}} {{EnemyInfo|SkirmisherPlus|Size=Small}}
-* {{C|Sniper}} {{EnemyInfo|Sniper|Size=Small}}
-* {{C|ChargeSkirmisher}} {{EnemyInfo|ChargeSkirmisher|Size=Small}}
-* {{C|ShieldJuggernaut}} {{EnemyInfo|ShieldJuggernaut|Size=Small}}
-* {{C|RegenFrigateSniper}} {{EnemyInfo|RegenFrigateSniper|Size=Small}}
-* {{C|ShieldRegenFighter}} {{EnemyInfo|ShieldRegenFighter|Size=Small}}
-* {{C|RegenJuggernaut}} {{EnemyInfo|RegenJuggernaut|Size=Small}}
-* {{C|DualLaserSkirmisher}} {{EnemyInfo|DualLaserSkirmisher|Size=Small}}
-* {{C|Swarmer}} {{EnemyInfo|Swarmer|Size=Small}}
-* {{C|ShieldRegenSniper}} {{EnemyInfo|ShieldRegenSniper|Size=Small}}
-* {{C|MegaJuggernaut}} {{EnemyInfo|MegaJuggernaut|Size=Small}}
-* {{C|BeamFighter}} {{EnemyInfo|BeamFighter|Size=Small}}
-* {{C|BeamSkirmisher}} {{EnemyInfo|BeamSkirmisher|Size=Small}}
-* {{C|ShieldBeamSkirmisher}} {{EnemyInfo|ShieldBeamSkirmisher|Size=Small}}
-* {{C|ShieldJuggernaut}} {{EnemyInfo|ShieldJuggernaut|Size=Small}}
-* {{C|RegenSniper}} {{EnemyInfo|RegenSniper|Size=Small}}
-* {{C|DualLaserFighter}} {{EnemyInfo|DualLaserFighter|Size=Small}}
-* {{C|DualLaserFighterPlus}} {{EnemyInfo|DualLaserFighterPlus|Size=Small}}
-* {{C|ShieldlessDualLaserFighter}} {{EnemyInfo|ShieldlessDualLaserFighter|Size=Small}}
-* {{C|ArmoredFighter}} {{EnemyInfo|ArmoredFighter|Size=Small}}
-* {{C|ArmoredSkirmisher}} {{EnemyInfo|ArmoredSkirmisher|Size=Small}}
-* {{C|ArmoredJuggernaut}} {{EnemyInfo|ArmoredJuggernaut|Size=Small}}
-* {{C|ShieldedFighterRegen}} {{EnemyInfo|ShieldedFighterRegen|Size=Small}}
-* {{C|ShieldedSkirmisherRegen}} {{EnemyInfo|ShieldedSkirmisherRegen|Size=Small}}
-* {{C|MixedFighter}} {{EnemyInfo|MixedFighter|Size=Small}}
-* {{C|HullJuggernaut}} {{EnemyInfo|HullJuggernaut|Size=Small}}
-* {{C|HullLaserJuggernaut}} {{EnemyInfo|HullLaserJuggernaut|Size=Small}}
-* {{C|SniperPlus}} {{EnemyInfo|SniperPlus|Size=Small}}
-* {{C|ArmoredSniperPlus}} {{EnemyInfo|ArmoredSniperPlus|Size=Small}}
-* {{C|MixedRegenFighter}} {{EnemyInfo|MixedRegenFighter|Size=Small}}
-* {{C|BeamFighterPlus}} {{EnemyInfo|BeamFighterPlus|Size=Small}}
-* {{C|BeamJuggernaut}} {{EnemyInfo|BeamJuggernaut|Size=Small}}
-* {{C|ShieldSkirmisher}} {{EnemyInfo|ShieldSkirmisher|Size=Small}}
-* {{C|ArmoredSwarmer}} {{EnemyInfo|ArmoredSwarmer|Size=Small}}
-* {{C|ArmoredJuggernaut}} {{EnemyInfo|ArmoredJuggernaut|Size=Small}}
-* {{C|ArmoredRegenFighter}} {{EnemyInfo|ArmoredRegenFighter|Size=Small}}
-* {{C|ShieldedSniper}} {{EnemyInfo|ShieldedSniper|Size=Small}}
-* {{C|ArmoredRegenSniper}} {{EnemyInfo|ArmoredRegenSniper|Size=Small}}
-* {{C|ArmoredRegenSkirmisher}} {{EnemyInfo|ArmoredRegenSkirmisher|Size=Small}}
-* {{C|ArmoredRegenJuggernaut}} {{EnemyInfo|ArmoredRegenJuggernaut|Size=Small}}
-* {{C|ShieldFighterPlus}} {{EnemyInfo|ShieldFighterPlus|Size=Small}}
-* {{C|ShieldChargeSkirmisher}} {{EnemyInfo|ShieldChargeSkirmisher|Size=Small}}
-* {{C|ShieldSwarmer}} {{EnemyInfo|ShieldSwarmer|Size=Small}}
-* {{C|ArmoredFrigateJuggernaut}} {{EnemyInfo|ArmoredFrigateJuggernaut|Size=Small}}
-* {{C|HullBigWeapon}} {{EnemyInfo|HullBigWeapon|Size=Small}}
-* {{C|HullFighterPlus}} {{EnemyInfo|HullFighterPlus|Size=Small}}
-* {{C|HullSkirmisherPlus}} {{EnemyInfo|HullSkirmisherPlus|Size=Small}}
-* {{C|HullHugeWeaponPlatform}} {{EnemyInfo|HullHugeWeaponPlatform|Size=Small}}
-* {{C|ShieldedSniperHugeWeapon}} {{EnemyInfo|ShieldedSniperHugeWeapon|Size=Small}}
-* {{C|HullSwarmer}} {{EnemyInfo|HullSwarmer|Size=Small}}
-* {{C|ArmoredSkirmisherHugeWeapon}} {{EnemyInfo|ArmoredSkirmisherHugeWeapon|Size=Small}}
-* {{C|ShieldBigWeapon}} {{EnemyInfo|ShieldBigWeapon|Size=Small}}
-* {{C|ArmorBigWeapon}} {{EnemyInfo|ArmorBigWeapon|Size=Small}}
-* {{C|ArmoredRegenHugeWeaponPlatform}} {{EnemyInfo|ArmoredRegenHugeWeaponPlatform|Size=Small}}
-* {{C|PhaseFighter}} {{EnemyInfo|PhaseFighter|Size=Small}}
-* {{C|PhaseSkirmisher}} {{EnemyInfo|PhaseSkirmisher|Size=Small}}
-* {{C|PhaseJuggernaut}} {{EnemyInfo|PhaseJuggernaut|Size=Small}}
-* {{C|ArmoredRegenFighterPlus}} {{EnemyInfo|ArmoredRegenFighterPlus|Size=Small}}
-* {{C|ArmoredRegenSkirmisherPlus}} {{EnemyInfo|ArmoredRegenSkirmisherPlus|Size=Small}}
-* {{C|PhaseShieldFighter}} {{EnemyInfo|PhaseShieldFighter|Size=Small}}
-* {{C|PhasingShieldBeamBig}} {{EnemyInfo|PhasingShieldBeamBig|Size=Small}}
-* {{C|PhasingBeamSkirmisher}} {{EnemyInfo|PhasingBeamSkirmisher|Size=Small}}
-* {{C|HullSwarmerPlus}} {{EnemyInfo|HullSwarmerPlus|Size=Small}}
-* {{C|HullSniperPlus}} {{EnemyInfo|HullSniperPlus|Size=Small}}
-* {{C|ShieldHugeWeaponPlatform}} {{EnemyInfo|ShieldHugeWeaponPlatform|Size=Small}}
-* {{C|PhaseSwarmerHugeWeapon}} {{EnemyInfo|PhaseSwarmerHugeWeapon|Size=Small}}
-* {{C|ArmoredFighterPlus}} {{EnemyInfo|ArmoredFighterPlus|Size=Small}}
-* {{C|PhasingArmoredRegenFighter}} {{EnemyInfo|PhasingArmoredRegenFighter|Size=Small}}
-* {{C|PhasingArmoredSkirmisher}} {{EnemyInfo|PhasingArmoredSkirmisher|Size=Small}}
-* {{C|PhasingArmoredRegenJuggernaut}} {{EnemyInfo|PhasingArmoredRegenJuggernaut|Size=Small}}
-* {{C|PhasingArmoredRegenHugeWeapon}} {{EnemyInfo|PhasingArmoredRegenHugeWeapon|Size=Small}}
-* {{C|ShieldedSniperPlus}} {{EnemyInfo|ShieldedSniperPlus|Size=Small}}
-* {{C|HullCarrier}} {{EnemyInfo|HullCarrier|Size=Small}}
-* {{C|HullHuge}} {{EnemyInfo|HullHuge|Size=Small}}
-* {{C|ShieldedSwarmCarrier}} {{EnemyInfo|ShieldedSwarmCarrier|Size=Small}}
-* {{C|ShieldedCarrierHugeWeapon}} {{EnemyInfo|ShieldedCarrierHugeWeapon|Size=Small}}
-* {{C|ShieldedBigWeapon}} {{EnemyInfo|ShieldedBigWeapon|Size=Small}}
-* {{C|ShieldedCarrier}} {{EnemyInfo|ShieldedCarrier|Size=Small}}
-* {{C|PhasingCarrierSnipers}} {{EnemyInfo|PhasingCarrierSnipers|Size=Small}}
-* {{C|PhasingCarrierPhasing}} {{EnemyInfo|PhasingCarrierPhasing|Size=Small}}
-* {{C|MixedCarrier}} {{EnemyInfo|MixedCarrier|Size=Small}}
-* {{C|PhasingSniper}} {{EnemyInfo|PhasingSniper|Size=Small}}
-* {{C|HighPhasingMixedCarrier}} {{EnemyInfo|HighPhasingMixedCarrier|Size=Small}}
-* {{C|ArmoredSwarmCarrier}} {{EnemyInfo|ArmoredSwarmCarrier|Size=Small}}
-* {{C|BarrierCarrier}} {{EnemyInfo|BarrierCarrier|Size=Small}}
-* {{C|BarrierHullFighter}} {{EnemyInfo|BarrierHullFighter|Size=Small}}
-* {{C|BarrierShieldedSwarmCarrier}} {{EnemyInfo|BarrierShieldedSwarmCarrier|Size=Small}}
-* {{C|BarrierShieldSwarmer}} {{EnemyInfo|BarrierShieldSwarmer|Size=Small}}
-* {{C|BarrierArmoredSniperCarrier}} {{EnemyInfo|BarrierArmoredSniperCarrier|Size=Small}}
-* {{C|BarrierArmoredSniper}} {{EnemyInfo|BarrierArmoredSniper|Size=Small}}
-* {{C|BarrierShieldRegenCarrier}} {{EnemyInfo|BarrierShieldRegenCarrier|Size=Small}}
-* {{C|BarrierRegenHuge}} {{EnemyInfo|BarrierRegenHuge|Size=Small}}
-* {{C|BarrierArmoredRegenFighter}} {{EnemyInfo|BarrierArmoredRegenFighter|Size=Small}}
-* {{C|BarrierArmoredRegenCarrier}} {{EnemyInfo|BarrierArmoredRegenCarrier|Size=Small}}
-* {{C|LargeBarrierArmoredRegenCarrier}} {{EnemyInfo|LargeBarrierArmoredRegenCarrier|Size=Small}}
-* {{C|HugeBarrierPhasingCarrier}} {{EnemyInfo|HugeBarrierPhasingCarrier|Size=Small}}
-* {{C|BarrierPhasingFighter}} {{EnemyInfo|BarrierPhasingFighter|Size=Small}}
-* {{C|BarrierArmorBig}} {{EnemyInfo|BarrierArmorBig|Size=Small}}
+* {{C|Fighter}} {{EnemyInfo|Fighter|Size=small}}
+* {{C|ShieldBoss}} {{EnemyInfo|ShieldBoss|Size=small}}
+* {{C|FrigateBoss}} {{EnemyInfo|FrigateBoss|Size=small}}
+* {{C|HullBoss}} {{EnemyInfo|HullBoss|Size=small}}
+* {{C|RegenBoss}} {{EnemyInfo|RegenBoss|Size=small}}
+* {{C|ArmorBoss}} {{EnemyInfo|ArmorBoss|Size=small}}
+* {{C|MixedBoss}} {{EnemyInfo|MixedBoss|Size=small}}
+* {{C|PhasingBoss}} {{EnemyInfo|PhasingBoss|Size=small}}
+* {{C|ShieldPhasingBoss}} {{EnemyInfo|ShieldPhasingBoss|Size=small}}
+* {{C|Skirmisher}} {{EnemyInfo|Skirmisher|Size=small}}
+* {{C|ShieldedFighter}} {{EnemyInfo|ShieldedFighter|Size=small}}
+* {{C|SkirmisherPlus}} {{EnemyInfo|SkirmisherPlus|Size=small}}
+* {{C|Sniper}} {{EnemyInfo|Sniper|Size=small}}
+* {{C|ChargeSkirmisher}} {{EnemyInfo|ChargeSkirmisher|Size=small}}
+* {{C|ShieldJuggernaut}} {{EnemyInfo|ShieldJuggernaut|Size=small}}
+* {{C|RegenFrigateSniper}} {{EnemyInfo|RegenFrigateSniper|Size=small}}
+* {{C|ShieldRegenFighter}} {{EnemyInfo|ShieldRegenFighter|Size=small}}
+* {{C|RegenJuggernaut}} {{EnemyInfo|RegenJuggernaut|Size=small}}
+* {{C|DualLaserSkirmisher}} {{EnemyInfo|DualLaserSkirmisher|Size=small}}
+* {{C|Swarmer}} {{EnemyInfo|Swarmer|Size=small}}
+* {{C|ShieldRegenSniper}} {{EnemyInfo|ShieldRegenSniper|Size=small}}
+* {{C|MegaJuggernaut}} {{EnemyInfo|MegaJuggernaut|Size=small}}
+* {{C|BeamFighter}} {{EnemyInfo|BeamFighter|Size=small}}
+* {{C|BeamSkirmisher}} {{EnemyInfo|BeamSkirmisher|Size=small}}
+* {{C|BeamSkirmisher}} {{EnemyInfo|BeamSkirmisherPlus|Size=small}}
+* {{C|ShieldBeamSkirmisher}} {{EnemyInfo|ShieldBeamSkirmisher|Size=small}}
+* {{C|ShieldJuggernaut}} {{EnemyInfo|ShieldJuggernaut|Size=small}}
+* {{C|RegenSniper}} {{EnemyInfo|RegenSniper|Size=small}}
+* {{C|DualLaserFighter}} {{EnemyInfo|DualLaserFighter|Size=small}}
+* {{C|DualLaserFighterPlus}} {{EnemyInfo|DualLaserFighterPlus|Size=small}}
+* {{C|ShieldlessDualLaserFighter}} {{EnemyInfo|ShieldlessDualLaserFighter|Size=small}}
+* {{C|ArmoredFighter}} {{EnemyInfo|ArmoredFighter|Size=small}}
+* {{C|ArmoredSkirmisher}} {{EnemyInfo|ArmoredSkirmisher|Size=small}}
+* {{C|ArmoredJuggernaut}} {{EnemyInfo|ArmoredJuggernaut|Size=small}}
+* {{C|ShieldedFighterRegen}} {{EnemyInfo|ShieldedFighterRegen|Size=small}}
+* {{C|ShieldedSkirmisherRegen}} {{EnemyInfo|ShieldedSkirmisherRegen|Size=small}}
+* {{C|MixedFighter}} {{EnemyInfo|MixedFighter|Size=small}}
+* {{C|HullJuggernaut}} {{EnemyInfo|HullJuggernaut|Size=small}}
+* {{C|HullLaserJuggernaut}} {{EnemyInfo|HullLaserJuggernaut|Size=small}}
+* {{C|SniperPlus}} {{EnemyInfo|SniperPlus|Size=small}}
+* {{C|ArmoredSniperPlus}} {{EnemyInfo|ArmoredSniperPlus|Size=small}}
+* {{C|MixedRegenFighter}} {{EnemyInfo|MixedRegenFighter|Size=small}}
+* {{C|BeamFighterPlus}} {{EnemyInfo|BeamFighterPlus|Size=small}}
+* {{C|BeamJuggernaut}} {{EnemyInfo|BeamJuggernaut|Size=small}}
+* {{C|ShieldSkirmisher}} {{EnemyInfo|ShieldSkirmisher|Size=small}}
+* {{C|ArmoredSwarmer}} {{EnemyInfo|ArmoredSwarmer|Size=small}}
+* {{C|ArmoredJuggernaut}} {{EnemyInfo|ArmoredJuggernaut|Size=small}}
+* {{C|ArmoredRegenFighter}} {{EnemyInfo|ArmoredRegenFighter|Size=small}}
+* {{C|ShieldedSniper}} {{EnemyInfo|ShieldedSniper|Size=small}}
+* {{C|ArmoredRegenSniper}} {{EnemyInfo|ArmoredRegenSniper|Size=small}}
+* {{C|ArmoredRegenSkirmisher}} {{EnemyInfo|ArmoredRegenSkirmisher|Size=small}}
+* {{C|ArmoredRegenJuggernaut}} {{EnemyInfo|ArmoredRegenJuggernaut|Size=small}}
+* {{C|ShieldFighterPlus}} {{EnemyInfo|ShieldFighterPlus|Size=small}}
+* {{C|ShieldChargeSkirmisher}} {{EnemyInfo|ShieldChargeSkirmisher|Size=small}}
+* {{C|ShieldSwarmer}} {{EnemyInfo|ShieldSwarmer|Size=small}}
+* {{C|ArmoredFrigateJuggernaut}} {{EnemyInfo|ArmoredFrigateJuggernaut|Size=small}}
+* {{C|HullBigWeapon}} {{EnemyInfo|HullBigWeapon|Size=small}}
+* {{C|HullFighterPlus}} {{EnemyInfo|HullFighterPlus|Size=small}}
+* {{C|HullSkirmisherPlus}} {{EnemyInfo|HullSkirmisherPlus|Size=small}}
+* {{C|HullHugeWeaponPlatform}} {{EnemyInfo|HullHugeWeaponPlatform|Size=small}}
+* {{C|ShieldedSniperHugeWeapon}} {{EnemyInfo|ShieldedSniperHugeWeapon|Size=small}}
+* {{C|HullSwarmer}} {{EnemyInfo|HullSwarmer|Size=small}}
+* {{C|ArmoredSkirmisherHugeWeapon}} {{EnemyInfo|ArmoredSkirmisherHugeWeapon|Size=small}}
+* {{C|ShieldBigWeapon}} {{EnemyInfo|ShieldBigWeapon|Size=small}}
+* {{C|ArmorBigWeapon}} {{EnemyInfo|ArmorBigWeapon|Size=small}}
+* {{C|ArmoredRegenHugeWeaponPlatform}} {{EnemyInfo|ArmoredRegenHugeWeaponPlatform|Size=small}}
+* {{C|PhaseFighter}} {{EnemyInfo|PhaseFighter|Size=small}}
+* {{C|PhaseSkirmisher}} {{EnemyInfo|PhaseSkirmisher|Size=small}}
+* {{C|PhaseJuggernaut}} {{EnemyInfo|PhaseJuggernaut|Size=small}}
+* {{C|ArmoredRegenFighterPlus}} {{EnemyInfo|ArmoredRegenFighterPlus|Size=small}}
+* {{C|ArmoredRegenSkirmisherPlus}} {{EnemyInfo|ArmoredRegenSkirmisherPlus|Size=small}}
+* {{C|PhaseShieldFighter}} {{EnemyInfo|PhaseShieldFighter|Size=small}}
+* {{C|PhasingShieldBeamBig}} {{EnemyInfo|PhasingShieldBeamBig|Size=small}}
+* {{C|PhasingBeamSkirmisher}} {{EnemyInfo|PhasingBeamSkirmisher|Size=small}}
+* {{C|HullSwarmerPlus}} {{EnemyInfo|HullSwarmerPlus|Size=small}}
+* {{C|HullSniperPlus}} {{EnemyInfo|HullSniperPlus|Size=small}}
+* {{C|ShieldHugeWeaponPlatform}} {{EnemyInfo|ShieldHugeWeaponPlatform|Size=small}}
+* {{C|PhaseSwarmerHugeWeapon}} {{EnemyInfo|PhaseSwarmerHugeWeapon|Size=small}}
+* {{C|ArmoredFighterPlus}} {{EnemyInfo|ArmoredFighterPlus|Size=small}}
+* {{C|PhasingArmoredRegenFighter}} {{EnemyInfo|PhasingArmoredRegenFighter|Size=small}}
+* {{C|PhasingArmoredSkirmisher}} {{EnemyInfo|PhasingArmoredSkirmisher|Size=small}}
+* {{C|PhasingArmoredRegenJuggernaut}} {{EnemyInfo|PhasingArmoredRegenJuggernaut|Size=small}}
+* {{C|PhasingArmoredRegenHugeWeapon}} {{EnemyInfo|PhasingArmoredRegenHugeWeapon|Size=small}}
+* {{C|ShieldedSniperPlus}} {{EnemyInfo|ShieldedSniperPlus|Size=small}}
+* {{C|HullCarrier}} {{EnemyInfo|HullCarrier|Size=small}}
+* {{C|HullHuge}} {{EnemyInfo|HullHuge|Size=small}}
+* {{C|ShieldedSwarmCarrier}} {{EnemyInfo|ShieldedSwarmCarrier|Size=small}}
+* {{C|ShieldedCarrierHugeWeapon}} {{EnemyInfo|ShieldedCarrierHugeWeapon|Size=small}}
+* {{C|ShieldedBigWeapon}} {{EnemyInfo|ShieldedBigWeapon|Size=small}}
+* {{C|ShieldedCarrier}} {{EnemyInfo|ShieldedCarrier|Size=small}}
+* {{C|PhasingCarrierSnipers}} {{EnemyInfo|PhasingCarrierSnipers|Size=small}}
+* {{C|PhasingCarrierPhasing}} {{EnemyInfo|PhasingCarrierPhasing|Size=small}}
+* {{C|MixedCarrier}} {{EnemyInfo|MixedCarrier|Size=small}}
+* {{C|PhasingSniper}} {{EnemyInfo|PhasingSniper|Size=small}}
+* {{C|HighPhasingMixedCarrier}} {{EnemyInfo|HighPhasingMixedCarrier|Size=small}}
+* {{C|ArmoredSwarmCarrier}} {{EnemyInfo|ArmoredSwarmCarrier|Size=small}}
+* {{C|BarrierCarrier}} {{EnemyInfo|BarrierCarrier|Size=small}}
+* {{C|BarrierHullFighter}} {{EnemyInfo|BarrierHullFighter|Size=small}}
+* {{C|BarrierShieldedSwarmCarrier}} {{EnemyInfo|BarrierShieldedSwarmCarrier|Size=small}}
+* {{C|BarrierShieldSwarmer}} {{EnemyInfo|BarrierShieldSwarmer|Size=small}}
+* {{C|BarrierArmoredSniperCarrier}} {{EnemyInfo|BarrierArmoredSniperCarrier|Size=small}}
+* {{C|BarrierArmoredSniper}} {{EnemyInfo|BarrierArmoredSniper|Size=small}}
+* {{C|BarrierShieldRegenCarrier}} {{EnemyInfo|BarrierShieldRegenCarrier|Size=small}}
+* {{C|BarrierRegenHuge}} {{EnemyInfo|BarrierRegenHuge|Size=small}}
+* {{C|BarrierArmoredRegenFighter}} {{EnemyInfo|BarrierArmoredRegenFighter|Size=small}}
+* {{C|BarrierArmoredRegenCarrier}} {{EnemyInfo|BarrierArmoredRegenCarrier|Size=small}}
+* {{C|LargeBarrierArmoredRegenCarrier}} {{EnemyInfo|LargeBarrierArmoredRegenCarrier|Size=small}}
+* {{C|HugeBarrierPhasingCarrier}} {{EnemyInfo|HugeBarrierPhasingCarrier|Size=small}}
+* {{C|BarrierPhasingFighter}} {{EnemyInfo|BarrierPhasingFighter|Size=small}}
+* {{C|BarrierArmorBig}} {{EnemyInfo|BarrierArmorBig|Size=small}}
+</noinclude>
