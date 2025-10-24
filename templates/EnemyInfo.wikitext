@@ -26,7 +26,7 @@
 |BeamSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Shield|Size={{{Size|}}}}}|Beam Skirmisher|Small fighter with beam weapon that prevents shields from recharging}}
 |BeamSkirmisherPlus={{TooltipIcon|{{Enemy|Sniper|Shield|Size={{{Size|}}}}}|Beam Skirmisher +|Small fighter with beam weapon that prevents shields from recharging}}
 |ShieldBeamSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Shield|Size={{{Size|}}}}}|Shield Beam Skirmisher|Small fighter with beam weapon that prevents shields from recharging}}
-|ShieldedJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Regen|Size={{{Size|}}}}}|Shield Juggernaut|Large shielded enemy}}
+|ShieldedJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Shield|Size={{{Size|}}}}}|Shield Juggernaut|Large shielded enemy}}
 |RegenSniper={{TooltipIcon|{{Enemy|Sniper|Regen|Size={{{Size|}}}}}|Shielded Sniper|Sniper with high shields and recovery}}
 |DualLaserFighter={{TooltipIcon|{{Enemy|Fighter|Shield|Size={{{Size|}}}}}|Dual Laser Fighter|Dual laser fighter}}
 |DualLaserFighterPlus={{TooltipIcon|{{Enemy|Fighter|Shield|Size={{{Size|}}}}}|Dual Laser Fighter +|Dual laser fighter}}
