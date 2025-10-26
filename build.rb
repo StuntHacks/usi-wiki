@@ -32,11 +32,12 @@ Dir.entries(".").each do |f|
 end
 
 # enemies
-puts "Verifying enemy PNGs..."
+skipping = ENV["SKIP_ENEMY_PNGS"] == "true"
+puts "#{skipping ? "Skipping" : "Verifying"} enemy PNGs..."
 upToDate = true
 toPurge = []
 Dir.entries("../png/enemies").each do |f|
-    break if ENV["SKIP_ENEMY_PNGS"] == "true"
+    break if skipping
     enemies.push f
     if f != "." and f != ".."
         f = f.gsub(".png", "")
