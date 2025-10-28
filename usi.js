@@ -128,7 +128,7 @@ function init() {
   for (var i = 0; i < tabs.length; i++) {
     tabs[i].addEventListener("click", switchTab);
 
-    const expanded = window.location.hash.match(/(?:^|#)tab=([^&]+)/);
+    var expanded = window.location.hash.match(/(?:^|#)tab=([^&]+)/);
     var tabId = tabs[i].dataset.for;
     if (expanded && expanded[1] === tabId) {
       switchTab({ target: tabs[i] });
