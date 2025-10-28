@@ -75,7 +75,7 @@ function renderImages() {
 
 function scrollIntoView(element) {
   if (element) {
-    const position = element.getBoundingClientRect().top + window.scrollY;
+    var position = element.getBoundingClientRect().top + window.scrollY;
     window.scrollTo({
       top: position - 60,
       behavior: "smooth",
