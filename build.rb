@@ -177,7 +177,7 @@ else
 end
 
 # css
-css = Cssminify.compress(File.read("../usi.css"))
+css = CSSminify.compress(File.read("../usi.css"))
 old = client.get_wikitext "MediaWiki:Common.css"
 if old.body != css.strip
     puts "Updating usi.css on wiki..."
