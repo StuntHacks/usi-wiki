@@ -130,9 +130,16 @@ function init() {
 
     var expanded = window.location.hash.match(/(?:^|#)tab=([^&]+)/);
     var tabId = tabs[i].dataset.for;
+    var scrollTarget = tabs[i].dataset.scroll;
     if (expanded && expanded[1] === tabId) {
       switchTab({ target: tabs[i] });
-      scrollIntoView(tabs[i]);
+
+      if (scrollTarget) {
+        var id = scrollTarget.replace(" ", "_").replace("+", ".2B");
+        scrollIntoView(document.getElementById(id));
+      } else {
+        scrollIntoView(tabs[i]);
+      }
     }
   }
 
