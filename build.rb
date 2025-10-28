@@ -2,7 +2,7 @@ require "uglifier"
 require "mediawiki_api"
 require "dotenv"
 require "digest"
-require 'cssminify'
+require 'sassc'
 
 begin
     Dotenv.load "../.env"
@@ -178,8 +178,10 @@ end
 
 # css
 css = CSSminify.compress(File.read("../usi.css"))
+engine = SassC::Engine.new(css, style: :compressed)
+minified = engine.render
 old = client.get_wikitext "MediaWiki:Common.css"
-if old.body != css.strip
+if old.body != minified.strip
     puts "Updating usi.css on wiki..."
     client.action(:edit, title: "MediaWiki:Common.css", text: css, summary: "[BOT] Updating to newest usi.css", bot: true) unless local
 else
