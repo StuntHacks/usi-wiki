@@ -32,6 +32,7 @@
 |DualLaserFighter={{TooltipIcon|{{Enemy|Fighter|Shield|Size={{{Size|}}}}}|Dual Laser Fighter|Dual laser fighter}}
 |DualLaserFighterPlus={{TooltipIcon|{{Enemy|Fighter|Shield|Size={{{Size|}}}}}|Dual Laser Fighter +|Dual laser fighter}}
 |ShieldlessDualLaserFighter={{TooltipIcon|{{Enemy|Fighter|Hull|Size={{{Size|}}}}}|Shieldless Dual Laser Fighter|Shieldless dual laser fighter}}
+|ShieldlessSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Hull|Size={{{Size|}}}}}|Shieldless Skirmisher|Smaller more agile fighter with two lasers}}
 |ArmoredFighter={{TooltipIcon|{{Enemy|Fighter|Armor|Size={{{Size|}}}}}|Armored Fighter|Fighter with armor, reduced damage taken from lasers}}
 |ArmoredSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Armor|Size={{{Size|}}}}}|Armored Skirmisher|Skirmisher with armor, reduced damage taken from lasers}}
 |ArmoredJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Shield|Size={{{Size|}}}}}|Armored Juggernaut|Large armored enemy}}
@@ -151,6 +152,7 @@ The following enemies are supported ('''please note that some enemies can have v
 * {{C|DualLaserFighter}} {{EnemyInfo|DualLaserFighter|Size=small}}
 * {{C|DualLaserFighterPlus}} {{EnemyInfo|DualLaserFighterPlus|Size=small}}
 * {{C|ShieldlessDualLaserFighter}} {{EnemyInfo|ShieldlessDualLaserFighter|Size=small}}
+* {{C|ShieldlessSkirmisher}} {{EnemyInfo|ShieldlessSkirmisher|Size=small}}
 * {{C|ArmoredFighter}} {{EnemyInfo|ArmoredFighter|Size=small}}
 * {{C|ArmoredSkirmisher}} {{EnemyInfo|ArmoredSkirmisher|Size=small}}
 * {{C|ArmoredJuggernaut}} {{EnemyInfo|ArmoredJuggernaut|Size=small}}
