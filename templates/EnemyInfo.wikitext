@@ -20,11 +20,11 @@
 |RegenJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Regen|Size={{{Size|}}}}}|Juggernaut|Large enemy with rapid shield regen}}
 |DualLaserSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Hull|Size={{{Size|}}}}}|Dual Laser Skirmisher|Smaller more agile fighter with two lasers}}
 |Swarmer={{TooltipIcon|{{Enemy|Skirmisher|Hull|Size={{{Size|}}}}}|Swarmer|Tiny fighter comes in swarms}}
-|ShieldRegenSniper={{TooltipIcon|{{Enemy|Frigate|Regen|Size={{{Size|}}}}}|Shield Regen Sniper|Advanced fighter with rapid shield regen}}
+|ShieldRegenSniper={{TooltipIcon|{{Enemy|Sniper|Regen|Size={{{Size|}}}}}|Shield Regen Sniper|Advanced fighter with rapid shield regen}}
 |MegaJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Regen|Size={{{Size|}}}}}|Mega Juggernaut|Large enemy with rapid shield regen}}
 |BeamFighter={{TooltipIcon|{{Enemy|Frigate|Shield|Size={{{Size|}}}}}|Beam Fighter|Fighter with beam weapon that prevents shields from recharging}}
 |BeamSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Shield|Size={{{Size|}}}}}|Beam Skirmisher|Small fighter with beam weapon that prevents shields from recharging}}
-|BeamSkirmisherPlus={{TooltipIcon|{{Enemy|Sniper|Shield|Size={{{Size|}}}}}|Beam Skirmisher +|Small fighter with beam weapon that prevents shields from recharging}}
+|BeamSkirmisherPlus={{TooltipIcon|{{Enemy|Skirmisher|Shield|Size={{{Size|}}}}}|Beam Skirmisher +|Small fighter with beam weapon that prevents shields from recharging}}
 |ShieldBeamSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Shield|Size={{{Size|}}}}}|Shield Beam Skirmisher|Small fighter with beam weapon that prevents shields from recharging}}
 |ShieldedJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Shield|Size={{{Size|}}}}}|Shield Juggernaut|Large shielded enemy}}
 |RegenSniper={{TooltipIcon|{{Enemy|Sniper|Regen|Size={{{Size|}}}}}|Shielded Sniper|Sniper with high shields and recovery}}
