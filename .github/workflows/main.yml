@@ -20,7 +20,7 @@ jobs:
 
       - name: Installing gems
         run: |
-          gem install uglifier mediawiki_api dotenv cssmin
+          gem install uglifier mediawiki_api dotenv yui-compressor
 
       - name: Running build script
         env:
