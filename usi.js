@@ -75,7 +75,6 @@ function renderImages() {
 
 function scrollIntoView(element) {
   if (element) {
-    console.log("scrolling to element", element);
     var position = element.getBoundingClientRect().top + window.scrollY;
     window.scrollTo({
       top: position - 100,
@@ -136,8 +135,7 @@ function init() {
       switchTab({ target: tabs[i] });
 
       if (scrollTarget) {
-        var id = scrollTarget.replace(" ", "_").replace("+", ".2B");
-        console.log("scrolling to", id);
+        var id = scrollTarget.replaceAll(" ", "_").replaceAll("+", ".2B");
         scrollIntoView(document.getElementById(id));
       } else {
         scrollIntoView(tabs[i]);
