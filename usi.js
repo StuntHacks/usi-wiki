@@ -73,6 +73,16 @@ function renderImages() {
   }
 }
 
+function scrollIntoView(element) {
+  if (element) {
+    const position = element.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({
+      top: position - 60,
+      behavior: "smooth",
+    });
+  }
+}
+
 function init() {
   // imgs
   renderImages();
@@ -117,6 +127,13 @@ function init() {
   var tabs = document.querySelectorAll(".js-tabs .tab");
   for (var i = 0; i < tabs.length; i++) {
     tabs[i].addEventListener("click", switchTab);
+
+    const expanded = window.location.hash.match(/(?:^|#)tab=([^&]+)/);
+    var tabId = tabs[i].dataset.for;
+    if (expanded && expanded[1] === tabId) {
+      switchTab({ target: tabs[i] });
+      scrollIntoView(tabs[i]);
+    }
   }
 
   // spoiler sections
