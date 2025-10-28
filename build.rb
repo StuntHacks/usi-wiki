@@ -177,7 +177,7 @@ end
 
 # css
 system("npx postcss ./usi.css -u cssnano -o ./usi.min.css")
-css = File.read("./usi.css")
+css = File.read("./usi.min.css")
 old = client.get_wikitext "MediaWiki:Common.css"
 if old.body != css.strip
     puts "Updating usi.css on wiki..."
