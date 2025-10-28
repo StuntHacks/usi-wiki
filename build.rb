@@ -2,10 +2,9 @@ require "uglifier"
 require "mediawiki_api"
 require "dotenv"
 require "digest"
-require 'sassc'
 
 begin
-    Dotenv.load "../.env"
+    Dotenv.load "./.env"
 rescue
     puts ".env file not found, proceeding without it."
 end
@@ -20,10 +19,10 @@ enemies = []
 js = ""
 
 # svgs
-Dir.entries(".").each do |f|
+Dir.entries("./svg").each do |f|
     svgs.push f
     if f != "." and f != ".."
-        f = f.gsub(".svg", "")
+        f = "./svg/#{f.gsub(".svg", "")}"
         split = f.split("_")
         markup = File.read("./#{f}.svg").strip
         name = split[1]
@@ -37,7 +36,7 @@ skipping = ENV["SKIP_ENEMY_PNGS"] == "true"
 puts "#{skipping ? "Skipping" : "Verifying"} enemy PNGs..."
 upToDate = true
 toPurge = []
-Dir.entries("../png/enemies").each do |f|
+Dir.entries("./png/enemies").each do |f|
     break if skipping
     enemies.push f
     if f != "." and f != ".."
@@ -50,7 +49,7 @@ Dir.entries("../png/enemies").each do |f|
         else
             combined = "#{name}_#{type}"
         end
-        path = "../png/enemies/#{f}.png"
+        path = "./png/enemies/#{f}.png"
         wikiPath = "Enemy_#{f}.png"
         changed = false
 
@@ -95,18 +94,18 @@ else
 end
 
 # js
-newJs = File.read("../usi.js").gsub("/* {ICON_PLACEHOLDER} */", js)
+newJs = File.read("./usi.js").gsub("/* {ICON_PLACEHOLDER} */", js)
 includedJs = ""
 
-Dir.entries("../js").each do |f|
+Dir.entries("./js").each do |f|
     if f != "." and f != ".."
-        includedJs += File.read("../js/#{f}")
+        includedJs += File.read("./js/#{f}")
     end
 end
 newJs = newJs.gsub("/* {JS_PLACEHOLDER} */", includedJs)
 
 minified = Uglifier.compile(newJs)
-File.write("../usi.build.js", newJs)
+File.write("./usi.build.js", newJs)
 
 old = client.get_wikitext "MediaWiki:Common.js"
 if old.body != minified
@@ -117,8 +116,8 @@ else
 end
 
 # icon showcase
-base = File.read "../html/base_showcase.html"
-enemies = File.read "../html/enemy_showcase.html"
+base = File.read "./html/base_showcase.html"
+enemies = File.read "./html/enemy_showcase.html"
 
 output = {
     :general => "",
@@ -177,11 +176,10 @@ else
 end
 
 # css
-css = File.read("../usi.css")
-engine = SassC::Engine.new(css, style: :compressed)
-minified = engine.render
+system("npx postcss ./usi.css -u cssnano -o ./usi.min.css")
+css = File.read("./usi.css")
 old = client.get_wikitext "MediaWiki:Common.css"
-if old.body != minified.strip
+if old.body != css.strip
     puts "Updating usi.css on wiki..."
     client.action(:edit, title: "MediaWiki:Common.css", text: css, summary: "[BOT] Updating to newest usi.css", bot: true) unless local
 else
@@ -190,10 +188,10 @@ end
 
 # tools
 upToDate = true
-Dir.entries("../tools").each do |f|
+Dir.entries("./tools").each do |f|
     if f != "." and f != ".."
         name = f.split(".")[0]
-        content = File.read("../tools/#{f}")
+        content = File.read("./tools/#{f}")
         old = client.get_wikitext "Tool:#{name}"
         if old.body != content.strip
             puts "Updating Tool:#{f} on wiki..."

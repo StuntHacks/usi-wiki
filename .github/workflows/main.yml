@@ -18,12 +18,15 @@ jobs:
         with:
           ruby-version: '3.2.3'
 
+      - name: Installing postcss
+        run: |
+          npm i
+
       - name: Installing gems
         run: |
-          gem install uglifier mediawiki_api dotenv sassc
+          gem install uglifier mediawiki_api dotenv
 
       - name: Running build script
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-        run: ruby ../build.rb
-        working-directory: svg
+        run: ruby build.rb

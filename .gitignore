@@ -1,2 +1,4 @@
 .env
 usi.build.js
+usi.min.css
+node_modules/
