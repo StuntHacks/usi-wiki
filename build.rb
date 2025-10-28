@@ -2,7 +2,7 @@ require "uglifier"
 require "mediawiki_api"
 require "dotenv"
 require "digest"
-require 'yui/compressor'
+require 'cssminify'
 
 begin
     Dotenv.load "../.env"
@@ -177,7 +177,7 @@ else
 end
 
 # css
-css = YUI::CssCompressor.new.compress(File.read("../usi.css"))
+css = Cssminify.compress(File.read("../usi.css"))
 old = client.get_wikitext "MediaWiki:Common.css"
 if old.body != css.strip
     puts "Updating usi.css on wiki..."
