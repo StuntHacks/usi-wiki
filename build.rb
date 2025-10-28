@@ -2,6 +2,7 @@ require "uglifier"
 require "mediawiki_api"
 require "dotenv"
 require "digest"
+require 'cssmin'
 
 begin
     Dotenv.load "../.env"
@@ -176,7 +177,7 @@ else
 end
 
 # css
-css = File.read("../usi.css")
+css = CSSMin.minify(File.read("../usi.css"))
 old = client.get_wikitext "MediaWiki:Common.css"
 if old.body != css.strip
     puts "Updating usi.css on wiki..."

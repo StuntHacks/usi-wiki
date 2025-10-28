@@ -2453,3 +2453,7 @@ button:active {
 .internal-link a::after {
     display: none !important;
 }
+
+td .newline-icon {
+    margin-left: 1rem;
+}

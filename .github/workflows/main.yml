@@ -20,7 +20,7 @@ jobs:
 
       - name: Installing gems
         run: |
-          gem install uglifier mediawiki_api dotenv
+          gem install uglifier mediawiki_api dotenv cssmin
 
       - name: Running build script
         env:
