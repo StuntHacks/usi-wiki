@@ -177,7 +177,7 @@ else
 end
 
 # css
-css = CSSminify.compress(File.read("../usi.css"))
+css = File.read("../usi.css")
 engine = SassC::Engine.new(css, style: :compressed)
 minified = engine.render
 old = client.get_wikitext "MediaWiki:Common.css"
