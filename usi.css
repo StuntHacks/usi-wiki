@@ -2457,3 +2457,7 @@ button:active {
 td .newline-icon {
     margin-left: 1rem;
 }
+
+.sector-data-table .icon-with-tooltip:nth-last-child(2) {
+    margin-right: 1rem;
+}
