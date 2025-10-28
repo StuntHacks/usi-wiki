@@ -10,7 +10,7 @@
 |PhasingBoss={{TooltipIcon|{{Enemy|Juggernaut|Phasing|Size={{{Size|}}}}}|Boss}}
 |ShieldPhasingBoss={{TooltipIcon|{{Enemy|Juggernaut|MixedPhasing|Size={{{Size|}}}}}|Boss}}
 |Skirmisher={{TooltipIcon|{{Enemy|Skirmisher|Hull|Size={{{Size|}}}}}|Skirmisher|Smaller more agile fighter}}
-|ShieldedFighter={{TooltipIcon|{{Enemy|Fighter|Shield|Size={{{Size|}}}}}|Shielded Fighter|Shielded fighter}}
+|ShieldFighter={{TooltipIcon|{{Enemy|Fighter|Shield|Size={{{Size|}}}}}|Shield Fighter|Shielded fighter}}
 |SkirmisherPlus={{TooltipIcon|{{Enemy|Skirmisher|Hull|Size={{{Size|}}}}}|Skirmisher +|Smaller more agile fighter +}}
 |Sniper={{TooltipIcon|{{Enemy|Sniper|Hull|Size={{{Size|}}}}}|Sniper|Long range high damage attacker}}
 |ChargeSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Hull|Size={{{Size|}}}}}|Charge Skirmisher|More agile fighter with a charge laser}}
@@ -128,7 +128,7 @@ The following enemies are supported ('''please note that some enemies can have v
 * {{C|PhasingBoss}} {{EnemyInfo|PhasingBoss|Size=small}}
 * {{C|ShieldPhasingBoss}} {{EnemyInfo|ShieldPhasingBoss|Size=small}}
 * {{C|Skirmisher}} {{EnemyInfo|Skirmisher|Size=small}}
-* {{C|ShieldedFighter}} {{EnemyInfo|ShieldedFighter|Size=small}}
+* {{C|ShieldFighter}} {{EnemyInfo|ShieldFighter|Size=small}}
 * {{C|SkirmisherPlus}} {{EnemyInfo|SkirmisherPlus|Size=small}}
 * {{C|Sniper}} {{EnemyInfo|Sniper|Size=small}}
 * {{C|ChargeSkirmisher}} {{EnemyInfo|ChargeSkirmisher|Size=small}}
