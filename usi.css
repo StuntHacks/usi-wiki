@@ -2445,3 +2445,7 @@ button:active {
     font-size: 1.1rem;
     margin-left: 0.5rem;
 }
+
+.internal-link a::after {
+    display: none !important;
+}
