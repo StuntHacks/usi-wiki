@@ -77,7 +77,7 @@ function scrollIntoView(element) {
   if (element) {
     var position = element.getBoundingClientRect().top + window.scrollY;
     window.scrollTo({
-      top: position - 60,
+      top: position - 100,
       behavior: "smooth",
     });
   }
