@@ -23,6 +23,7 @@
 |ShieldRegenSniper={{TooltipIcon|{{Enemy|Sniper|Regen|Size={{{Size|}}}}}|Shield Regen Sniper|Advanced fighter with rapid shield regen}}
 |MegaJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Regen|Size={{{Size|}}}}}|Mega Juggernaut|Large enemy with rapid shield regen}}
 |BeamFighter={{TooltipIcon|{{Enemy|Frigate|Shield|Size={{{Size|}}}}}|Beam Fighter|Fighter with beam weapon that prevents shields from recharging}}
+|ShieldBeamFighter={{TooltipIcon|{{Enemy|Frigate|Shield|Size={{{Size|}}}}}|Shield Beam Fighter|Fighter with beam weapon that prevents shields from recharging}}
 |BeamSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Shield|Size={{{Size|}}}}}|Beam Skirmisher|Small fighter with beam weapon that prevents shields from recharging}}
 |BeamSkirmisherPlus={{TooltipIcon|{{Enemy|Skirmisher|Shield|Size={{{Size|}}}}}|Beam Skirmisher +|Small fighter with beam weapon that prevents shields from recharging}}
 |ShieldBeamSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Shield|Size={{{Size|}}}}}|Shield Beam Skirmisher|Small fighter with beam weapon that prevents shields from recharging}}
@@ -141,6 +142,7 @@ The following enemies are supported ('''please note that some enemies can have v
 * {{C|ShieldRegenSniper}} {{EnemyInfo|ShieldRegenSniper|Size=small}}
 * {{C|MegaJuggernaut}} {{EnemyInfo|MegaJuggernaut|Size=small}}
 * {{C|BeamFighter}} {{EnemyInfo|BeamFighter|Size=small}}
+* {{C|ShieldBeamFighter}} {{EnemyInfo|ShieldBeamFighter|Size=small}}
 * {{C|BeamSkirmisher}} {{EnemyInfo|BeamSkirmisher|Size=small}}
 * {{C|BeamSkirmisher}} {{EnemyInfo|BeamSkirmisherPlus|Size=small}}
 * {{C|ShieldBeamSkirmisher}} {{EnemyInfo|ShieldBeamSkirmisher|Size=small}}
