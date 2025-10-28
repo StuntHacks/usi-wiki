@@ -1238,6 +1238,10 @@ pre {
     display: block;
 }
 
+.js-tabs .tab-content > .stub {
+    margin-top: 1rem;
+}
+
 .scrollable {
     overflow-x: auto;
 }
