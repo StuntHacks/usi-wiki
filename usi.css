@@ -2466,3 +2466,7 @@ td .newline-icon {
 .wikitable {
     --border-color-base: rgba(255, 255, 255, 0.2);
 }
+
+.table-centered th {
+    text-align: center;
+}
