@@ -2461,3 +2461,7 @@ td .newline-icon {
 .sector-data-table .icon-with-tooltip:nth-last-child(2) {
     margin-right: 1rem;
 }
+
+.wikitable {
+    --border-color-base: rgba(255, 255, 255, 0.15);
+}
