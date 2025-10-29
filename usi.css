@@ -1792,7 +1792,7 @@ table.wikitable tr:first-of-type:hover {
     background-color: transparent;
 }
 
-.wikitable span.mw-collapsible-toggle {
+span.mw-collapsible-toggle {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
     top: 10rem;
     border: 2px solid var(--color-primary);
@@ -1806,7 +1806,8 @@ table.wikitable tr:first-of-type:hover {
     margin-left: 0.5rem;
 }
 
-.wikitable.mw-collapsible {
+.wikitable.mw-collapsible,
+div.mw-collapsible {
     min-width: 500px;
 }
 
@@ -1815,21 +1816,21 @@ table.wikitable tr:first-of-type:hover {
     border-bottom: 1px solid var(--border-color-base) !important;
 }
 
-.wikitable span.mw-collapsible-toggle::before,
-.wikitable span.mw-collapsible-toggle::after {
+span.mw-collapsible-toggle::before,
+span.mw-collapsible-toggle::after {
     display: none;
 }
 
-.wikitable span.mw-collapsible-toggle a {
+span.mw-collapsible-toggle a {
     color: var(--color-primary) !important;
     transition: color 200ms;
 }
 
-.wikitable span.mw-collapsible-toggle:hover {
+span.mw-collapsible-toggle:hover {
     background-color: var(--color-primary);
 }
 
-.wikitable span.mw-collapsible-toggle:hover a {
+span.mw-collapsible-toggle:hover a {
     color: white !important;
 }
 
