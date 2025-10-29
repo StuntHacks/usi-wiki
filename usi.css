@@ -2482,6 +2482,10 @@ td .newline-icon {
     text-align: center;
 }
 
+table.wikitable tr:has(.newline-icon):hover {
+    background-color: transparent;
+}
+
 .tab-content > div:first-child {
     margin-top: 1rem;
 }
