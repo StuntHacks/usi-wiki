@@ -2496,3 +2496,8 @@ table.wikitable tr:has(.newline-icon):hover {
 table.wikitable tr:last-of-type td {
     border-bottom: none;
 }
+
+.enemy-info-list ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
