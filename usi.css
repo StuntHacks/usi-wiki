@@ -534,7 +534,9 @@ pre {
 
 .icon.alien-synth {
     --color: #000;
-    color: var(--color);
+    fill: var(--color);
+    stroke: var(--color);
+    flood-color: var(--color);
 }
 
 .icon.alien-synth svg {
@@ -589,9 +591,9 @@ pre {
     width: var(--size);
     height: var(--size);
     display: inline-block;
-    fill: currentColor;
-    flood-color: currentColor;
-    stroke: currentColor;
+    fill: #FFF;
+    flood-color: #fff;
+    stroke: #fff;
     position: relative;
 }
 
@@ -654,13 +656,13 @@ pre {
 
 .icon:not([data-icon="UISalvage"]):not([data-icon="UIVoidMatter"]) svg:not(.specimen-icon) g path,
 .icon:not([data-icon="UISalvage"]):not([data-icon="UIVoidMatter"]) svg:not(.specimen-icon) g text {
-    color: #FFF;
-    color: inherit;
+    fill: #FFF;
+    fill: inherit;
 }
 
 .icon:not([data-icon="UISalvage"]):not([data-icon="UIVoidMatter"]) svg:not(.specimen-icon) g circle[stroke="#fff"] {
-    color: #FFF;
-    color: inherit;
+    stroke: #FFF;
+    stroke: inherit;
 }
 
 .icon:not([data-icon="UISalvage"]):not([data-icon="UIVoidMatter"]) svg:not(.specimen-icon) * {
@@ -669,15 +671,21 @@ pre {
 
 /* Custom icon classes */
 .core-icon {
-    color: #EE1C51;
+    fill: #EE1C51;
+    stroke: #EE1C51;
+    flood-color: #EE1C51;
 }
 
 .icon-ui {
-    color: var(--color-primary);
+    fill: var(--color-primary);
+    stroke: var(--color-primary);
+    flood-color: var(--color-primary);
 }
 
 .icon.base-icon {
-    color: #000;
+    fill: #000;
+    stroke: #000;
+    flood-color: #000;
 }
 
 .icon.base-icon.mats svg>path {
@@ -722,7 +730,9 @@ pre {
 
 [class*="shard-tier-"],
 [class*="synth-tier-"] {
-    color: var(--color);
+    fill: var(--color);
+    stroke: var(--color);
+    flood-color: var(--color);
 }
 
 .shard-tier-1 {
@@ -1433,7 +1443,9 @@ img.fullwidth {
 
 .icon.module {
     --color: #33d2e0;
-    color: var(--color);
+    fill: var(--color);
+    stroke: var(--color);
+    flood-color: var(--color);
 }
 
 .loadout-box .contents .shards {
@@ -1639,7 +1651,9 @@ img.fullwidth {
 }
 
 .core-upgrade-not-selected .icon {
-    color: #fff;
+    fill: #fff;
+    stroke: #fff;
+    flood-color: #fff;
 }
 
 .generic-spoiler-block {
@@ -1750,7 +1764,9 @@ img.fullwidth {
 }
 
 .icon.shard-key {
-    color: #AAA7A4;
+    fill: #AAA7A4;
+    stroke: #AAA7A4;
+    flood-color: #AAA7A4;
 }
 
 .icon.shard-key::before {
@@ -2169,19 +2185,27 @@ ul.tile-icons .tile-item.buffer:hover {
 }
 
 .crew-milestone-list.Acumen .icon {
-    color: #0066FF;
+    fill: #0066FF;
+    stroke: #0066FF;
+    flood-color: #0066FF;
 }
 
 .crew-milestone-list.Engineering .icon {
-    color: #00D94C;
+    fill: #00D94C;
+    stroke: #00D94C;
+    flood-color: #00D94C;
 }
 
 .crew-milestone-list.Ingenuity .icon {
-    color: #FFFF00
+    fill: #FFFF00;
+    stroke: #FFFF00;
+    flood-color: #FFFF00
 }
 
 .crew-milestone-list.Proficiency .icon {
-    color: #FF0000;
+    fill: #FF0000;
+    stroke: #FF0000;
+    flood-color: #FF0000;
 }
 
 .crew-milestone-list h3.section-subheading {
