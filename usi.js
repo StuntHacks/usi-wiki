@@ -82,6 +82,13 @@ function scrollIntoView(element) {
     });
   }
 }
+  
+function getHorizontalOffset(element) {
+  var rect = element.getBoundingClientRect();
+  if (rect.left < 0) return rect.left;
+  if (rect.right > window.innerWidth) return rect.right - window.innerWidth;
+  return 0;
+}
 
 function init() {
   // imgs
@@ -149,6 +156,13 @@ function init() {
     spoilers[i].addEventListener("click", function (e) {
       e.target.closest(".spoiler-block").classList.add("dismissed");
     });
+  }
+
+  // move tooltips onscreen
+  var tooltips = document.getElementsByClassName("tooltip");
+  for (var i = 0; i < tooltips.length; i++) {
+    var offset = getHorizontalOffset(tooltips[i]);
+    if (offset > 0) tooltips[i].style.marginLeft = -(offset + 10) + "px";
   }
 
   // init copy buttons

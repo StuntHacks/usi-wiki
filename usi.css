@@ -1708,7 +1708,7 @@ img.fullwidth {
     z-index: 1000;
 }
 
-@media screen and (max-width: 775px) {
+/*@media screen and (max-width: 775px) {
     .icon-with-tooltip .tooltip {
         transform: translateX(50%);
         bottom: 100%;
@@ -1717,7 +1717,7 @@ img.fullwidth {
         left: auto;
         margin-bottom: 10px;
     }
-}
+}*/
 
 .icon-with-tooltip:hover:not(:has(.tooltip:hover)) .tooltip {
     visibility: visible;
