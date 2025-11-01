@@ -2507,7 +2507,7 @@ table.wikitable tr:last-of-type td {
     align-items: center;
 }
 
-.reinforce-milestone span {
+.reinforce-milestone > span {
     margin-right: 0.5rem;
     font-size: 1.3rem;
 }
