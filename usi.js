@@ -163,7 +163,9 @@ function init() {
     var tooltips = document.getElementsByClassName("tooltip");
     for (var i = 0; i < tooltips.length; i++) {
       var offset = getHorizontalOffset(tooltips[i]);
-      if (offset > 0) tooltips[i].style.marginLeft = -(offset + 10) + "px";
+      if (offset > 0) var margin = -(offset + 10) + "px";
+      else var margin = "10px";
+      tooltips[i].style.marginLeft = margin;
     }
   }
 
