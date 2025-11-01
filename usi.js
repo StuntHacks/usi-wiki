@@ -159,11 +159,16 @@ function init() {
   }
 
   // move tooltips onscreen
-  var tooltips = document.getElementsByClassName("tooltip");
-  for (var i = 0; i < tooltips.length; i++) {
-    var offset = getHorizontalOffset(tooltips[i]);
-    if (offset > 0) tooltips[i].style.marginLeft = -(offset + 10) + "px";
+  function adjustTooltips() {
+    var tooltips = document.getElementsByClassName("tooltip");
+    for (var i = 0; i < tooltips.length; i++) {
+      var offset = getHorizontalOffset(tooltips[i]);
+      if (offset > 0) tooltips[i].style.marginLeft = -(offset + 10) + "px";
+    }
   }
+
+  window.addEventListener("resize", adjustTooltips);
+  adjustTooltips();
 
   // init copy buttons
   function setCopyText(element) {
