@@ -179,7 +179,7 @@ function init() {
 
   function copyToClipboard(e) {
     navigator.clipboard.writeText(
-      e.target.parentNode.querySelector("span").innerText
+      e.target.parentNode.querySelector(e.target.dataset.target || "span").innerText
     );
     e.target.innerText = "Copied!";
     setTimeout(setCopyText.bind(null, e.target), 1000);
