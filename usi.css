@@ -2501,3 +2501,13 @@ table.wikitable tr:last-of-type td {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+
+.reinforce-milestone {
+    display: flex;
+    align-items: center;
+}
+
+.reinforce-milestone span {
+    margin-right: 0.5rem;
+    font-size: 1.3rem;
+}
