@@ -2529,3 +2529,10 @@ table.wikitable tr:last-of-type td {
     margin-right: 0.5rem;
     font-size: 1.3rem;
 }
+
+.mw-icon-arrow-collapsed,
+.mw-collapsible-arrow.mw-collapsible-toggle-collapsed,
+.mw-icon-arrow-expanded,
+.mw-collapsible-arrow.mw-collapsible-toggle-expanded {
+    background-position: center;
+}
