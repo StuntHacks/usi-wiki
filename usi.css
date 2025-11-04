@@ -2515,7 +2515,7 @@ table.wikitable tr:last-of-type td {
     border-bottom: none;
 }
 
-.enemy-info-list ul {
+.enemy-info-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
