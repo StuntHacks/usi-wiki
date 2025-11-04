@@ -1,121 +1,119 @@
-<includeonly>
-{{#switch:{{{1}}}
-|Fighter={{TooltipIcon|{{Enemy|Fighter|Hull|Size={{{Size|}}}}}|Fighter|Basic fighter}}
-|ShieldBoss={{TooltipIcon|{{Enemy|Juggernaut|Shield|Size={{{Size|}}}}}|Boss}}
-|FrigateBoss={{TooltipIcon|{{Enemy|Frigate|Shield|Size={{{Size|}}}}}|Boss}}
-|HullBoss={{TooltipIcon|{{Enemy|Juggernaut|Hull|Size={{{Size|}}}}}|Boss}}
-|RegenBoss={{TooltipIcon|{{Enemy|Juggernaut|Regen|Size={{{Size|}}}}}|Boss}}
-|ArmorBoss={{TooltipIcon|{{Enemy|Juggernaut|Armor|Size={{{Size|}}}}}|Boss}}
-|MixedBoss={{TooltipIcon|{{Enemy|Juggernaut|Mixed|Size={{{Size|}}}}}|Boss}}
-|PhasingBoss={{TooltipIcon|{{Enemy|Juggernaut|Phasing|Size={{{Size|}}}}}|Boss}}
-|ShieldPhasingBoss={{TooltipIcon|{{Enemy|Juggernaut|MixedPhasing|Size={{{Size|}}}}}|Boss}}
-|Skirmisher={{TooltipIcon|{{Enemy|Skirmisher|Hull|Size={{{Size|}}}}}|Skirmisher|Smaller more agile fighter}}
-|ShieldFighter={{TooltipIcon|{{Enemy|Fighter|Shield|Size={{{Size|}}}}}|Shield Fighter|Shielded fighter}}
-|SkirmisherPlus={{TooltipIcon|{{Enemy|Skirmisher|Hull|Size={{{Size|}}}}}|Skirmisher +|Smaller more agile fighter +}}
-|Sniper={{TooltipIcon|{{Enemy|Sniper|Hull|Size={{{Size|}}}}}|Sniper|Long range high damage attacker}}
-|ChargeSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Hull|Size={{{Size|}}}}}|Charge Skirmisher|More agile fighter with a charge laser}}
-|ShieldJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Shield|Size={{{Size|}}}}}|Juggernaut|Large enemy}}
-|RegenFrigateSniper={{TooltipIcon|{{Enemy|Sniper|Regen|Size={{{Size|}}}}}|Shielded Sniper|Sniper with high shields and recovery}}
-|ShieldRegenFighter={{TooltipIcon|{{Enemy|Frigate|Regen|Size={{{Size|}}}}}|Shield Regen Fighter|Advanced fighter with rapid shield regen}}
-|RegenJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Regen|Size={{{Size|}}}}}|Juggernaut|Large enemy with rapid shield regen}}
-|DualLaserSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Hull|Size={{{Size|}}}}}|Dual Laser Skirmisher|Smaller more agile fighter with two lasers}}
-|Swarmer={{TooltipIcon|{{Enemy|Skirmisher|Hull|Size={{{Size|}}}}}|Swarmer|Tiny fighter comes in swarms}}
-|ShieldRegenSniper={{TooltipIcon|{{Enemy|Sniper|Regen|Size={{{Size|}}}}}|Shield Regen Sniper|Advanced fighter with rapid shield regen}}
-|MegaJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Regen|Size={{{Size|}}}}}|Mega Juggernaut|Large enemy with rapid shield regen}}
-|BeamFighter={{TooltipIcon|{{Enemy|Frigate|Shield|Size={{{Size|}}}}}|Beam Fighter|Fighter with beam weapon that prevents shields from recharging}}
-|ShieldBeamFighter={{TooltipIcon|{{Enemy|Frigate|Shield|Size={{{Size|}}}}}|Shield Beam Fighter|Fighter with beam weapon that prevents shields from recharging}}
-|BeamSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Shield|Size={{{Size|}}}}}|Beam Skirmisher|Small fighter with beam weapon that prevents shields from recharging}}
-|BeamSkirmisherPlus={{TooltipIcon|{{Enemy|Skirmisher|Shield|Size={{{Size|}}}}}|Beam Skirmisher +|Small fighter with beam weapon that prevents shields from recharging}}
-|ShieldBeamSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Shield|Size={{{Size|}}}}}|Shield Beam Skirmisher|Small fighter with beam weapon that prevents shields from recharging}}
-|ShieldedJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Shield|Size={{{Size|}}}}}|Shield Juggernaut|Large shielded enemy}}
-|RegenSniper={{TooltipIcon|{{Enemy|Sniper|Regen|Size={{{Size|}}}}}|Shielded Sniper|Sniper with high shields and recovery}}
-|DualLaserFighter={{TooltipIcon|{{Enemy|Fighter|Shield|Size={{{Size|}}}}}|Dual Laser Fighter|Dual laser fighter}}
-|DualLaserFighterPlus={{TooltipIcon|{{Enemy|Fighter|Shield|Size={{{Size|}}}}}|Dual Laser Fighter +|Dual laser fighter}}
-|ShieldlessDualLaserFighter={{TooltipIcon|{{Enemy|Fighter|Hull|Size={{{Size|}}}}}|Shieldless Dual Laser Fighter|Shieldless dual laser fighter}}
-|ShieldlessSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Hull|Size={{{Size|}}}}}|Shieldless Skirmisher|Smaller more agile fighter with two lasers}}
-|ArmoredFighter={{TooltipIcon|{{Enemy|Fighter|Armor|Size={{{Size|}}}}}|Armored Fighter|Fighter with armor, reduced damage taken from lasers}}
-|ArmoredSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Armor|Size={{{Size|}}}}}|Armored Skirmisher|Skirmisher with armor, reduced damage taken from lasers}}
-|ArmoredJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Shield|Size={{{Size|}}}}}|Armored Juggernaut|Large armored enemy}}
-|ShieldedFighterRegen={{TooltipIcon|{{Enemy|Fighter|Shield|Size={{{Size|}}}}}|Shielded Fighter|Shielded fighter, moderate regen}}
-|ShieldedSkirmisherRegen={{TooltipIcon|{{Enemy|Fighter|Shield|Size={{{Size|}}}}}|Shielded Skirmisher|Shielded skirmisher, moderate regen}}
-|MixedFighter={{TooltipIcon|{{Enemy|Fighter|Mixed|Size={{{Size|}}}}}|Armored Fighter With Shields|Fighter with armor and shields}}
-|HullJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Hull|Size={{{Size|}}}}}|Hull Juggernaut|Large high damage enemy}}
-|HullLaserJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Hull|Size={{{Size|}}}}}|Hull Laser Juggernaut|Large high damage enemy with several lasers}}
-|SniperPlus={{TooltipIcon|{{Enemy|Sniper|Hull|Size={{{Size|}}}}}|Sniper +|Sniper with long range}}
-|ArmoredSniperPlus={{TooltipIcon|{{Enemy|Sniper|Armor|Size={{{Size|}}}}}|Armored Sniper +|Armored Sniper with long range}}
-|MixedRegenFighter={{TooltipIcon|{{Enemy|Fighter|Mixed|Size={{{Size|}}}}}|Armored Shield Regen Fighter|Fighter with armor, reduced damage taken from lasers and fast regen}}
-|BeamFighterPlus={{TooltipIcon|{{Enemy|Frigate|Shield|Size={{{Size|}}}}}|Beam Fighter +|Fighter with beam weapon that prevents shields from recharging}}
-|BeamJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Hull|Size={{{Size|}}}}}|Beam Juggernaut|Juggernaut with beam weapon that prevents shields from recharging}}
-|ShieldSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Shield|Size={{{Size|}}}}}|Skirmisher|Skirmisher}}
-|ArmoredSwarmer={{TooltipIcon|{{Enemy|Skirmisher|Armor|Size={{{Size|}}}}}|Armored Swarmer|Swarmer with armor, reduced damage taken from lasers}}
-|ArmoredJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Shield|Size={{{Size|}}}}}|Armored Mega Juggernaut|Large high damage enemy with several lasers}}
-|ArmoredRegenFighter={{TooltipIcon|{{Enemy|Fighter|Mixed|Size={{{Size|}}}}}|Armored Regen Fighter|Fighter with armor and fast regen shields}}
-|ShieldedSniper={{TooltipIcon|{{Enemy|Sniper|Shield|Size={{{Size|}}}}}|Shielded Sniper|Sniper with high shields and recovery}}
-|ArmoredRegenSniper={{TooltipIcon|{{Enemy|Sniper|Mixed|Size={{{Size|}}}}}|Armored Regen Sniper|Armored regen sniper with long range}}
-|ArmoredRegenSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Mixed|Size={{{Size|}}}}}|Armored Regen Skirmisher|Skirmisher}}
-|ArmoredRegenJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Mixed|Size={{{Size|}}}}}|Armored Regen Juggernaut|Armored regen large high damage enemy with several lasers}}
-|ShieldFighterPlus={{TooltipIcon|{{Enemy|Fighter|Shield|Size={{{Size|}}}}}|Shield Fighter +|Highly shielded fighter}}
-|ShieldChargeSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Shield|Size={{{Size|}}}}}|Shield Charge Skirmisher|Highly shielded skirmisher with charge weapon}}
-|ShieldSwarmer={{TooltipIcon|{{Enemy|Skirmisher|Shield|Size={{{Size|}}}}}|Shield Swarmer|Highly shielded Swarmer}}
-|ArmoredFrigateJuggernaut={{TooltipIcon|{{Enemy|Frigate|Armor|Size={{{Size|}}}}}|Armored Juggernaut|Armored Juggernaut with large armament}}
-|HullBigWeapon={{TooltipIcon|{{Enemy|Juggernaut|Hull|Size={{{Size|}}}}}|Hull Big Weapon|Large enemy with a massive weapon}}
-|HullFighterPlus={{TooltipIcon|{{Enemy|Fighter|Hull|Size={{{Size|}}}}}|Hull Fighter +|Plain fighter}}
-|HullSkirmisherPlus={{TooltipIcon|{{Enemy|Skirmisher|Hull|Size={{{Size|}}}}}|Hull Skirmisher +|Skirmisher}}
-|HullHugeWeaponPlatform={{TooltipIcon|{{Enemy|Juggernaut|Hull|Size={{{Size|}}}}}|Hull Huge Weapon Platform|Large enemy with a massive weapon and other armaments}}
-|ShieldedSniperHugeWeapon={{TooltipIcon|{{Enemy|Sniper|Shield|Size={{{Size|}}}}}|Shielded Sniper Huge Weapon|Sniper with high shields and recovery and huge weapon}}
-|HullSwarmer={{TooltipIcon|{{Enemy|Skirmisher|Hull|Size={{{Size|}}}}}|Hull Swarmer|Swarmer}}
-|ArmoredSkirmisherHugeWeapon={{TooltipIcon|{{Enemy|Skirmisher|Armor|Size={{{Size|}}}}}|Armored Skirmisher Huge Weapon|Skirmisher with armor, reduced damage taken from lasers. Huge weapon}}
-|ShieldBigWeapon={{TooltipIcon|{{Enemy|Juggernaut|Shield|Size={{{Size|}}}}}|Shield Big Weapon|Large shielded enemy with a massive weapon}}
-|ArmorBigWeapon={{TooltipIcon|{{Enemy|Juggernaut|Armor|Size={{{Size|}}}}}|Armor Big Weapon|Large armored enemy with a massive weapon}}
-|ArmoredRegenHugeWeaponPlatform={{TooltipIcon|{{Enemy|Juggernaut|Hull|Size={{{Size|}}}}}|Armored Regen Huge Weapon Platform|Large armored regen enemy with a massive weapon and other armaments}}
-|PhaseFighter={{TooltipIcon|{{Enemy|Fighter|Phasing|Size={{{Size|}}}}}|Phase Fighter|Fighter with phase jump engines, needs disruption to be reliably hit}}
-|PhaseSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Phasing|Size={{{Size|}}}}}|Phase Skirmisher|Phase Skirmisher}}
-|PhaseJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Phasing|Size={{{Size|}}}}}|Phase Juggernaut|Large phase jump enemy, needs two disruption charges on it to reliably hit}}
-|ArmoredRegenFighterPlus={{TooltipIcon|{{Enemy|Fighter|Mixed|Size={{{Size|}}}}}|Armored Regen Fighter +|Fighter with armor and fast regen shields}}
-|ArmoredRegenSkirmisherPlus={{TooltipIcon|{{Enemy|Skirmisher|Mixed|Size={{{Size|}}}}}|Armored Regen Skirmisher +|Skirmisher}}
-|PhaseShieldFighter={{TooltipIcon|{{Enemy|Fighter|MixedPhasing|Size={{{Size|}}}}}|Phase Shield Fighter|Fighter with phase jump engines, needs disruption to be reliably hit}}
-|PhasingShieldBeamBig={{TooltipIcon|{{Enemy|Juggernaut|MixedPhasing|Size={{{Size|}}}}}|Phasing Shielded Beam Big|Phasing Juggernaut with beam weapon that prevents shields from recharging}}
-|PhasingBeamSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|MixedPhasing|Size={{{Size|}}}}}|Phasing Beam Skirmisher|Phase Skirmisher}}
-|HullSwarmerPlus={{TooltipIcon|{{Enemy|Skirmisher|Hull|Size={{{Size|}}}}}|Hull Swarmer +|Swarmer}}
-|HullSniperPlus={{TooltipIcon|{{Enemy|Skirmisher|Hull|Size={{{Size|}}}}}|Hull Sniper +|Hull Sniper}}
-|ShieldHugeWeaponPlatform={{TooltipIcon|{{Enemy|Juggernaut|Hull|Size={{{Size|}}}}}|Shielded Huge Weapons Platform|Huge shielded enemy}}
-|PhaseSwarmerHugeWeapon={{TooltipIcon|{{Enemy|Skirmisher|Phasing|Size={{{Size|}}}}}|Phase Swarmer Huge Weapon|Phase swarmer with armor, reduced damage taken from lasers. Huge weapon}}
-|ArmoredFighterPlus={{TooltipIcon|{{Enemy|Fighter|Armor|Size={{{Size|}}}}}|Armored Fighter +|Armored fighter}}
-|PhasingArmoredRegenFighter={{TooltipIcon|{{Enemy|Fighter|MixedPhasing|Size={{{Size|}}}}}|Phasing Armored Regen Fighter|Phasing fighter with armor and fast regen shields}}
-|PhasingArmoredSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|MixedPhasing|Size={{{Size|}}}}}|Phasing Armored Skirmisher|Phasing skirmisher with armor and fast regen shields}}
-|PhasingArmoredRegenJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|MixedPhasing|Size={{{Size|}}}}}|Phasing Armored Regen Juggernaut|Phasing Armored Regen Large high damage enemy with several lasers}}
-|PhasingArmoredRegenHugeWeapon={{TooltipIcon|{{Enemy|Juggernaut|MixedPhasing|Size={{{Size|}}}}}|Phasing Armored Regen Huge Weapon|Phasing large armored regen enemy with a massive weapon and other armaments}}
-|ShieldedSniperPlus={{TooltipIcon|{{Enemy|Sniper|Regen|Size={{{Size|}}}}}|Shielded Sniper +|Sniper with high shields and recovery}}
-|HullCarrier={{TooltipIcon|{{Enemy|Frigate|Hull|Size={{{Size|}}}}}|Hull Carrier|Carrier that periodically launches a wave of fighters}}
-|HullHuge={{TooltipIcon|{{Enemy|Juggernaut|Hull|Size={{{Size|}}}}}|Hull Huge|Huge Enemy}}
-|ShieldedSwarmCarrier={{TooltipIcon|{{Enemy|Frigate|Shield|Size={{{Size|}}}}}|Shielded Swarm Carrier|Shielded carrier that constantly launches armored swarmers}}
-|ShieldedCarrierHugeWeapon={{TooltipIcon|{{Enemy|Frigate|Shield|Size={{{Size|}}}}}|Shielded Carrier with Huge Weapon|Shielded carrier with huge weapon that launches skirmishers}}
-|ShieldedBigWeapon={{TooltipIcon|{{Enemy|Juggernaut|Shield|Size={{{Size|}}}}}|Shielded Big Weapon|Large shielded enemy with a massive weapon}}
-|ShieldedCarrier={{TooltipIcon|{{Enemy|Frigate|Shield|Size={{{Size|}}}}}|Shielded Carrier|Shielded carrier that launches huge weapon skirmishers}}
-|PhasingCarrierSnipers={{TooltipIcon|{{Enemy|Frigate|Phasing|Size={{{Size|}}}}}|Phasing Carrier|Phasing carrier that launches snipers}}
-|PhasingCarrierPhasing={{TooltipIcon|{{Enemy|Frigate|Phasing|Size={{{Size|}}}}}|Phasing Carrier|Phasing carrier that launches phasing enemies}}
-|MixedCarrier={{TooltipIcon|{{Enemy|Frigate|Mixed|Size={{{Size|}}}}}|Armored Regen Carrier|Armored regen carrier that periodically launches a wave of fighters}}
-|PhasingSniper={{TooltipIcon|{{Enemy|Sniper|Phasing|Size={{{Size|}}}}}|Phasing Sniper|Phasing Sniper}}
-|HighPhasingMixedCarrier={{TooltipIcon|{{Enemy|Frigate|MixedPhasing|Size={{{Size|}}}}}|High Phasing Armored Regen Carrier|High Phasing carrier that launches enemies and huge weapon enemies}}
-|ArmoredSwarmCarrier={{TooltipIcon|{{Enemy|Frigate|Shield|Size={{{Size|}}}}}|Armored Swarm Carrier|Aggressive Armored releases swarms}}
-|BarrierCarrier={{TooltipIcon|{{Enemy|Frigate|Barrier|Size={{{Size|}}}}}|Basic Carrier with Barrier|Basic Carrier with Barrier}}
-|BarrierHullFighter={{TooltipIcon|{{Enemy|Fighter|Barrier|Size={{{Size|}}}}}|Barrier Hull Fighter|Barrier Hull Fighter}}
-|BarrierShieldedSwarmCarrier={{TooltipIcon|{{Enemy|Frigate|Barrier|Size={{{Size|}}}}}|Barrier Shielded Swarm Carrier|Barrier Shielded carrier that constantly launches shielded swarmers}}
-|BarrierShieldSwarmer={{TooltipIcon|{{Enemy|Skirmisher|Barrier|Size={{{Size|}}}}}|Barrier Shield Swarmer|Highly shielded swarmer with barrier}}
-|BarrierArmoredSniperCarrier={{TooltipIcon|{{Enemy|Frigate|Barrier|Size={{{Size|}}}}}|Barrier Armored Sniper Carrier|Barrier Armored Sniper Carrier}}
-|BarrierArmoredSniper={{TooltipIcon|{{Enemy|Sniper|Barrier|Size={{{Size|}}}}}|Armored Sniper +|Barrier Armored Sniper}}
-|BarrierShieldRegenCarrier={{TooltipIcon|{{Enemy|Frigate|Barrier|Size={{{Size|}}}}}|Barrier Shield Regen Carrier|Barrier shield regen carrier with mix}}
-|BarrierRegenHuge={{TooltipIcon|{{Enemy|Juggernaut|Barrier|Size={{{Size|}}}}}|Barrier Regen Huge|Barrier regen huge enemy}}
-|BarrierArmoredRegenFighter={{TooltipIcon|{{Enemy|Fighter|Barrier|Size={{{Size|}}}}}|Barrier Armored Regen Fighter|Barrier fighter with armor and regen}}
-|BarrierArmoredRegenCarrier={{TooltipIcon|{{Enemy|Frigate|Barrier|Size={{{Size|}}}}}|Barrier Armored Regen Carrier|Barrier armored regen carrier with mix}}
-|LargeBarrierArmoredRegenCarrier={{TooltipIcon|{{Enemy|Frigate|Barrier|Size={{{Size|}}}}}|Large Barrier Armored Regen Carrier|Large barrier armored regen carrier with mix}}
-|HugeBarrierPhasingCarrier={{TooltipIcon|{{Enemy|Frigate|Barrier|Size={{{Size|}}}}}|Huge Barrier Phasing Carrier|Huge barrier phasing carrier}}
-|BarrierPhasingFighter={{TooltipIcon|{{Enemy|Fighter|Barrier|Size={{{Size|}}}}}|Barrier Phasing Fighter|Barrier phasing fighter}}
-|BarrierArmorBig={{TooltipIcon|{{Enemy|Juggernaut|Barrier|Size={{{Size|}}}}}|Barrier Armor Big Enemy|Barrier armor big enemy}}
-|#default={{{1}}}
-}}
-</includeonly>
-<nowiki/>
+<includeonly>{{#switch:{{{1}}}<!-- -->
+|Fighter={{TooltipIcon|{{Enemy|Fighter|Hull|Size={{{Size|}}}}}|Fighter|Basic fighter}}<!-- -->
+|ShieldBoss={{TooltipIcon|{{Enemy|Juggernaut|Shield|Size={{{Size|}}}}}|Boss}}<!-- -->
+|FrigateBoss={{TooltipIcon|{{Enemy|Frigate|Shield|Size={{{Size|}}}}}|Boss}}<!-- -->
+|HullBoss={{TooltipIcon|{{Enemy|Juggernaut|Hull|Size={{{Size|}}}}}|Boss}}<!-- -->
+|RegenBoss={{TooltipIcon|{{Enemy|Juggernaut|Regen|Size={{{Size|}}}}}|Boss}}<!-- -->
+|ArmorBoss={{TooltipIcon|{{Enemy|Juggernaut|Armor|Size={{{Size|}}}}}|Boss}}<!-- -->
+|MixedBoss={{TooltipIcon|{{Enemy|Juggernaut|Mixed|Size={{{Size|}}}}}|Boss}}<!-- -->
+|PhasingBoss={{TooltipIcon|{{Enemy|Juggernaut|Phasing|Size={{{Size|}}}}}|Boss}}<!-- -->
+|ShieldPhasingBoss={{TooltipIcon|{{Enemy|Juggernaut|MixedPhasing|Size={{{Size|}}}}}|Boss}}<!-- -->
+|BarrierBoss={{TooltipIcon|{{Enemy|Juggernaut|Barrier|Size={{{Size|}}}}}|Boss}}<!-- -->
+|Skirmisher={{TooltipIcon|{{Enemy|Skirmisher|Hull|Size={{{Size|}}}}}|Skirmisher|Smaller more agile fighter}}<!-- -->
+|ShieldFighter={{TooltipIcon|{{Enemy|Fighter|Shield|Size={{{Size|}}}}}|Shield Fighter|Shielded fighter}}<!-- -->
+|SkirmisherPlus={{TooltipIcon|{{Enemy|Skirmisher|Hull|Size={{{Size|}}}}}|Skirmisher +|Smaller more agile fighter +}}<!-- -->
+|Sniper={{TooltipIcon|{{Enemy|Sniper|Hull|Size={{{Size|}}}}}|Sniper|Long range high damage attacker}}<!-- -->
+|ChargeSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Hull|Size={{{Size|}}}}}|Charge Skirmisher|More agile fighter with a charge laser}}<!-- -->
+|ShieldJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Shield|Size={{{Size|}}}}}|Juggernaut|Large enemy}}<!-- -->
+|RegenFrigateSniper={{TooltipIcon|{{Enemy|Sniper|Regen|Size={{{Size|}}}}}|Shielded Sniper|Sniper with high shields and recovery}}<!-- -->
+|ShieldRegenFighter={{TooltipIcon|{{Enemy|Frigate|Regen|Size={{{Size|}}}}}|Shield Regen Fighter|Advanced fighter with rapid shield regen}}<!-- -->
+|RegenJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Regen|Size={{{Size|}}}}}|Juggernaut|Large enemy with rapid shield regen}}<!-- -->
+|DualLaserSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Hull|Size={{{Size|}}}}}|Dual Laser Skirmisher|Smaller more agile fighter with two lasers}}<!-- -->
+|Swarmer={{TooltipIcon|{{Enemy|Skirmisher|Hull|Size={{{Size|}}}}}|Swarmer|Tiny fighter comes in swarms}}<!-- -->
+|ShieldRegenSniper={{TooltipIcon|{{Enemy|Sniper|Regen|Size={{{Size|}}}}}|Shield Regen Sniper|Advanced fighter with rapid shield regen}}<!-- -->
+|MegaJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Regen|Size={{{Size|}}}}}|Mega Juggernaut|Large enemy with rapid shield regen}}<!-- -->
+|BeamFighter={{TooltipIcon|{{Enemy|Frigate|Shield|Size={{{Size|}}}}}|Beam Fighter|Fighter with beam weapon that prevents shields from recharging}}<!-- -->
+|ShieldBeamFighter={{TooltipIcon|{{Enemy|Frigate|Shield|Size={{{Size|}}}}}|Shield Beam Fighter|Fighter with beam weapon that prevents shields from recharging}}<!-- -->
+|BeamSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Shield|Size={{{Size|}}}}}|Beam Skirmisher|Small fighter with beam weapon that prevents shields from recharging}}<!-- -->
+|BeamSkirmisherPlus={{TooltipIcon|{{Enemy|Skirmisher|Shield|Size={{{Size|}}}}}|Beam Skirmisher +|Small fighter with beam weapon that prevents shields from recharging}}<!-- -->
+|ShieldBeamSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Shield|Size={{{Size|}}}}}|Shield Beam Skirmisher|Small fighter with beam weapon that prevents shields from recharging}}<!-- -->
+|ShieldedJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Shield|Size={{{Size|}}}}}|Shield Juggernaut|Large shielded enemy}}<!-- -->
+|RegenSniper={{TooltipIcon|{{Enemy|Sniper|Regen|Size={{{Size|}}}}}|Shielded Sniper|Sniper with high shields and recovery}}<!-- -->
+|DualLaserFighter={{TooltipIcon|{{Enemy|Fighter|Shield|Size={{{Size|}}}}}|Dual Laser Fighter|Dual laser fighter}}<!-- -->
+|DualLaserFighterPlus={{TooltipIcon|{{Enemy|Fighter|Shield|Size={{{Size|}}}}}|Dual Laser Fighter +|Dual laser fighter}}<!-- -->
+|ShieldlessDualLaserFighter={{TooltipIcon|{{Enemy|Fighter|Hull|Size={{{Size|}}}}}|Shieldless Dual Laser Fighter|Shieldless dual laser fighter}}<!-- -->
+|ShieldlessSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Hull|Size={{{Size|}}}}}|Shieldless Skirmisher|Smaller more agile fighter with two lasers}}<!-- -->
+|ArmoredFighter={{TooltipIcon|{{Enemy|Fighter|Armor|Size={{{Size|}}}}}|Armored Fighter|Fighter with armor, reduced damage taken from lasers}}<!-- -->
+|ArmoredSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Armor|Size={{{Size|}}}}}|Armored Skirmisher|Skirmisher with armor, reduced damage taken from lasers}}<!-- -->
+|ArmoredJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Shield|Size={{{Size|}}}}}|Armored Juggernaut|Large armored enemy}}<!-- -->
+|ShieldedFighterRegen={{TooltipIcon|{{Enemy|Fighter|Shield|Size={{{Size|}}}}}|Shielded Fighter|Shielded fighter, moderate regen}}<!-- -->
+|ShieldedSkirmisherRegen={{TooltipIcon|{{Enemy|Fighter|Shield|Size={{{Size|}}}}}|Shielded Skirmisher|Shielded skirmisher, moderate regen}}<!-- -->
+|MixedFighter={{TooltipIcon|{{Enemy|Fighter|Mixed|Size={{{Size|}}}}}|Armored Fighter With Shields|Fighter with armor and shields}}<!-- -->
+|HullJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Hull|Size={{{Size|}}}}}|Hull Juggernaut|Large high damage enemy}}<!-- -->
+|HullLaserJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Hull|Size={{{Size|}}}}}|Hull Laser Juggernaut|Large high damage enemy with several lasers}}<!-- -->
+|SniperPlus={{TooltipIcon|{{Enemy|Sniper|Hull|Size={{{Size|}}}}}|Sniper +|Sniper with long range}}<!-- -->
+|ArmoredSniperPlus={{TooltipIcon|{{Enemy|Sniper|Armor|Size={{{Size|}}}}}|Armored Sniper +|Armored Sniper with long range}}<!-- -->
+|MixedRegenFighter={{TooltipIcon|{{Enemy|Fighter|Mixed|Size={{{Size|}}}}}|Armored Shield Regen Fighter|Fighter with armor, reduced damage taken from lasers and fast regen}}<!-- -->
+|BeamFighterPlus={{TooltipIcon|{{Enemy|Frigate|Shield|Size={{{Size|}}}}}|Beam Fighter +|Fighter with beam weapon that prevents shields from recharging}}<!-- -->
+|BeamJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Hull|Size={{{Size|}}}}}|Beam Juggernaut|Juggernaut with beam weapon that prevents shields from recharging}}<!-- -->
+|ShieldSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Shield|Size={{{Size|}}}}}|Skirmisher|Skirmisher}}<!-- -->
+|ArmoredSwarmer={{TooltipIcon|{{Enemy|Skirmisher|Armor|Size={{{Size|}}}}}|Armored Swarmer|Swarmer with armor, reduced damage taken from lasers}}<!-- -->
+|ArmoredJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Shield|Size={{{Size|}}}}}|Armored Mega Juggernaut|Large high damage enemy with several lasers}}<!-- -->
+|ArmoredRegenFighter={{TooltipIcon|{{Enemy|Fighter|Mixed|Size={{{Size|}}}}}|Armored Regen Fighter|Fighter with armor and fast regen shields}}<!-- -->
+|ShieldedSniper={{TooltipIcon|{{Enemy|Sniper|Shield|Size={{{Size|}}}}}|Shielded Sniper|Sniper with high shields and recovery}}<!-- -->
+|ArmoredRegenSniper={{TooltipIcon|{{Enemy|Sniper|Mixed|Size={{{Size|}}}}}|Armored Regen Sniper|Armored regen sniper with long range}}<!-- -->
+|ArmoredRegenSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Mixed|Size={{{Size|}}}}}|Armored Regen Skirmisher|Skirmisher}}<!-- -->
+|ArmoredRegenJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Mixed|Size={{{Size|}}}}}|Armored Regen Juggernaut|Armored regen large high damage enemy with several lasers}}<!-- -->
+|ShieldFighterPlus={{TooltipIcon|{{Enemy|Fighter|Shield|Size={{{Size|}}}}}|Shield Fighter +|Highly shielded fighter}}<!-- -->
+|ShieldChargeSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Shield|Size={{{Size|}}}}}|Shield Charge Skirmisher|Highly shielded skirmisher with charge weapon}}<!-- -->
+|ShieldSwarmer={{TooltipIcon|{{Enemy|Skirmisher|Shield|Size={{{Size|}}}}}|Shield Swarmer|Highly shielded Swarmer}}<!-- -->
+|ArmoredFrigateJuggernaut={{TooltipIcon|{{Enemy|Frigate|Armor|Size={{{Size|}}}}}|Armored Juggernaut|Armored Juggernaut with large armament}}<!-- -->
+|HullBigWeapon={{TooltipIcon|{{Enemy|Juggernaut|Hull|Size={{{Size|}}}}}|Hull Big Weapon|Large enemy with a massive weapon}}<!-- -->
+|HullFighterPlus={{TooltipIcon|{{Enemy|Fighter|Hull|Size={{{Size|}}}}}|Hull Fighter +|Plain fighter}}<!-- -->
+|HullSkirmisherPlus={{TooltipIcon|{{Enemy|Skirmisher|Hull|Size={{{Size|}}}}}|Hull Skirmisher +|Skirmisher}}<!-- -->
+|HullHugeWeaponPlatform={{TooltipIcon|{{Enemy|Juggernaut|Hull|Size={{{Size|}}}}}|Hull Huge Weapon Platform|Large enemy with a massive weapon and other armaments}}<!-- -->
+|ShieldedSniperHugeWeapon={{TooltipIcon|{{Enemy|Sniper|Shield|Size={{{Size|}}}}}|Shielded Sniper Huge Weapon|Sniper with high shields and recovery and huge weapon}}<!-- -->
+|HullSwarmer={{TooltipIcon|{{Enemy|Skirmisher|Hull|Size={{{Size|}}}}}|Hull Swarmer|Swarmer}}<!-- -->
+|ArmoredSkirmisherHugeWeapon={{TooltipIcon|{{Enemy|Skirmisher|Armor|Size={{{Size|}}}}}|Armored Skirmisher Huge Weapon|Skirmisher with armor, reduced damage taken from lasers. Huge weapon}}<!-- -->
+|ShieldBigWeapon={{TooltipIcon|{{Enemy|Juggernaut|Shield|Size={{{Size|}}}}}|Shield Big Weapon|Large shielded enemy with a massive weapon}}<!-- -->
+|ArmorBigWeapon={{TooltipIcon|{{Enemy|Juggernaut|Armor|Size={{{Size|}}}}}|Armor Big Weapon|Large armored enemy with a massive weapon}}<!-- -->
+|ArmoredRegenHugeWeaponPlatform={{TooltipIcon|{{Enemy|Juggernaut|Hull|Size={{{Size|}}}}}|Armored Regen Huge Weapon Platform|Large armored regen enemy with a massive weapon and other armaments}}<!-- -->
+|PhaseFighter={{TooltipIcon|{{Enemy|Fighter|Phasing|Size={{{Size|}}}}}|Phase Fighter|Fighter with phase jump engines, needs disruption to be reliably hit}}<!-- -->
+|PhaseSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|Phasing|Size={{{Size|}}}}}|Phase Skirmisher|Phase Skirmisher}}<!-- -->
+|PhaseJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|Phasing|Size={{{Size|}}}}}|Phase Juggernaut|Large phase jump enemy, needs two disruption charges on it to reliably hit}}<!-- -->
+|ArmoredRegenFighterPlus={{TooltipIcon|{{Enemy|Fighter|Mixed|Size={{{Size|}}}}}|Armored Regen Fighter +|Fighter with armor and fast regen shields}}<!-- -->
+|ArmoredRegenSkirmisherPlus={{TooltipIcon|{{Enemy|Skirmisher|Mixed|Size={{{Size|}}}}}|Armored Regen Skirmisher +|Skirmisher}}<!-- -->
+|PhaseShieldFighter={{TooltipIcon|{{Enemy|Fighter|MixedPhasing|Size={{{Size|}}}}}|Phase Shield Fighter|Fighter with phase jump engines, needs disruption to be reliably hit}}<!-- -->
+|PhasingShieldBeamBig={{TooltipIcon|{{Enemy|Juggernaut|MixedPhasing|Size={{{Size|}}}}}|Phasing Shielded Beam Big|Phasing Juggernaut with beam weapon that prevents shields from recharging}}<!-- -->
+|PhasingBeamSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|MixedPhasing|Size={{{Size|}}}}}|Phasing Beam Skirmisher|Phase Skirmisher}}<!-- -->
+|HullSwarmerPlus={{TooltipIcon|{{Enemy|Skirmisher|Hull|Size={{{Size|}}}}}|Hull Swarmer +|Swarmer}}<!-- -->
+|HullSniperPlus={{TooltipIcon|{{Enemy|Skirmisher|Hull|Size={{{Size|}}}}}|Hull Sniper +|Hull Sniper}}<!-- -->
+|ShieldHugeWeaponPlatform={{TooltipIcon|{{Enemy|Juggernaut|Hull|Size={{{Size|}}}}}|Shielded Huge Weapons Platform|Huge shielded enemy}}<!-- -->
+|PhaseSwarmerHugeWeapon={{TooltipIcon|{{Enemy|Skirmisher|Phasing|Size={{{Size|}}}}}|Phase Swarmer Huge Weapon|Phase swarmer with armor, reduced damage taken from lasers. Huge weapon}}<!-- -->
+|ArmoredFighterPlus={{TooltipIcon|{{Enemy|Fighter|Armor|Size={{{Size|}}}}}|Armored Fighter +|Armored fighter}}<!-- -->
+|PhasingArmoredRegenFighter={{TooltipIcon|{{Enemy|Fighter|MixedPhasing|Size={{{Size|}}}}}|Phasing Armored Regen Fighter|Phasing fighter with armor and fast regen shields}}<!-- -->
+|PhasingArmoredSkirmisher={{TooltipIcon|{{Enemy|Skirmisher|MixedPhasing|Size={{{Size|}}}}}|Phasing Armored Skirmisher|Phasing skirmisher with armor and fast regen shields}}<!-- -->
+|PhasingArmoredRegenJuggernaut={{TooltipIcon|{{Enemy|Juggernaut|MixedPhasing|Size={{{Size|}}}}}|Phasing Armored Regen Juggernaut|Phasing Armored Regen Large high damage enemy with several lasers}}<!-- -->
+|PhasingArmoredRegenHugeWeapon={{TooltipIcon|{{Enemy|Juggernaut|MixedPhasing|Size={{{Size|}}}}}|Phasing Armored Regen Huge Weapon|Phasing large armored regen enemy with a massive weapon and other armaments}}<!-- -->
+|ShieldedSniperPlus={{TooltipIcon|{{Enemy|Sniper|Regen|Size={{{Size|}}}}}|Shielded Sniper +|Sniper with high shields and recovery}}<!-- -->
+|HullCarrier={{TooltipIcon|{{Enemy|Frigate|Hull|Size={{{Size|}}}}}|Hull Carrier|Carrier that periodically launches a wave of fighters}}<!-- -->
+|HullHuge={{TooltipIcon|{{Enemy|Juggernaut|Hull|Size={{{Size|}}}}}|Hull Huge|Huge Enemy}}<!-- -->
+|ShieldedSwarmCarrier={{TooltipIcon|{{Enemy|Frigate|Shield|Size={{{Size|}}}}}|Shielded Swarm Carrier|Shielded carrier that constantly launches armored swarmers}}<!-- -->
+|ShieldedCarrierHugeWeapon={{TooltipIcon|{{Enemy|Frigate|Shield|Size={{{Size|}}}}}|Shielded Carrier with Huge Weapon|Shielded carrier with huge weapon that launches skirmishers}}<!-- -->
+|ShieldedBigWeapon={{TooltipIcon|{{Enemy|Juggernaut|Shield|Size={{{Size|}}}}}|Shielded Big Weapon|Large shielded enemy with a massive weapon}}<!-- -->
+|ShieldedCarrier={{TooltipIcon|{{Enemy|Frigate|Shield|Size={{{Size|}}}}}|Shielded Carrier|Shielded carrier that launches huge weapon skirmishers}}<!-- -->
+|PhasingCarrierSnipers={{TooltipIcon|{{Enemy|Frigate|Phasing|Size={{{Size|}}}}}|Phasing Carrier|Phasing carrier that launches snipers}}<!-- -->
+|PhasingCarrierPhasing={{TooltipIcon|{{Enemy|Frigate|Phasing|Size={{{Size|}}}}}|Phasing Carrier|Phasing carrier that launches phasing enemies}}<!-- -->
+|MixedCarrier={{TooltipIcon|{{Enemy|Frigate|Mixed|Size={{{Size|}}}}}|Armored Regen Carrier|Armored regen carrier that periodically launches a wave of fighters}}<!-- -->
+|PhasingSniper={{TooltipIcon|{{Enemy|Sniper|Phasing|Size={{{Size|}}}}}|Phasing Sniper|Phasing Sniper}}<!-- -->
+|HighPhasingMixedCarrier={{TooltipIcon|{{Enemy|Frigate|MixedPhasing|Size={{{Size|}}}}}|High Phasing Armored Regen Carrier|High Phasing carrier that launches enemies and huge weapon enemies}}<!-- -->
+|ArmoredSwarmCarrier={{TooltipIcon|{{Enemy|Frigate|Shield|Size={{{Size|}}}}}|Armored Swarm Carrier|Aggressive Armored releases swarms}}<!-- -->
+|BarrierCarrier={{TooltipIcon|{{Enemy|Frigate|Barrier|Size={{{Size|}}}}}|Basic Carrier with Barrier|Basic Carrier with Barrier}}<!-- -->
+|BarrierHullFighter={{TooltipIcon|{{Enemy|Fighter|Barrier|Size={{{Size|}}}}}|Barrier Hull Fighter|Barrier Hull Fighter}}<!-- -->
+|BarrierShieldedSwarmCarrier={{TooltipIcon|{{Enemy|Frigate|Barrier|Size={{{Size|}}}}}|Barrier Shielded Swarm Carrier|Barrier Shielded carrier that constantly launches shielded swarmers}}<!-- -->
+|BarrierShieldSwarmer={{TooltipIcon|{{Enemy|Skirmisher|Barrier|Size={{{Size|}}}}}|Barrier Shield Swarmer|Highly shielded swarmer with barrier}}<!-- -->
+|BarrierArmoredSniperCarrier={{TooltipIcon|{{Enemy|Frigate|Barrier|Size={{{Size|}}}}}|Barrier Armored Sniper Carrier|Barrier Armored Sniper Carrier}}<!-- -->
+|BarrierArmoredSniper={{TooltipIcon|{{Enemy|Sniper|Barrier|Size={{{Size|}}}}}|Armored Sniper +|Barrier Armored Sniper}}<!-- -->
+|BarrierShieldRegenCarrier={{TooltipIcon|{{Enemy|Frigate|Barrier|Size={{{Size|}}}}}|Barrier Shield Regen Carrier|Barrier shield regen carrier with mix}}<!-- -->
+|BarrierRegenHuge={{TooltipIcon|{{Enemy|Juggernaut|Barrier|Size={{{Size|}}}}}|Barrier Regen Huge|Barrier regen huge enemy}}<!-- -->
+|BarrierArmoredRegenFighter={{TooltipIcon|{{Enemy|Fighter|Barrier|Size={{{Size|}}}}}|Barrier Armored Regen Fighter|Barrier fighter with armor and regen}}<!-- -->
+|BarrierArmoredRegenCarrier={{TooltipIcon|{{Enemy|Frigate|Barrier|Size={{{Size|}}}}}|Barrier Armored Regen Carrier|Barrier armored regen carrier with mix}}<!-- -->
+|LargeBarrierArmoredRegenCarrier={{TooltipIcon|{{Enemy|Frigate|Barrier|Size={{{Size|}}}}}|Large Barrier Armored Regen Carrier|Large barrier armored regen carrier with mix}}<!-- -->
+|HugeBarrierPhasingCarrier={{TooltipIcon|{{Enemy|Frigate|Barrier|Size={{{Size|}}}}}|Huge Barrier Phasing Carrier|Huge barrier phasing carrier}}<!-- -->
+|BarrierPhasingFighter={{TooltipIcon|{{Enemy|Fighter|Barrier|Size={{{Size|}}}}}|Barrier Phasing Fighter|Barrier phasing fighter}}<!-- -->
+|BarrierArmorBig={{TooltipIcon|{{Enemy|Juggernaut|Barrier|Size={{{Size|}}}}}|Barrier Armor Big Enemy|Barrier armor big enemy}}<!-- -->
+|Capital={{TooltipIcon|{{Enemy|Capital|Size={{{Size|}}}}}|Capital Ship|Caputal ship can only be damaged by capital weapons}}<!-- -->
+|#default={{{1}}}}}</includeonly><nowiki/>
 <noinclude>
 Renders the corresponding enemy icon and their in-game description in a tooltip. The {{C|Size}} parameter is supported.
 
@@ -130,6 +128,7 @@ The following enemies are supported ('''please note that some enemies can have v
 * {{C|MixedBoss}} {{EnemyInfo|MixedBoss|Size=small}}
 * {{C|PhasingBoss}} {{EnemyInfo|PhasingBoss|Size=small}}
 * {{C|ShieldPhasingBoss}} {{EnemyInfo|ShieldPhasingBoss|Size=small}}
+* {{C|BarrierBoss}} {{EnemyInfo|BarrierBoss|Size=small}}
 * {{C|Skirmisher}} {{EnemyInfo|Skirmisher|Size=small}}
 * {{C|ShieldFighter}} {{EnemyInfo|ShieldFighter|Size=small}}
 * {{C|SkirmisherPlus}} {{EnemyInfo|SkirmisherPlus|Size=small}}
@@ -233,5 +232,6 @@ The following enemies are supported ('''please note that some enemies can have v
 * {{C|HugeBarrierPhasingCarrier}} {{EnemyInfo|HugeBarrierPhasingCarrier|Size=small}}
 * {{C|BarrierPhasingFighter}} {{EnemyInfo|BarrierPhasingFighter|Size=small}}
 * {{C|BarrierArmorBig}} {{EnemyInfo|BarrierArmorBig|Size=small}}
+* {{C|Capital}} {{EnemyInfo|Capital|Size=small}}
 </div>
 </noinclude>
