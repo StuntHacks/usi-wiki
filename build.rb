@@ -98,7 +98,7 @@ newJs = File.read("./usi.js").gsub("/* {ICON_PLACEHOLDER} */", js)
 includedJs = ""
 
 Dir.entries("./js").each do |f|
-    if f != "." and f != ".."
+    if f != "." and f != ".." and !f.starts_with?("_")
         includedJs += File.read("./js/#{f}")
     end
 end
