@@ -112,7 +112,7 @@
 |HugeBarrierPhasingCarrier={{TooltipIcon|{{Enemy|Frigate|Barrier|Size={{{Size|}}}}}|Huge Barrier Phasing Carrier|Huge barrier phasing carrier}}<!-- -->
 |BarrierPhasingFighter={{TooltipIcon|{{Enemy|Fighter|Barrier|Size={{{Size|}}}}}|Barrier Phasing Fighter|Barrier phasing fighter}}<!-- -->
 |BarrierArmorBig={{TooltipIcon|{{Enemy|Juggernaut|Barrier|Size={{{Size|}}}}}|Barrier Armor Big Enemy|Barrier armor big enemy}}<!-- -->
-|Capital={{TooltipIcon|{{Enemy|Capital|Size={{{Size|}}}}}|Capital Ship|Caputal ship can only be damaged by capital weapons}}<!-- -->
+|Capital={{TooltipIcon|{{Enemy|Capital|Size={{{Size|}}}}}|Capital Ship|Capital ship can only be damaged by capital weapons}}<!-- -->
 |#default={{{1}}}}}</includeonly><nowiki/>
 <noinclude>
 Renders the corresponding enemy icon and their in-game description in a tooltip. The {{C|Size}} parameter is supported.
