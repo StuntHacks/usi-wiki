@@ -4,9 +4,6 @@
     width: var(--size);
     height: var(--size);
     display: inline-block;
-    fill: #FFF;
-    flood-color: #fff;
-    stroke: #fff;
     position: relative;
 
     .tile-icon & {
@@ -62,6 +59,11 @@
 }
 
 .icon {
+    --color: #FFF;
+    fill: var(--color);
+    flood-color: var(--color);
+    stroke: var(--color);
+
     svg {
         width: var(--size);
         height: var(--size);
@@ -97,68 +99,60 @@
 
     // classes
     &.core-icon {
-        fill: #EE1C51;
-        stroke: #EE1C51;
-        flood-color: #EE1C51;
+        --color: #EE1C51;
     }
 
     &.icon-ui {
-        fill: var(--color-primary);
-        stroke: var(--color-primary);
-        flood-color: var(--color-primary);
+        --color: var(--color-primary);
     }
 
     &.base-icon {
-        fill: #000;
-        stroke: #000;
-        flood-color: #000;
-    }
+        --color: #000;
 
-    &.base-icon.mats svg>path {
-        fill: #5DD82B;
-    }
+        &.mats svg>path {
+            fill: #5DD82B;
+        }
 
-    &.base-icon.parts svg>path {
-        fill: #FCF400;
-    }
+        &.parts svg>path {
+            fill: #FCF400;
+        }
 
-    &.base-icon.comps svg>path {
-        fill: #EE2E2E;
-    }
+        &.comps svg>path {
+            fill: #EE2E2E;
+        }
 
-    &.base-icon.booster svg>path {
-        fill: #4EECF2;
-    }
+        &.booster svg>path {
+            fill: #4EECF2;
+        }
 
-    &.base-icon.double-booster svg>path {
-        fill: #3F46F6;
-    }
+        &.double-booster svg>path {
+            fill: #3F46F6;
+        }
 
-    &.base-icon.drain-reducer svg>path {
-        fill: #E541F7;
-    }
+        &.drain-reducer svg>path {
+            fill: #E541F7;
+        }
 
-    &.base-icon.mats-booster svg>path {
-        fill: #53F3A7;
-    }
+        &.mats-booster svg>path {
+            fill: #53F3A7;
+        }
 
-    &.base-icon.parts-booster svg>path {
-        fill: #FFF390;
-    }
+        &.parts-booster svg>path {
+            fill: #FFF390;
+        }
 
-    &.base-icon.comps-booster svg>path {
-        fill: #FF6363;
-    }
+        &.comps-booster svg>path {
+            fill: #FF6363;
+        }
 
-    &.base-icon.double-booster svg circle:first-of-type {
-        display: none;
+        &.double-booster svg circle:first-of-type {
+            display: none;
+        }
     }
 
     &[class*="shard-tier-"],
     &[class*="synth-tier-"] {
-        fill: var(--color);
-        stroke: var(--color);
-        flood-color: var(--color);
+        --color: var(--color);
     }
 
     &.shard-tier-1 {
@@ -279,9 +273,6 @@
 
     &.module {
         --color: #33d2e0;
-        fill: var(--color);
-        stroke: var(--color);
-        flood-color: var(--color);
     }
 
     &:not([data-icon="UISalvage"]):not([data-icon="UIVoidMatter"]) svg:not(.specimen-icon) g path {
@@ -297,9 +288,7 @@
     }
 
     &.shard-key {
-        fill: #AAA7A4;
-        stroke: #AAA7A4;
-        flood-color: #AAA7A4;
+        --color: #AAA7A4;
 
         &::before {
             content: '';
@@ -316,9 +305,6 @@
 
     &.alien-synth {
         --color: #000;
-        fill: var(--color);
-        stroke: var(--color);
-        flood-color: var(--color);
 
         svg {
             background: #FFF;
