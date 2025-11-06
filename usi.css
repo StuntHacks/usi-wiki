@@ -779,6 +779,10 @@ pre {
     --color: #9BCF90;
 }
 
+.shard-tier-12 {
+    --color: #FF00FF;
+}
+
 .synth-tier-1 {
     --color: #FFF;
 }
