@@ -1,0 +1,64 @@
+.template-info-box {
+    color: #dae6ff;
+    position: relative;
+    padding: 1rem 2rem;
+    padding-left: 4rem;
+    background-color: rgb(92 133 214 / 30%);
+    display: inline-block;
+    max-width: 80%;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 1rem;
+        top: 0.8rem;
+        --size: 2rem;
+        width: var(--size);
+        height: var(--size);
+        background-size: var(--size);
+        background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><g id='SVGRepo_bgCarrier' stroke-width='0'></g><g id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'></g><g id='SVGRepo_iconCarrier'> <circle cx='12' cy='12' r='10' stroke='%237ca7fe' stroke-width='1.5'></circle> <path d='M12 17V11' stroke='%237ca7fe' stroke-width='1.5' stroke-linecap='round'></path> <circle cx='1' cy='1' r='1' transform='matrix(1 0 0 -1 11 9)' fill='%237ca7fe'></circle> </g></svg>");
+    }
+
+    p + & {
+        margin-top: 0;
+    }
+
+    a {
+        color: #7ca7fe;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &.warning {
+        color: #fff9da;
+        background-color: rgb(74 74 7);
+
+        &::before {
+            transform: rotate(180deg);
+            background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><g id='SVGRepo_bgCarrier' stroke-width='0'></g><g id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'></g><g id='SVGRepo_iconCarrier'> <circle cx='12' cy='12' r='10' stroke='%23e9cd5b' stroke-width='1.5'></circle> <path d='M12 17V11' stroke='%23e9cd5b' stroke-width='1.5' stroke-linecap='round'></path> <circle cx='1' cy='1' r='1' transform='matrix(1 0 0 -1 11 9)' fill='%23e9cd5b'></circle> </g></svg>");
+        }
+
+        a {
+            color: #e9cd5b;
+        }
+    }
+
+    &.important {
+        color: #ffdada;
+        background-color: rgb(84 28 28);
+
+        &::before {
+            transform: rotate(180deg);
+            background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><g id='SVGRepo_bgCarrier' stroke-width='0'></g><g id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'></g><g id='SVGRepo_iconCarrier'> <circle cx='12' cy='12' r='10' stroke='%23ff6d6d' stroke-width='1.5'></circle> <path d='M12 17V11' stroke='%23ff6d6d' stroke-width='1.5' stroke-linecap='round'></path> <circle cx='1' cy='1' r='1' transform='matrix(1 0 0 -1 11 9)' fill='%23ff6d6d'></circle> </g></svg>");
+        }
+
+        a {
+            color: #ff6d6d;
+        }
+    }
+}

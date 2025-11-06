@@ -1,0 +1,114 @@
+/* CSS placed here will be applied to all skins */
+
+/* Game Banner */
+
+.page-game-banner {
+    background-image: url(https://img-spaceidle.game-vault.net/b/b5/Banner.jpg);
+}
+
+/* Site Subtitle */
+
+#siteSub {
+    display: none;
+}
+
+/* Game Menu Icons */
+
+#n-Reviews a::after {
+    background-image: url(/w/skins/Citizen/resources/skins.citizen.icons/shared/rate_review.svg);
+}
+
+#n-Guides a::after {
+    background-image: url(/w/skins/Citizen/resources/skins.citizen.icons/shared/export_contacts.svg);
+}
+
+#n-News a::after {
+    background-image: url(/w/skins/Citizen/resources/skins.citizen.icons/shared/offline_bolt.svg);
+}
+
+.skin-citizen-dark #n-Reviews a::after,
+.skin-citizen-dark #n-Guides a::after,
+.skin-citizen-dark #n-News a::after {
+    filter: invert(1);
+}
+
+/* SimpleBatchUpload Dropzone */
+
+.fileinput-button {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-surface-2--active) !important;
+    color: var(--color-base--emphasized) !important;
+    border-radius: 0 !important;
+    margin-right: -6px;
+    border-color: var(--color-primary) !important;
+    font-size: 20px !important;
+    cursor: pointer !important;
+}
+
+/* Icon Tile styles */
+
+.tile-icon.green {
+    background: #acf2b1;
+}
+
+.tile-icon.yellow {
+    background: #e6e340;
+}
+
+.tile-icon.blue {
+    background: #9fc9ff;
+}
+
+.tile-icon.violet {
+    background: #ddb1ea;
+}
+
+.tile-icon.black {
+    background: #000000;
+}
+
+.tile-icon.white {
+    background: #ffffff;
+}
+
+.tile-icon.gray {
+    background: #20252b;
+}
+
+.tile-icon.orange {
+    background: #eb984e;
+}
+
+.tile-icon.red {
+    background: #f1948a;
+}
+
+.mw-logo.citizen-drawer__logo {
+    display: flex;
+    align-items: center;
+}
+
+.mw-logo.citizen-drawer__logo::after {
+    content: ' ';
+    display: inline-block;
+    border-bottom: 2px solid var(--color-base);
+    border-right: 2px solid var(--color-base);
+    height: 6px;
+    width: 6px;
+    transform: rotate(45deg);
+    margin: 0 7px;
+}
+
+.citizen-drawer__button {
+    width: 70px;
+}
+
+.citizen-header {
+    z-index: 999;
+}
+
+.citizen-body a.image {
+    display: inline-block;
+}

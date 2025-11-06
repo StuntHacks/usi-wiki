@@ -1,0 +1,68 @@
+.showcase-container {
+    text-align: center;
+
+    .section-subheading {
+        margin-bottom: 2rem;
+        font-size: 1.6rem;
+    }
+
+    &.categorized {
+        padding: 0 3rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 20%);
+        grid-gap: 3rem 4rem;
+        justify-content: space-between;
+
+        @media screen and (max-width: 700px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (max-width: 640px) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .showcase-category {
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            flex-basis: 20%;
+            flex-shrink: 0;
+            margin-right: 1rem;
+
+            .category-header {
+                text-align: left;
+                padding: 0 0.5rem;
+                margin-bottom: 1rem;
+                border-bottom: 1px solid #fff;
+                width: 100%;
+            }
+
+            .icon-showcase {
+                margin: 0;
+                margin-bottom: 1rem;
+                margin-right: 3rem;
+                margin-bottom: 3rem;
+                display: inline-flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+
+                .enemy-icon {
+                    margin-bottom: 0.5rem;
+                }
+
+                p {
+                    display: inline-flex;
+                    flex-direction: column;
+                    text-align: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+.mw-headline#All_Icons {
+    margin-bottom: 2rem;
+}

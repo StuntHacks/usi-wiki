@@ -1,0 +1,127 @@
+table.wikitable tr:first-of-type:hover {
+    background-color: transparent;
+}
+
+span.mw-collapsible-toggle {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    top: 10rem;
+    border: 2px solid var(--color-primary);
+    background-color: #000;
+    border-radius: 2px;
+    position: sticky;
+    display: inline-flex;
+    padding: 2px 4px;
+    cursor: pointer;
+    transition: background-color 200ms, color 200ms;
+    margin-left: 0.5rem;
+
+    &::after,
+    &::before {
+        display: none;
+    }
+
+    &:hover {
+        background-color: var(--color-primary);
+
+        a {
+            color: white !important;
+        }
+    }
+
+    a {
+        color: var(--color-primary) !important;
+        transition: color 200ms;
+    }
+}
+
+.wikitable.mw-collapsible,
+div.mw-collapsible {
+    min-width: 500px;
+}
+
+.wikitable.mw-collapsible caption {
+    border: none !important;
+    border-bottom: 1px solid var(--border-color-base) !important;
+}
+
+table.wikitable tr td {
+    position: relative;
+    padding: 5px 20px 10px 5px;
+    font-size: 0.95rem;
+
+    &:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        background-color: var(--border-color-base);
+        width: 1px;
+        height: 60%;
+        transform: translateY(-50%);
+        right: 0;
+        top: 50%;
+        opacity: 0.5;
+    }
+}
+
+.table-centered td {
+    text-align: center;
+}
+
+.table-column-headers td:first-of-type {
+    font-weight: bold;
+    text-align: right;
+}
+
+/* STICKY TABLE HEADERS */
+table:not(.navbox-table) tr:first-of-type th {
+    position: sticky;
+    top: 56px;
+    padding-top: 1rem !important;
+    background-color: #131a20 !important;
+    z-index: 20;
+    border-bottom: none !important;
+}
+
+header.mw-header.citizen-header {
+    background-color: #131a20;
+
+    &::before {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    table {
+        display: table !important;
+    }
+}
+
+td .newline-icon {
+    margin-left: 1rem;
+}
+
+.sector-data-table .icon-with-tooltip:nth-last-child(2) {
+    margin-right: 1rem;
+}
+
+.wikitable {
+    --border-color-base: rgba(255, 255, 255, 0.2);
+}
+
+.table-centered th {
+    text-align: center;
+}
+
+table.wikitable tr:has(.newline-icon):hover {
+    background-color: transparent;
+}
+
+table.wikitable tr:last-of-type td {
+    border-bottom: none;
+}
+
+.mw-icon-arrow-collapsed,
+.mw-collapsible-arrow.mw-collapsible-toggle-collapsed,
+.mw-icon-arrow-expanded,
+.mw-collapsible-arrow.mw-collapsible-toggle-expanded {
+    background-position: center;
+}

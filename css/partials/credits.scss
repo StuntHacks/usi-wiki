@@ -1,0 +1,27 @@
+.credits-box {
+    background-color: #2f284a;
+    padding: 1rem 1rem;
+    display: flex;
+    align-items: center;
+    
+    @media screen and (min-width: 720px) {
+        clear: right;
+        float: right;
+        margin-left: 1rem;
+    }
+
+    img {
+        height: 3rem;
+        border-radius: 3rem;
+    }
+
+    div {
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    strong {
+        font-style: italic;
+    }
+}

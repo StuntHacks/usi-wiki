@@ -1,0 +1,24 @@
+button {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--border-radius--medium);
+    font-size: 0.9rem;
+    transition: background 100ms ease, color 100ms ease;
+    background-color: var(--color-primary);
+    color: #fff;
+    border: 2px solid transparent;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+
+    &:hover,
+    &:focus {
+        background-color: var(--color-primary--hover);
+    }
+
+    &:active {
+        background-color: var(--color-primary--active);
+    }
+}

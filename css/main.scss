@@ -1,0 +1,134 @@
+.sidebar:not(#sidebar-left) {
+    display: none !important;
+}
+
+.toc {
+    scrollbar-width: auto;
+}
+
+.sidebar#sidebar-left {
+    z-index: 50;
+    position: sticky;
+}
+
+pre {
+    display: inline-block;
+}
+
+.catlinks {
+    margin-top: 5rem;
+}
+
+.scrollable {
+    overflow-x: auto;
+}
+
+// not sure what this is but its annoying
+body #hf-nsfooter- {
+    display: none;
+}
+
+li.tile-item:hover>a {
+    background-color: transparent !important;
+    color: #EE1C51;
+}
+
+li.tile-item>a {
+    transition: color 150ms;
+}
+
+img.fullwidth {
+    width: 90%;
+    height: auto;
+}
+
+code + .copy-button {
+    background-color: var(--color-primary);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .75);
+    color: #fff;
+    cursor: pointer;
+    padding: .4rem .7rem;
+    transition: box-shadow .15s;
+    user-select: none;
+}
+
+.copy-button.small {
+    padding: 0.1rem 0.35rem;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 775px) {
+    .Desktop-only {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 776px) {
+    .Mobile-only {
+        display: none;
+    }
+}
+
+.centered-wrapper {
+    text-align: center;
+}
+
+.main-link {
+    margin-left: 1rem;
+    font-style: italic;
+}
+
+li.tile-item .tile-icon {
+    background-color: transparent;
+}
+
+li.tile-item {
+    border-radius: 6px;
+    transition: color 150ms;
+}
+
+li.tile-item:hover {
+    background-color: #FFFFFF0F;
+}
+
+.game-vault-card-body-title a::before {
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.game-vault-card {
+    position: relative;
+}
+
+ul.tile-icons {
+    justify-content: center;
+}
+
+div#toc {
+    bottom: auto;
+    top: auto;
+}
+
+ul.tile-icons .tile-item.buffer:hover {
+    background: transparent;
+}
+
+/* hide ad container if empty */
+.vm-placement:empty {
+    display: none;
+}
+
+.internal-link a::after {
+    display: none !important;
+}
+
+.enemy-info-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}

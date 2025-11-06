@@ -1,0 +1,267 @@
+
+.shard-box {
+    background-color: transparent;
+    display: inline-flex;
+    flex-direction: column;
+    border: 2px solid #34EFF8;
+
+    @media screen and (min-width: 776px) {
+        min-width: 400px;
+    }
+
+    @media screen and (min-width: 1000px) {
+        min-width: 530px;
+    }
+
+    .spoiler-block {
+        overflow: hidden;
+    }
+
+    .spoiler-overlay {
+        width: 100%;
+        left: 0;
+        height: 100%;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    &-row {
+        display: flex;
+    }
+
+    .spoiler-button {
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        justify-content: center;
+    }
+
+    .shard-title,
+    .shard-section-title {
+        display: block;
+        text-align: center;
+        background-color: #232050;
+        color: #34ECF6;
+        padding: 0.25rem;
+        border-bottom: 2px solid #000;
+    }
+
+    .shard-title {
+        font-weight: bold;
+    }
+
+    .shard-section-title {
+        border-top: 2px solid #000;
+    }
+
+    @media screen and (max-width: 350px) {
+        .shard-summary {
+            flex-direction: column;
+        }
+
+        .shard-icon {
+            justify-content: center;
+        }
+    }
+
+    .shard-icon {
+        background: #000;
+        padding: 0.5rem 1rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .shard-info {
+        background: #303030;
+        flex-grow: 1;
+
+        p {
+            display: flex;
+            flex-direction: column;
+        }
+
+        >p>span {
+            padding: 0 1rem;
+
+            &:first-child {
+                padding-top: 0.5rem;
+            }
+        }
+
+        .generic-boosts {
+            border-top: 2px solid #000;
+            padding: 0.5rem 1rem;
+            text-align: left;
+            margin-top: 0.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        >p>span,
+        .generic-boosts>span {
+            display: flex;
+
+            strong {
+                flex-grow: 1;
+                margin-right: 1rem;
+            }
+        }
+
+        >p>span:not(.generic-boosts)>span,
+        .generic-boosts>span span {
+            text-align: right;
+        }
+
+        p:not(:has(span)) {
+            display: none;
+        }
+    }
+
+    .shard-slots {
+        position: absolute;
+        display: flex;
+        bottom: 5px;
+        left: 10px;
+
+        [class*="slot-"] {
+            width: 6px;
+            height: 6px;
+            margin-right: 3px;
+            box-sizing: border-box
+        }
+
+        .slot-red {
+            background-color: #F00;
+        }
+
+        .slot-green {
+            background-color: #04bf07;
+        }
+
+        .slot-blue {
+            background-color: #1437ff;
+        }
+
+        .slot-orange {
+            background-color: #ff8707;
+        }
+
+        .slot-pink {
+            background-color: #ff69c8;
+        }
+
+        .slot-red-link {
+            border: 1px solid #F00;
+        }
+
+        .slot-green-link {
+            border: 1px solid #04bf07;
+        }
+
+        .slot-blue-link {
+            border: 1px solid #1437ff;
+        }
+
+        .slot-orange-link {
+            border: 1px solid #ff8707;
+        }
+
+        .slot-pink-link {
+            border: 1px solid #ff69c8;
+        }
+
+        p {
+            display: none;
+        }
+    }
+
+    .shard-effects {
+        display: flex;
+        flex-direction: column;
+
+        p {
+            display: flex;
+            padding: 0.5rem;
+            font-weight: bold;
+            align-items: center;
+        }
+
+        &.link-only p {
+            font-weight: normal;
+        }
+    }
+
+    .effect-name,
+    .effect-min,
+    .effect-max {
+        text-align: center;
+        flex-grow: 0;
+    }
+
+    .effect-name {
+        flex-basis: 60%;
+        margin-right: 0.5rem;
+    }
+
+    .effect-min {
+        margin-right: 0.5rem;
+        flex-basis: 20%;
+    }
+
+    .effect-max {
+        flex-basis: 20%;
+    }
+
+    .shard-effect {
+        background-color: var(--color-dark);
+        color: var(--color);
+        border: 2px solid var(--color-dark);
+        border-left: 0;
+        border-right: 0;
+
+        &.link-only {
+            background-color: transparent;
+            border-color: var(--color);
+            color: var(--color);
+        }
+
+        &.Red {
+            --color: #F00;
+            --color-dark: #660000;
+        }
+
+        &.Orange {
+            --color: #FF8707;
+            --color-dark: #693600;
+        }
+
+        &.Pink {
+            --color: #FF69C8;
+            --color-dark: #90005b;
+        }
+
+        &.Blue {
+            --color: #a1afff;
+            --color-dark: #00106e;
+        }
+
+        &.Green {
+            --color: #04BF07;
+            --color-dark: #024c03;
+        }
+
+        &.Red.link-only+&.Red.link-only,
+        &.Orange.link-only+&.Orange.link-only,
+        &.Pink.link-only+&.Pink.link-only,
+        &.Blue.link-only+&.Blue.link-only,
+        &.Green.link-only+&.Green.link-only {
+            border-top: 0;
+        }
+    }
+}
+

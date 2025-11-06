@@ -1,0 +1,96 @@
+.research-table {
+    border: 5px solid #34EFF8;
+    background-color: #182232;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+    color: #34ECF6;
+    flex-basis: 50%;
+
+    & + & {
+        border-left: 0;
+
+        @media screen and (max-width: 775px) {
+            border-left: 5px solid #34EFF8;
+            margin-top: 1rem;
+        }
+    }
+
+    &:has(.research:hover) .research-row .research:not(:hover) {
+        background: #2B2151;
+        color: #34859B;
+    }
+
+    .research-table-name {
+        font-size: 1.4rem;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .research-row {
+        display: flex;
+
+        &:last-child {
+            flex-grow: 1;
+        }
+    }
+
+    .research {
+        border: 2px solid #268895;
+        background-color: #4F4977;
+        cursor: pointer;
+        position: relative;
+        flex-grow: 1;
+        flex-basis: 50%;
+        transition-property: border-color, color, background-color;
+        transition-duration: 200ms;
+        min-height: 110px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        p {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tooltip {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            transition: opacity 200ms ease, visibility 0s ease 200ms;
+            z-index: 10;
+            background-color: #2B2151;
+            color: #34ECF6;
+            border-radius: 1rem;
+            padding: 0.5rem;
+            text-align: center;
+            bottom: calc(100% + 0.4rem);
+            left: 50%;
+            transform: translateX(-50%);
+            width: 15rem;
+            user-select: none;
+            cursor: pointer;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+            pointer-events: none;
+
+            .title {
+                display: block;
+                font-weight: bold;
+            }
+        }
+
+        &:hover:not(:has(.tooltip:hover)) .tooltip {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 200ms ease, visibility 0s ease 0s;
+        }
+
+        &:hover {
+            border-color: #EE1C51;
+        }
+    }
+}

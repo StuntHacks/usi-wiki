@@ -1,0 +1,271 @@
+.loadout-box p {
+    margin: 0;
+    padding: 0;
+}
+
+.loadout-box {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #34EFF8;
+}
+
+.loadout-box .name {
+    display: block;
+    text-align: center;
+    background-color: #232050;
+    color: #34ECF6;
+    padding: 0.25rem;
+    border-bottom: 2px solid #000;
+}
+
+.loadout-box .name {
+    font-size: 1.8rem;
+}
+
+.loadout-box .description {
+    border-bottom: 2px solid #000;
+    background: #303030;
+    flex-grow: 1;
+    padding: 0.5rem 1rem
+}
+
+.loadout-box .contents {
+    display: flex;
+    flex-direction: column;
+}
+
+.loadout-box .contents>div {
+    padding: 0.5rem 1rem;
+    border-bottom: 2px solid #000;
+    text-align: center;
+}
+
+.loadout-box .contents .modules {
+    padding-bottom: 0.25rem;
+}
+
+.loadout-box .contents .core {
+    display: flex;
+}
+
+.loadout-box .contents .core>div {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.loadout-box .code {
+    word-break: break-word;
+    position: relative;
+    background: #303030;
+}
+
+#loadout-output {
+    word-break: break-word;
+    position: relative;
+    background: #303030;
+}
+
+#loadout-output span {
+    max-height: 150px;
+    display: block;
+    overflow-y: auto;
+    padding: 0.5rem 1rem;
+}
+
+.loadout-box .code span {
+    max-height: 150px;
+    display: block;
+    overflow-y: auto;
+    padding: 0.5rem 1rem;
+}
+
+.loadout-box .code .copy-button,
+#loadout-output .copy-button {
+    position: absolute;
+    background-color: var(--color-primary);
+    padding: 0.4rem 0.7rem;
+    border-radius: 10px;
+    color: #FFF;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    transition: box-shadow 150ms;
+    top: 10px;
+    right: 30px;
+    user-select: none;
+    cursor: pointer;
+}
+
+
+#generate-loadout {
+    border: none;
+    background-color: var(--color-primary);
+    padding: 0.4rem 0.7rem;
+    border-radius: 10px;
+    color: #FFF;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    transition: box-shadow 150ms;
+    cursor: pointer;
+    user-select: none;
+}
+
+#loadout-description,
+#loadout-string {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin-bottom: 10px;
+    padding: 0.4rem 0.7rem;
+    border-radius: 10px;
+    color: #FFF;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    transition: box-shadow 150ms;
+}
+
+#generate-loadout:hover,
+.loadout-box .code .copy-button:hover,
+#loadout-output .copy-button:hover,
+code + .copy-button:hover {
+    box-shadow: 0px 0px 10px 0px var(--color-primary);
+}
+
+.loadout-box .contents .shards {
+    display: flex;
+    justify-content: center;
+}
+
+.loadout-box .contents .shards .shard {
+    border: 10px solid var(--shard-color);
+    width: 60px;
+    height: 60px;
+    position: relative;
+}
+
+.loadout-box .contents .shards .shard .icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loadout-box .contents .shards .link {
+    background: var(--link-color);
+    width: 10px;
+    margin-right: 10px;
+}
+
+.loadout-box .contents .shards .red {
+    --shard-color: #F00;
+}
+
+.loadout-box .contents .shards .blue {
+    --shard-color: #1438FF;
+}
+
+.loadout-box .contents .shards .green {
+    --shard-color: #04BF07;
+}
+
+.loadout-box .contents .shards .orange {
+    --shard-color: #FF8707;
+}
+
+.loadout-box .contents .shards .pink {
+    --shard-color: #FF69C8;
+}
+
+.loadout-box .contents .shards .blue-green {
+    --link-color: linear-gradient(#1438FF, #04BF07);
+}
+
+.loadout-box .contents .shards .orange-blue {
+    --link-color: linear-gradient(#FF8707, #1438FF);
+}
+
+.loadout-box .contents .shards .orange-green {
+    --link-color: linear-gradient(#FF8707, #04BF07);
+}
+
+.loadout-box .contents .shards .orange-pink {
+    --link-color: linear-gradient(#FF8707, #FF69C8);
+}
+
+.loadout-box .contents .shards .pink-blue {
+    --link-color: linear-gradient(#FF69C8, #1438FF);
+}
+
+.loadout-box .contents .shards .pink-green {
+    --link-color: linear-gradient(#FF69C8, #04BF07);
+}
+
+.loadout-box .contents .shards .red-blue {
+    --link-color: linear-gradient(#F00, #1438FF);
+}
+
+.loadout-box .contents .shards .red-green {
+    --link-color: linear-gradient(#F00, #04BF07);
+}
+
+.loadout-box .contents .shards .red-orange {
+    --link-color: linear-gradient(#F00, #FF8707);
+}
+
+.loadout-box .contents .shards .red-pink {
+    --link-color: linear-gradient(#F00, #FF69C8);
+}
+
+.loadout-box .contents .crew {
+    display: flex;
+    justify-content: center;
+}
+
+.loadout-box .contents .crew>div {
+    margin: 0 10px;
+}
+
+.loadout-box .contents .crew span {
+    display: block;
+}
+
+.loadout-box .contents .crew .stat {
+    margin: 0 5px;
+}
+
+.stat.proficiency,
+.stat.ingenuity,
+.stat.engineering,
+.stat.acumen {
+    display: inline-block;
+    background-color: var(--stat-color);
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+}
+
+.stat.acumen {
+    --stat-color: #0064FF;
+}
+
+.stat.proficiency {
+    --stat-color: #F00;
+}
+
+.stat.ingenuity {
+    --stat-color: #FF0;
+}
+
+.stat.engineering {
+    --stat-color: #0F0;
+}
+
+._hidden {
+    display: none;
+}
+
+#loadout-output {
+    position: relative;
+}

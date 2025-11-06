@@ -1,6 +1,9 @@
 {
+  "scripts": {
+    "build": "ruby build.rb",
+    "css": "sass css/main.scss css/usi.css --no-source-map && npx sass css/usi.css usi.min.css --no-source-map --style=compressed"
+  },
   "dependencies": {
-    "cssnano": "^7.1.1",
-    "postcss-cli": "^11.0.1"
+    "sass": "^1.93.3"
   }
 }

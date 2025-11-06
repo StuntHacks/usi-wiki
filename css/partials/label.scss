@@ -1,0 +1,16 @@
+.mw-headline:has(.label-template) {
+    display: flex;
+    align-items: center;
+}
+
+.label-template::before {
+    content: attr(data-text);
+    background-color: rgb(92 133 214 / 30%);
+    color: #7ca7fe;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-left: 0.5rem;
+}

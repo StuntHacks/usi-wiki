@@ -1,0 +1,201 @@
+.core-table {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: stretch;
+    border: 5px solid #34EFF8;
+    list-style: none;
+    margin: 0 !important;
+    padding: 0;
+    display: inline-flex;
+}
+
+.core-table+.core-table {
+    border-top: none;
+}
+
+.core-table li {
+    border-right: 3px solid #000;
+    padding: 1rem 0 0;
+}
+
+.core-name {
+    background-color: #232050;
+    width: 200px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    min-width: 100px;
+    z-index: 2;
+    padding-top: 0 !important;
+}
+
+.core-name strong {
+    color: #34ECF6;
+}
+
+.core-milestone {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: visible;
+    background-color: #1FB1AB;
+    transition: background-color 200ms;
+}
+
+@media screen and (max-width: 575px) {
+    .core-name::after {
+        content: '(click to expand upgrades)';
+        margin: 1rem 0;
+        color: #ddd;
+    }
+
+    .core-table.expanded .core-name::after {
+        content: '(click to collapse upgrades)';
+    }
+
+    .core-table:not(.expanded) .core-milestone {
+        display: none;
+    }
+}
+
+.core-milestone .icon,
+.core-milestone .icon svg {
+    width: 75px;
+    height: 75px;
+    transition: filter 200ms;
+}
+
+.core-milestone .icon {
+    margin: 0 5px;
+}
+
+.core-table+p,
+.core-table+hr+p {
+    margin: 0.3rem !important;
+}
+
+.core-upgrade {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+.core-upgrade-label {
+    position: absolute;
+    top: 0;
+    font-weight: bold;
+    color: #232050;
+}
+
+.core-upgrade .tooltip {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 200ms ease, visibility 0s ease 200ms;
+    z-index: 10;
+    background-color: #2B2151;
+    color: #34ECF6;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+    bottom: calc(100% + 0.25rem);
+    right: -10px;
+    width: 15rem;
+    user-select: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    pointer-events: none;
+}
+
+.core-upgrade:hover:not(:has(.tooltip:hover)) .tooltip {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 200ms ease, visibility 0s ease 0s;
+}
+
+.core-upgrade .tooltip .title {
+    display: block;
+    font-weight: bold;
+}
+
+.core-table:has(.core-upgrade:hover) .core-milestone .core-upgrade:not(:hover) svg {
+    filter: brightness(0.5);
+}
+
+.core-table:has(.core-upgrade:hover) .core-milestone {
+    background-color: #006a66;
+}
+
+@media screen and (max-width: 1050px) {
+
+    .core-milestone .icon,
+    .core-milestone .icon svg {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 775px) {
+
+    .core-milestone .icon,
+    .core-milestone .icon svg {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    .core-milestone .icon,
+    .core-milestone .icon svg {
+        width: 75px;
+        height: 75px;
+    }
+
+    .core-table {
+        flex-direction: column;
+    }
+
+    .core-table li {
+        border-right: 0;
+        border-bottom: 3px solid #000;
+    }
+
+    .core-name {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .core-milestone {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .core-upgrade .tooltip {
+        left: 0;
+        right: auto;
+    }
+
+    .core-upgrade:last-of-type .tooltip {
+        left: auto;
+        right: 0;
+    }
+
+    .core-upgrade.core-single .tooltip {
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+    }
+}
+
+.core-milestone p {
+    margin: 0.5rem 0 0;
+}

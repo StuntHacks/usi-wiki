@@ -1,0 +1,71 @@
+.crew-milestone-list {
+    border: 2px solid #34EFF8;
+    background: #1E293B;
+    color: #34EFF8;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        display: none;
+    }
+
+    &.Acumen .icon {
+        fill: #0066FF;
+        stroke: #0066FF;
+        flood-color: #0066FF;
+    }
+
+    &.Engineering .icon {
+        fill: #00D94C;
+        stroke: #00D94C;
+        flood-color: #00D94C;
+    }
+
+    &.Ingenuity .icon {
+        fill: #FFFF00;
+        stroke: #FFFF00;
+        flood-color: #FFFF00
+    }
+
+    &.Proficiency .icon {
+        fill: #FF0000;
+        stroke: #FF0000;
+        flood-color: #FF0000;
+    }
+
+    h3.section-subheading {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 20px 0;
+        color: #34EFF8;
+        font-weight: normal;
+        border-bottom: 2px solid #34EFF8;
+    }
+
+    .crew-milestone {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        .cost {
+            margin-right: 15px;
+            font-size: 20px;
+            width: 46px;
+            display: inline-block;
+            text-align: right;
+        }
+
+        &:first-of-type {
+            margin-top: 20px;
+        }
+
+        &:last-of-type {
+            margin-bottom: 20px;
+        }
+    }
+}

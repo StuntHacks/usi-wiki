@@ -1,0 +1,38 @@
+.flexbox {
+    margin-top: 1rem;
+
+    &:not(.no-gap) {
+        gap: 1.5rem;
+    }
+
+    &.ArticleWithBox {
+        align-items: flex-start;
+    }
+
+    @media screen and (max-width: 775px) {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    &.responsive {
+        @media screen and (max-width: 775px) {
+            align-items: flex-start;
+        }
+    }
+}
+
+.flexbox-nowrap {
+    flex-wrap: nowrap !important;
+}
+
+.flexbox-centered {
+    align-items: center;
+}
+
+.flexbox-centered-desktop {
+    justify-content: center;
+}
+
+.flexbox-column {
+    flex-direction: column;
+}

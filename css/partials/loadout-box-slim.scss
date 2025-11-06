@@ -1,0 +1,50 @@
+.loadout-box-slim {
+    padding: 0rem 1rem;
+    text-align: center;
+    align-items: center;
+    padding: 2px;
+    border: 2px solid #34EFF8;
+    display: inline-flex;
+    background-color: #232050;
+
+    @media screen and (max-width: 775px) {
+        flex-direction: column;
+    }
+
+    .name {
+        font-size: 1.25rem;
+        margin: 0.5rem 1rem;
+        color: #34ECF6;
+    }
+
+    .contents {
+        background: #182232;
+        color: #34EDF6;
+        display: flex;
+        align-items: center;
+        padding: 10px 5px;
+    }
+
+    .weapons, .shields, .utilities {
+        display: flex;
+        flex-direction: column;
+        margin: 0px 5px;
+    }
+
+    .loadout-core-count {
+        padding: 0px 6px;
+    }
+
+    .loadout-core-name {
+        border: 1px solid #418CA6;
+        background: #4F4977;
+        flex: 1;
+        padding: 0px 12px;
+    }
+
+    .loadout-core {
+        display: flex;
+        padding: 0px 5px;
+        align-items: center;
+    }
+}

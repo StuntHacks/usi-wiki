@@ -176,7 +176,7 @@ else
 end
 
 # css
-system("npx postcss ./usi.css -u cssnano --no-map -o ./usi.min.css")
+system("npm run css")
 css = File.read("./usi.min.css")
 old = client.get_wikitext "MediaWiki:Common.css"
 if old.body != css.strip
