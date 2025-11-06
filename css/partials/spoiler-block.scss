@@ -71,6 +71,10 @@
 
     &.stub {
         border-color: #5c85d6;
+
+        a::after {
+            display: none;
+        }
     }
 
     & + & {
