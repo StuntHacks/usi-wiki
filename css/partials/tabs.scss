@@ -33,7 +33,7 @@
         flex-wrap: wrap;
     }
 
-    .tab-content {
+    &:not(.shard-box) .tab-content {
         &>.stub {
             margin-top: 1rem;
         }
