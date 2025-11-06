@@ -15,12 +15,21 @@
 
     .spoiler-block {
         overflow: hidden;
-    }
 
-    .spoiler-overlay {
-        width: 100%;
-        left: 0;
-        height: 100%;
+        .spoiler-overlay {
+            width: 100%;
+            left: 0;
+            height: 100%;
+
+            .spoiler-button {
+                top: 50%;
+                left: 50%;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                width: 60%;
+                justify-content: center;
+            }
+        }
     }
 
     p {
@@ -29,15 +38,6 @@
 
     &-row {
         display: flex;
-    }
-
-    .spoiler-button {
-        top: 50%;
-        left: 50%;
-        position: absolute;
-        transform: translate(-50%, -50%);
-        width: 60%;
-        justify-content: center;
     }
 
     .shard-title,
