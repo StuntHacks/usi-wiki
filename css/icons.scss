@@ -87,12 +87,12 @@
         fill: #FFF;
         fill: inherit;
     }
-    
+
     &:not([data-icon="UISalvage"]):not([data-icon="UIVoidMatter"]) svg:not(.specimen-icon) g circle[stroke="#fff"] {
         stroke: #FFF;
         stroke: inherit;
     }
-    
+
     &:not([data-icon="UISalvage"]):not([data-icon="UIVoidMatter"]) svg:not(.specimen-icon) * {
         flood-color: inherit;
     }
@@ -107,206 +107,206 @@
         stroke: #EE1C51;
         flood-color: #EE1C51;
     }
-    
+
     &.icon-ui {
         fill: var(--color-primary);
         stroke: var(--color-primary);
         flood-color: var(--color-primary);
     }
-    
+
     &.base-icon {
         fill: #000;
         stroke: #000;
         flood-color: #000;
     }
-    
+
     &.base-icon.mats svg>path {
         fill: #5DD82B;
     }
-    
+
     &.base-icon.parts svg>path {
         fill: #FCF400;
     }
-    
+
     &.base-icon.comps svg>path {
         fill: #EE2E2E;
     }
-    
+
     &.base-icon.booster svg>path {
         fill: #4EECF2;
     }
-    
+
     &.base-icon.double-booster svg>path {
         fill: #3F46F6;
     }
-    
+
     &.base-icon.drain-reducer svg>path {
         fill: #E541F7;
     }
-    
+
     &.base-icon.mats-booster svg>path {
         fill: #53F3A7;
     }
-    
+
     &.base-icon.parts-booster svg>path {
         fill: #FFF390;
     }
-    
+
     &.base-icon.comps-booster svg>path {
         fill: #FF6363;
     }
-    
+
     &.base-icon.double-booster svg circle:first-of-type {
         display: none;
     }
-    
-    [class*="shard-tier-"],
-    [class*="synth-tier-"] {
+
+    &[class*="shard-tier-"],
+    &[class*="synth-tier-"] {
         fill: var(--color);
         stroke: var(--color);
         flood-color: var(--color);
     }
-    
+
     &.shard-tier-1 {
         --color: #AAA7A4;
     }
-    
+
     &.shard-tier-2 {
         --color: #0DA707;
     }
-    
+
     &.shard-tier-3 {
         --color: #0D39A4;
     }
-    
+
     &.shard-tier-4 {
         --color: #6B0A75;
     }
-    
+
     &.shard-tier-5 {
         --color: #7B4907;
     }
-    
+
     &.shard-tier-6 {
         --color: #780A25;
     }
-    
+
     &.shard-tier-7 {
         --color: #0D78A4;
     }
-    
+
     &.shard-tier-8 {
         --color: #788275;
     }
-    
+
     &.shard-tier-9 {
         --color: #909611;
     }
-    
+
     &.shard-tier-10 {
         --color: #AD3A3A;
     }
-    
+
     &.shard-tier-11 {
         --color: #9BCF90;
     }
-    
+
     &.shard-tier-12 {
         --color: #FF00FF;
     }
-    
+
     &.synth-tier-1 {
         --color: #FFF;
     }
-    
+
     &.synth-tier-2 {
         --color: #0F0;
     }
-    
+
     &.synth-tier-3 {
         --color: #004CFF;
     }
-    
+
     &.synth-tier-4 {
         --color: #9900B2;
     }
-    
+
     &.synth-tier-5 {
         --color: #B26600;
     }
-    
+
     &.synth-tier-6 {
         --color: #AD0030;
     }
-    
+
     &.synth-tier-7 {
         --color: #00B2FF;
     }
-    
+
     &.synth-tier-8 {
         --color: #788275;
     }
-    
+
     &.synth-tier-9 {
         --color: #D6E019;
     }
-    
+
     &.synth-tier-10 {
         --color: #E54C4C;
     }
-    
+
     &.synth-tier-11 {
         --color: #bfffb2;
     }
-    
+
     &.synth-tier-12 {
         --color: #ff00ff;
     }
-    
+
     &.synth-tier-13 {
         --color: #00ffcc;
     }
-    
+
     &.synth-tier-14 {
         --color: #FFC500;
     }
-    
+
     &.synth-tier-15 {
         --color: #376B37;
     }
-    
+
     &.synth-tier-16 {
         --color: #163975;
     }
-    
+
     &.synth-tier-17 {
         --color: #38154D;
     }
-    
+
     &.module {
         --color: #33d2e0;
         fill: var(--color);
         stroke: var(--color);
         flood-color: var(--color);
     }
-    
+
     &:not([data-icon="UISalvage"]):not([data-icon="UIVoidMatter"]) svg:not(.specimen-icon) g path {
         transition: fill 150ms;
     }
-    
+
     &.inline[data-icon="UISalvage"] {
         --size: 1.1rem;
     }
-    
+
     &[data-icon="Secret"] text {
         stroke: none;
     }
-    
+
     &.shard-key {
         fill: #AAA7A4;
         stroke: #AAA7A4;
         flood-color: #AAA7A4;
-    
+
         &::before {
             content: '';
             position: absolute;
@@ -325,10 +325,10 @@
         fill: var(--color);
         stroke: var(--color);
         flood-color: var(--color);
-    
+
         svg {
             background: #FFF;
-    
+
             >path {
                 fill: transparent;
             }
