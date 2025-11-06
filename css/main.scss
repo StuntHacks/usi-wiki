@@ -132,3 +132,30 @@ ul.tile-icons .tile-item.buffer:hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+
+@import "citizen_skin.css";
+@import "icons.scss";
+
+@import "partials/base-grid.scss";
+@import "partials/button.scss";
+@import "partials/core-table.scss";
+@import "partials/credits.scss";
+@import "partials/crew-milestones.scss";
+@import "partials/flexbox.scss";
+@import "partials/icon-showcase.scss";
+@import "partials/icon-with-tooltip.scss";
+@import "partials/info-box.scss";
+@import "partials/label.scss";
+@import "partials/loadout-box-slim.scss";
+@import "partials/loadout-box.scss";
+@import "partials/navbox.scss";
+@import "partials/quote-block.scss";
+@import "partials/reinforce-milestone.scss";
+@import "partials/research-table.scss";
+@import "partials/save-button.scss";
+@import "partials/shard-box.scss";
+@import "partials/spoiler-block.scss";
+@import "partials/tables.scss";
+@import "partials/tabs.scss";
+
+@import "tools/base-6-breakpoints.scss";
