@@ -37,28 +37,28 @@
                 border-bottom: 1px solid #fff;
                 width: 100%;
             }
+        }
+    }
 
-            .icon-showcase {
-                margin: 0;
-                margin-bottom: 1rem;
-                margin-right: 3rem;
-                margin-bottom: 3rem;
-                display: inline-flex;
-                flex-direction: column;
-                text-align: center;
-                align-items: center;
+    .icon-showcase {
+        margin: 0;
+        margin-bottom: 1rem;
+        margin-right: 3rem;
+        margin-bottom: 3rem;
+        display: inline-flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
 
-                .enemy-icon {
-                    margin-bottom: 0.5rem;
-                }
+        .enemy-icon {
+            margin-bottom: 0.5rem;
+        }
 
-                p {
-                    display: inline-flex;
-                    flex-direction: column;
-                    text-align: center;
-                    align-items: center;
-                }
-            }
+        p {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
         }
     }
 }
