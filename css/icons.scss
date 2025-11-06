@@ -60,9 +60,12 @@
 
 .icon {
     --color: #FFF;
-    fill: var(--color);
-    flood-color: var(--color);
-    stroke: var(--color);
+
+    &:not([data-icon="UISalvage"]):not([data-icon="UIVoidMatter"]) {
+        fill: var(--color);
+        flood-color: var(--color);
+        stroke: var(--color);
+    }
 
     svg {
         width: var(--size);
