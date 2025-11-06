@@ -86,6 +86,12 @@
     cursor: pointer;
     width: 100%;
     text-align: center;
+
+    &.core-upgrade-not-selected .icon {
+        fill: #fff;
+        stroke: #fff;
+        flood-color: #fff;
+    }
 }
 
 .core-upgrade-label {

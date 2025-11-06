@@ -48,12 +48,6 @@
     &.huge {
         --size: 200px;
     }
-
-    .core-upgrade-not-selected & {
-        fill: #fff;
-        stroke: #fff;
-        flood-color: #fff;
-    }
 }
 
 .enemy-icon {
