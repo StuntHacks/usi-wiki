@@ -1,9 +1,13 @@
 .quicklinks {
+    background: rgba(92, 133, 214, 0.3);
+    padding: 2rem 2rem;
+    box-sizing: border-box;
+
     p {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        gap: 1.5rem;
+        gap: 0.5rem;
         height: 100%;
         margin: 0;
         font-size: 1.5rem;
@@ -44,5 +48,16 @@ body:not(.loggedin) {
 
     .quote-block {
         margin-left: 0;
+    }
+
+    @media screen and (max-width: 930px) {
+        flex-direction: column;
+        padding-left: 0;
+        margin-left: 1rem;
+        margin-right: 1rem;
+
+        .quote-block {
+            width: 100%;
+        }
     }
 }
