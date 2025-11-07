@@ -1,0 +1,35 @@
+.quicklinks {
+    p {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 1.5rem;
+        height: 100%;
+        margin: 0;
+        font-size: 1.5rem;
+
+        a:last-of-type {
+            body.loggedin & {
+                display: none;
+            }
+        }
+
+        a {
+
+            &::before {
+                content: "🡢";
+                vertical-align: middle;
+                margin-right: 1rem;
+            }
+        }
+    }
+}
+
+body:not(.loggedin) #welcome-message {
+    display: none;
+}
+
+.quote-navigation {
+    margin-bottom: 3rem;
+    padding-left: 6rem;
+}

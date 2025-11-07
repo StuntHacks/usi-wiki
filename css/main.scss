@@ -15,6 +15,7 @@
 @use "partials/loadout-box.scss";
 @use "partials/navbox.scss";
 @use "partials/quote-block.scss";
+@use "partials/quote-navigation.scss";
 @use "partials/reinforce-milestone.scss";
 @use "partials/research-table.scss";
 @use "partials/save-button.scss";
@@ -158,4 +159,10 @@ ul.tile-icons .tile-item.buffer:hover {
 .enemy-info-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+#download-buttons {
+    img {
+        width: 200px;
+    }
 }

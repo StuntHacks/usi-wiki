@@ -214,6 +214,22 @@ function init() {
       localStorage.setItem("preference_confirmSave", e.target.checked.toString());
     });
   }
+
+  // welcome message
+  var welcomeMessage = document.getElementById("welcome-message");
+  var username = document.querySelector("#pt-userpage a");
+  if (welcomeMessage && username) {
+    welcomeMessage.innerText = "Welcome, " + username.innerHTML + "!";
+  }
+
+  // download buttons
+  var downloadButtons = document.getElementById("download-buttons");
+  if (downloadButtons) {
+    downloadButtons.innerHTML = "" +
+      '<a href="https://store.steampowered.com/app/2471100/Unnamed_Space_Idle/" target="_blank"><img src="https://img-spaceidle.game-vault.net/c/cf/Steam_Badge.png" alt="Download on Steam"></a>' +
+      '<a href="https://play.google.com/store/apps/details?id=com.jdogcorp.unnamedspaceidle&hl=en" target="_blank"><img src="https://img-spaceidle.game-vault.net/7/7b/Google_Button.png" alt="Download on Steam"></a>' +
+      '<a href="https://apps.apple.com/us/app/unnamed-space-idle/id6483933995" target="_blank"><img src="https://img-spaceidle.game-vault.net/a/a4/AppStore_Button.png" alt="Download on Steam"></a>';
+  }
 }
 
 if (document.readyState !== "loading") {
