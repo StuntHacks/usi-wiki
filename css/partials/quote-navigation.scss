@@ -2,6 +2,7 @@
     background: rgba(92, 133, 214, 0.3);
     padding: 2rem 2rem;
     box-sizing: border-box;
+    flex-shrink: 0;
 
     p {
         display: flex;
@@ -44,17 +45,18 @@ body:not(.loggedin) {
 
 .quote-navigation {
     margin-bottom: 3rem;
-    padding-left: 6rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 
     .quote-block {
         margin-left: 0;
+        font-size: 1.2rem;
+        width: auto;
     }
 
     @media screen and (max-width: 930px) {
         flex-direction: column;
         padding-left: 0;
-        margin-left: 1rem;
-        margin-right: 1rem;
 
         .quote-block {
             width: 100%;
