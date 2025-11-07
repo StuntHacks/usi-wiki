@@ -41,4 +41,8 @@ body:not(.loggedin) {
 .quote-navigation {
     margin-bottom: 3rem;
     padding-left: 6rem;
+
+    .quote-block {
+        margin-left: 0;
+    }
 }
