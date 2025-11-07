@@ -227,7 +227,7 @@ function init() {
   if (downloadButtons) {
     downloadButtons.innerHTML = "" +
       '<a href="https://store.steampowered.com/app/2471100/Unnamed_Space_Idle/" target="_blank"><img src="https://img-spaceidle.game-vault.net/c/cf/Steam_Badge.png" alt="Download on Steam"></a>' +
-      '<a href="https://play.google.com/store/apps/details?id=com.jdogcorp.unnamedspaceidle&hl=en" target="_blank"><img src="https://img-spaceidle.game-vault.net/7/7b/Google_Button.png" alt="Download on Steam"></a>' +
+      '<a href="https://play.google.com/store/apps/details?id=com.jdogcorp.unnamedspaceidle" target="_blank"><img src="https://img-spaceidle.game-vault.net/7/7b/Google_Button.png" alt="Download on Steam"></a>' +
       '<a href="https://apps.apple.com/us/app/unnamed-space-idle/id6483933995" target="_blank"><img src="https://img-spaceidle.game-vault.net/a/a4/AppStore_Button.png" alt="Download on Steam"></a>';
   }
 }
