@@ -3,7 +3,7 @@
     padding: 2rem 2rem;
     box-sizing: border-box;
 
-    > mw-parser-output {
+    > .mw-parser-output {
         display: flex;
         justify-content: space-between;
 
@@ -27,7 +27,7 @@
         }
     }
 
-    > h2 {
+    .citizen-body & > h2 {
         margin-top: 0;
     }
 }
