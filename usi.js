@@ -260,6 +260,7 @@ function init() {
     entries[i].querySelector(".date").innerText = timerangeToString(
       new Date(entries[i].dataset.date)
     ) + " ago";
+    entries[i].querySelector("a").target = "_blank";
     entries[i].parentElement.appendChild(entries[i]);
   }
 }
