@@ -171,3 +171,27 @@ ul.tile-icons .tile-item.buffer:hover {
         width: 200px;
     }
 }
+
+#game-banner-tagline {
+    position: relative;
+
+    &::after,
+    &::before {
+        content: "";
+        height: 100%;
+        position: absolute;
+        background: black;
+        width: 50px;
+        top: 0;
+    }
+
+    &::after {
+        right: 0;
+        background: linear-gradient(to left, #131a20, transparent);
+    }
+
+    &::before {
+        left: 0;
+        background: linear-gradient(to right, #131a20, transparent);
+    }
+}
