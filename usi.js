@@ -90,6 +90,23 @@ function getHorizontalOffset(element) {
   return 0;
 }
 
+function timerangeToString(date) {
+  var now = new Date();
+  var diff = Math.abs(now - date) / 1000;
+  if (diff < 60) {
+    return "a few moments";
+  } else if (diff < 3600) {
+    var minutes = Math.floor(diff / 60);
+    return minutes + " minute" + (minutes !== 1 ? "s" : "");
+  } else if (diff < 86400) {
+    var hours = Math.floor(diff / 3600);
+    return hours + " hour" + (hours !== 1 ? "s" : "");
+  } else {
+    var days = Math.floor(diff / 86400);
+    return days + " day" + (days !== 1 ? "s" : "");
+  }
+}
+
 function init() {
   // imgs
   renderImages();
@@ -234,12 +251,15 @@ function init() {
   // rss feed ordering
   var entries = Array.prototype.slice.call(document.getElementsByClassName("rss-element"));
   entries.sort(function (a, b) {
-    var dateA = new Date(a.querySelector(".date").innerText);
-    var dateB = new Date(b.querySelector(".date").innerText);
+    var dateA = new Date(a.dataset.date);
+    var dateB = new Date(b.dataset.date);
     return dateB - dateA;
   });
 
   for (var i = 0; i < entries.length; i++) {
+    entries[i].querySelector(".date").innerText = timerangeToString(
+      new Date(entries[i].dataset.date)
+    ) + " ago";
     entries[i].parentElement.appendChild(entries[i]);
   }
 }
