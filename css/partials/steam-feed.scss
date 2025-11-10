@@ -3,7 +3,9 @@
     padding: 2rem 2rem;
     box-sizing: border-box;
     padding-right: 0;
-    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 
     > .mw-parser-output {
         display: flex;
@@ -36,5 +38,9 @@
 
     .citizen-body & > h2 {
         margin-top: 0;
+    }
+
+    .citizen-body & h3 {
+        margin-top: 0.25rem;
     }
 }
