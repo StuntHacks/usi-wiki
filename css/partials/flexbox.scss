@@ -1,5 +1,6 @@
 .flexbox {
     margin-top: 1rem;
+    display: flex;
 
     &:not(.no-gap) {
         gap: 1.5rem;
@@ -17,6 +18,12 @@
     &.responsive {
         @media screen and (max-width: 775px) {
             align-items: flex-start;
+        }
+    }
+
+    &.two-column {
+        .column {
+            flex-basis: 50%;
         }
     }
 }
