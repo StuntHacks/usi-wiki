@@ -35,6 +35,15 @@
     scrollbar-width: auto;
 }
 
+div#toc {
+    bottom: auto;
+    top: auto;
+}
+
+.rootpage-Main_Page #toc {
+    display: none;
+}
+
 .sidebar#sidebar-left {
     z-index: 50;
     position: sticky;
@@ -137,11 +146,6 @@ li.tile-item:hover {
 
 ul.tile-icons {
     justify-content: center;
-}
-
-div#toc {
-    bottom: auto;
-    top: auto;
 }
 
 ul.tile-icons .tile-item.buffer:hover {
