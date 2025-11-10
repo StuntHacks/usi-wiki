@@ -230,6 +230,18 @@ function init() {
       '<a href="https://play.google.com/store/apps/details?id=com.jdogcorp.unnamedspaceidle" target="_blank"><img src="https://img-spaceidle.game-vault.net/7/7b/Google_Button.png" alt="Download on Steam"></a>' +
       '<a href="https://apps.apple.com/us/app/unnamed-space-idle/id6483933995" target="_blank"><img src="https://img-spaceidle.game-vault.net/a/a4/AppStore_Button.png" alt="Download on Steam"></a>';
   }
+
+  // rss feed ordering
+  var entries = Array.prototype.slice.call(document.getElementsByClassName("rss-element"));
+  entries.sort(function (a, b) {
+    var dateA = new Date(a.querySelector(".date").innerText);
+    var dateB = new Date(b.querySelector(".date").innerText);
+    return dateB - dateA;
+  });
+
+  for (var i = 0; i < entries.length; i++) {
+    entries[i].parentElement.appendChild(entries[i]);
+  }
 }
 
 if (document.readyState !== "loading") {
