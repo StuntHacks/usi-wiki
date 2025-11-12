@@ -8,7 +8,7 @@ The multiplier to enter is the ammount the multiplier increases by each level, i
 
 <div id="first-mult" data-text="First Multiplier:"></div>
 <div id="second-mult" data-text="Second Multiplier:"></div>
-<div id="total-levels" data-text="Levels to Distribute"><div class="total-levels-wrapper"></div></div>
+<div id="total-levels" data-text="Levels to Distribute"><span id="total-levels-wrapper"></span></div>
 <div id="calculate" data-text="Solve"></div>
 <div id="output"></div>
 </div>
