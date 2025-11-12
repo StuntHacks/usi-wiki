@@ -1,0 +1,39 @@
+#splice-optimizer {
+    #total-levels-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+
+        @media screen and (max-width: 640px) {
+            width: 100%;
+        }
+
+        .change-button {
+            background-color: var(--color-primary);
+            display: inline-block;
+            height: 2rem;
+            width: 2rem;
+            text-align: center;
+            color: #FFF;
+            border-radius: 100%;
+            padding-top: 0px;
+            cursor: pointer;
+            transition: background-color 150ms;
+            user-select: none;
+
+            &:hover {
+                background-color: var(--color-primary--hover);
+            }
+
+            &:active {
+                background-color: var(--color-primary--active);
+            }
+        }
+
+        input {
+            width: 70px;
+            margin: 0 0.5rem;
+        }
+    }
+}
