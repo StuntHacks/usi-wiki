@@ -41,7 +41,7 @@ function renderEnemies(selector) {
     let type = icon.dataset.type;
 
     if (type === undefined || type === "") {
-      switch (icons[i].dataset.name) {
+      switch (icon.dataset.name) {
         case "Capital":
           type = "";
           break;
@@ -56,7 +56,7 @@ function renderEnemies(selector) {
       type = "_" + type;
     }
 
-    const name = icons[i].dataset.name + type;
+    const name = icon.dataset.name + type;
     if (enemy_pngs[name]) {
       var node = createNodeFromHTML(enemy_pngs[name]);
       icon.appendChild(node);
@@ -184,7 +184,7 @@ function init() {
   const adjustTooltips = () => {
     var tooltips = document.getElementsByClassName("tooltip");
     for (let tooltip of tooltips) {
-      const offset = getHorizontalOffset(tooltips[i]);
+      const offset = getHorizontalOffset(tooltip);
       let margin;
       if (offset > 0) margin = -(offset + 10) + "px";
       else margin = "10px";
