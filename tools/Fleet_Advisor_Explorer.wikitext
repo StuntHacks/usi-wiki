@@ -1,8 +1,11 @@
 {{Backlink|Useful Tools|all tools}}
 <div id="advisor-explorer" class="flexbox toolbox">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Searches for available advisors for the given galaxy & battle.
 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Select the galaxy and battle, and available advisors will show up below for you to inspect.
+
+<div id="galaxy-select"></div>
+<div class="template-info-box important" id="no-results">No advisors found for the selected battle & stat combination</div>
 <div class="fleet-grid">
 <div class="column" data-col="C">
 <div class="slot" data-pos="2;0"></div>
@@ -27,4 +30,4 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 </div>
 <div class="column ships"></div>
 </div>
-{{DISPLAYTITLE:Fleed Advisor Explorer}}
+{{DISPLAYTITLE:Fleet Advisor Explorer}}
