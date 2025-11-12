@@ -1,5 +1,3 @@
-// - - - This file MUST be valid ES5 - otherwise the wiki won't accept it and won't render it! - - -
-// - - - var instead of let, no for-of loops, semicolons after every statement, etc
 var icons_svgs = new Array();
 var enemy_pngs = new Array();
 icons_svgs["UIVoidMatter"] =
@@ -118,6 +116,12 @@ function init() {
   const breakpointCalculator = document.getElementById("base-6-breakpoints");
   if (breakpointCalculator) {
     initBreakpointCalculator();
+  }
+
+  const spliceOptimizer = document.getElementById("splice-breakpoints");
+  if (spliceOptimizer) {
+    initSpliceOptimizer
+      ();
   }
 
   const advisorExplorer = document.getElementById("advisor-explorer");

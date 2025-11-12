@@ -1,9 +1,12 @@
 {
   "scripts": {
     "build": "ruby build.rb",
-    "css": "sass css/main.scss css/usi.css --no-source-map && sass css/usi.css usi.min.css --no-source-map --style=compressed"
+    "css": "sass css/main.scss css/usi.css --no-source-map && sass css/usi.css usi.min.css --no-source-map --style=compressed",
+    "transpile": "babel usi.js --out-file usi.transpiled.js --presets=@babel/preset-env"
   },
   "dependencies": {
+    "@babel/cli": "^7.28.3",
+    "@babel/preset-env": "^7.28.5",
     "sass": "^1.93.3"
   }
 }
