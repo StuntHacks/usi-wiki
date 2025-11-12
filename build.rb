@@ -98,15 +98,15 @@ newJs = File.read("./usi.js").gsub("/* {ICON_PLACEHOLDER} */", js)
 includedJs = ""
 
 Dir.entries("./js").each do |f|
-    if f != "." and f != ".." and !f.start_with?("_")
+    if f != "." and f != ".."
         includedJs += File.read("./js/#{f}")
     end
 end
+puts includedJs
 newJs = newJs.gsub("/* {JS_PLACEHOLDER} */", includedJs)
-#system("npm run transpile")
-#minified = Uglifier.new(harmony: true).compile(File.read("./usi.transpiled.js"))
-minified = Uglifier.compile(newJs)
 File.write("./usi.build.js", newJs)
+system("npm run transpile")
+minified = Uglifier.compile(File.read("./usi.transpiled.js"))
 
 old = client.get_wikitext "MediaWiki:Common.js"
 if old.body != minified
