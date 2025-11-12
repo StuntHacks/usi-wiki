@@ -4,7 +4,7 @@
 <div id="splice-optimizer" class="flexbox toolbox">
 Enter the additional multipliers for the two upgrades and how many levels you have and it will determine the optimal point distribution between them.
 
-The multiplier to enter is the ammount the multiplier increases by each level, i.e. if your tooltip says "+0.19836 per level" then you would enter 0.19836 below.
+The multiplier to enter is the amount the multiplier increases by each level, i.e. if your tooltip says "+0.19836 per level" then you would enter 0.19836 below.
 
 <div id="first-mult" data-text="First Multiplier:"></div>
 <div id="second-mult" data-text="Second Multiplier:"></div>
