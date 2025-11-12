@@ -125,6 +125,11 @@ function init() {
     initAdvisorExplorer();
   }
 
+  const spliceOptimizer = document.getElementById("splice-optimizer");
+  if (spliceOptimizer) {
+    initSpliceOptimizer();
+  }
+
   // collapsible cores
   const cores = document.getElementsByClassName("core-name");
   for (let core of cores) {
