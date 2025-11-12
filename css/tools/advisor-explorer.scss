@@ -1,0 +1,28 @@
+#advisor-explorer {
+    .fleet-grid {
+        display: flex;
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding-top: 1.5rem;
+
+            &::before {
+                content: attr(data-col);
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translateX(-50%);
+                color: rgba(255, 255, 255, 0.6);
+            }
+
+            .slot {
+                background-color: #0D3C3E;
+                height: 50px;
+                width: 100px;
+                margin: 0.5rem;
+            }
+        }
+    }
+}

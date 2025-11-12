@@ -1,0 +1,30 @@
+{{Backlink|Useful Tools|all tools}}
+<div id="advisor-explorer" class="flexbox toolbox">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+<div class="fleet-grid">
+<div class="column" data-col="C">
+<div class="slot" data-pos="2;0"></div>
+<div class="slot" data-pos="2;1"></div>
+<div class="slot" data-pos="2;2"></div>
+<div class="slot" data-pos="2;3"></div>
+<div class="slot" data-pos="2;4"></div>
+</div>
+<div class="column" data-col="B">
+<div class="slot" data-pos="1;0"></div>
+<div class="slot" data-pos="1;1"></div>
+<div class="slot" data-pos="1;2"></div>
+<div class="slot" data-pos="1;3"></div>
+<div class="slot" data-pos="1;4"></div>
+</div>
+<div class="column" data-col="A">
+<div class="slot" data-pos="0;0"></div>
+<div class="slot" data-pos="0;1"></div>
+<div class="slot" data-pos="0;2"></div>
+<div class="slot" data-pos="0;3"></div>
+<div class="slot" data-pos="0;4"></div>
+</div>
+<div class="column ships"></div>
+</div>
+{{DISPLAYTITLE:Fleed Advisor Explorer}}

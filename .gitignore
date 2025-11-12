@@ -1,6 +1,7 @@
 .env
 usi.build.js
 usi.transpiled.js
+usi.min.js
 usi.min.css
 node_modules/
 usi.css

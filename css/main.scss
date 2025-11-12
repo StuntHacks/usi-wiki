@@ -28,6 +28,7 @@
 
 @use "tools/base-6-breakpoints.scss";
 @use "tools/splice-optimizer.scss";
+@use "tools/advisor-explorer.scss";
 
 .sidebar:not(#sidebar-left) {
     display: none !important;
