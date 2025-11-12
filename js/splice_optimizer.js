@@ -63,8 +63,8 @@ function initSpliceOptimizer() {
 
     firstMultInput.addEventListener("change", () => {
         let index = parseFloat(firstMultInput.value);
-        if (isNaN(index) || index < 1) {
-            index = 1;
+        if (isNaN(index) || index < 0) {
+            index = 0;
         }
         firstMultInput.value = index;
     });
@@ -79,8 +79,8 @@ function initSpliceOptimizer() {
 
     secondMultInput.addEventListener("change", () => {
         let index = parseFloat(secondMultInput.value);
-        if (isNaN(index) || index < 1) {
-            index = 1;
+        if (isNaN(index) || index < 0) {
+            index = 0;
         }
         secondMultInput.value = index;
     });
