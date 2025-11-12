@@ -115,20 +115,20 @@ function init() {
   // enemies
   renderEnemies();
 
-  var breakpointCalculator = document.getElementById("base-6-breakpoints");
+  const breakpointCalculator = document.getElementById("base-6-breakpoints");
   if (breakpointCalculator) {
     initBreakpointCalculator();
   }
 
-  var advisorExplorer = document.getElementById("advisor-explorer");
+  const advisorExplorer = document.getElementById("advisor-explorer");
   if (advisorExplorer) {
     initAdvisorExplorer();
   }
 
   // collapsible cores
-  var cores = document.getElementsByClassName("core-name");
-  for (var i = 0; i < cores.length; i++) {
-    cores[i].addEventListener("click", function (e) {
+  const cores = document.getElementsByClassName("core-name");
+  for (let core of cores) {
+    core.addEventListener("click", function (e) {
       e.target.closest(".core-table").classList.toggle("expanded");
     });
   }
