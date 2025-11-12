@@ -27,6 +27,7 @@
 @use "partials/tool.scss";
 
 @use "tools/base-6-breakpoints.scss";
+@use "tools/splice-optimizer.scss";
 
 .sidebar:not(#sidebar-left) {
     display: none !important;
