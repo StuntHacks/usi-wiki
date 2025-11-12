@@ -103,8 +103,9 @@ Dir.entries("./js").each do |f|
     end
 end
 newJs = newJs.gsub("/* {JS_PLACEHOLDER} */", includedJs)
-system("npm run transpile")
-minified = Uglifier.new(harmony: true).compile(File.read("./usi.transpiled.js"))
+#system("npm run transpile")
+#minified = Uglifier.new(harmony: true).compile(File.read("./usi.transpiled.js"))
+minified = Uglifier.compile(newJs)
 File.write("./usi.build.js", newJs)
 
 old = client.get_wikitext "MediaWiki:Common.js"

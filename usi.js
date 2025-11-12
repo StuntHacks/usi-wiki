@@ -1,3 +1,5 @@
+// - - - This file MUST be valid ES5 - otherwise the wiki won't accept it and won't render it! - - -
+// - - - var instead of let, no for-of loops, semicolons after every statement, etc
 var icons_svgs = new Array();
 var enemy_pngs = new Array();
 icons_svgs["UIVoidMatter"] =
@@ -113,26 +115,20 @@ function init() {
   // enemies
   renderEnemies();
 
-  const breakpointCalculator = document.getElementById("base-6-breakpoints");
+  var breakpointCalculator = document.getElementById("base-6-breakpoints");
   if (breakpointCalculator) {
     initBreakpointCalculator();
   }
 
-  const spliceOptimizer = document.getElementById("splice-breakpoints");
-  if (spliceOptimizer) {
-    initSpliceOptimizer
-      ();
-  }
-
-  const advisorExplorer = document.getElementById("advisor-explorer");
+  var advisorExplorer = document.getElementById("advisor-explorer");
   if (advisorExplorer) {
     initAdvisorExplorer();
   }
 
   // collapsible cores
-  const cores = document.getElementsByClassName("core-name");
-  for (let core of cores) {
-    core.addEventListener("click", function (e) {
+  var cores = document.getElementsByClassName("core-name");
+  for (var i = 0; i < cores.length; i++) {
+    cores[i].addEventListener("click", function (e) {
       e.target.closest(".core-table").classList.toggle("expanded");
     });
   }
