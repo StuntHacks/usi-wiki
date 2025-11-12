@@ -104,7 +104,7 @@ Dir.entries("./js").each do |f|
 end
 newJs = newJs.gsub("/* {JS_PLACEHOLDER} */", includedJs)
 
-minified = Uglifier.compile(newJs)
+minified = Uglifier.new(harmony: true).compile(newJs)
 File.write("./usi.build.js", newJs)
 
 old = client.get_wikitext "MediaWiki:Common.js"
