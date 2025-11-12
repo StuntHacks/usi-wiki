@@ -120,6 +120,11 @@ function init() {
     initBreakpointCalculator();
   }
 
+  var advisorExplorer = document.getElementById("advisor-explorer");
+  if (advisorExplorer) {
+    initAdvisorExplorer();
+  }
+
   // collapsible cores
   var cores = document.getElementsByClassName("core-name");
   for (var i = 0; i < cores.length; i++) {
