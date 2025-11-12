@@ -1,7 +1,7 @@
 {{Credits|@ciryll|https://cdn.discordapp.com/avatars/324964355471048714/37d89894eb894bd7c5f935083cbea560.webp}}
 {{Backlink|Bases|bases}}
 {{Backlink|Useful Tools|all tools}}
-<div id="base-6-breakpoints" class="flexbox">
+<div id="base-6-breakpoints" class="flexbox toolbox">
 Finds the next 5 material booster breakpoints. Requires some progress in Base 6 before being useful.
 
 Enter your mats-booster level, select your mats layout from the index, and you will get a list of when to purchase a booster level instead of just levelling mats.

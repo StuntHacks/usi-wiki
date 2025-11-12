@@ -1,0 +1,68 @@
+#base-6-breakpoints {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: auto;
+    font-size: 1.2rem;
+    gap: 0;
+
+    >div:not(.template-info-box) {
+        display: flex;
+        flex-direction: row;
+        align-self: stretch;
+        flex-direction: row;
+        align-self: stretch;
+        align-items: center;
+        justify-content: center;
+    }
+
+    >p {
+        text-align: center;
+        margin-bottom: 0;
+        font-size: 1.1rem;
+        border-bottom: 1px solid #ffffff33;
+        padding-bottom: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .template-info-box {
+        font-size: 1rem;
+    }
+
+    input {
+        width: 200px;
+        font-size: 1rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    label {
+        flex-grow: 1;
+    }
+
+    @media screen and (max-width: 640px) {
+        >div:not(.template-info-box) {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0.5rem;
+        }
+
+        label {
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .layout {
+            margin: 0;
+            margin-bottom: 1rem;
+        }
+
+        .template-info-box {
+            width: 100%;
+        }
+    }
+}

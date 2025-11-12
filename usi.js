@@ -12,33 +12,33 @@ icons_svgs["UISalvage"] =
 
 // main usi.js
 function createNodeFromHTML(htmlString) {
-  var div = document.createElement("div");
+  const div = document.createElement("div");
   div.innerHTML = htmlString.trim();
   return div.firstChild;
 }
 
 function renderSVGs(selector) {
-  var icons = document.querySelectorAll(selector !== undefined ? selector : ".icon");
-  for (var i = 0; i < icons.length; i++) {
-    if (icons_svgs[icons[i].dataset.icon]) {
-      var node = createNodeFromHTML(icons_svgs[icons[i].dataset.icon]);
+  const icons = document.querySelectorAll(selector !== undefined ? selector : ".icon");
+  for (let icon of icons) {
+    if (icons_svgs[icon.dataset.icon]) {
+      const node = createNodeFromHTML(icons_svgs[icon.dataset.icon]);
 
-      if (icons[i].dataset.text) {
-        var texts = node.getElementsByTagName("tspan");
-        for (var j = 0; j < texts.length; j++) {
-          texts[j].innerHTML = icons[i].dataset.text;
+      if (icon.dataset.text) {
+        const texts = node.getElementsByTagName("tspan");
+        for (let text of texts) {
+          text.innerHTML = icon.dataset.text;
         }
       }
 
-      icons[i].appendChild(node);
+      icon.appendChild(node);
     }
   }
 }
 
 function renderEnemies(selector) {
-  var icons = document.querySelectorAll(selector !== undefined ? selector : ".enemy-icon");
-  for (var i = 0; i < icons.length; i++) {
-    var type = icons[i].dataset.type;
+  const icons = document.querySelectorAll(selector !== undefined ? selector : ".enemy-icon");
+  for (let icon of icons) {
+    let type = icon.dataset.type;
 
     if (type === undefined || type === "") {
       switch (icons[i].dataset.name) {
@@ -56,26 +56,26 @@ function renderEnemies(selector) {
       type = "_" + type;
     }
 
-    var name = icons[i].dataset.name + type;
+    const name = icons[i].dataset.name + type;
     if (enemy_pngs[name]) {
       var node = createNodeFromHTML(enemy_pngs[name]);
-      icons[i].appendChild(node);
+      icon.appendChild(node);
     }
   }
 }
 
 function renderImages() {
-  var images = document.querySelectorAll(".lazy-image");
-  for (var i = 0; i < images.length; i++) {
+  const images = document.querySelectorAll(".lazy-image");
+  for (let image of images) {
     var img = document.createElement("img");
-    img.src = images[i].dataset.img;
-    images[i].replaceWith(img);
+    img.src = image.dataset.img;
+    image.replaceWith(img);
   }
 }
 
 function scrollIntoView(element) {
   if (element) {
-    var position = element.getBoundingClientRect().top + window.scrollY;
+    const position = element.getBoundingClientRect().top + window.scrollY;
     window.scrollTo({
       top: position - 100,
       behavior: "smooth",
@@ -84,25 +84,25 @@ function scrollIntoView(element) {
 }
   
 function getHorizontalOffset(element) {
-  var rect = element.getBoundingClientRect();
+  const rect = element.getBoundingClientRect();
   if (rect.left < 0) return rect.left;
   if (rect.right > window.innerWidth) return rect.right - window.innerWidth;
   return 0;
 }
 
 function timerangeToString(date) {
-  var now = new Date();
-  var diff = Math.abs(now - date) / 1000;
+  const now = new Date();
+  const diff = Math.abs(now - date) / 1000;
   if (diff < 60) {
     return "a few moments";
   } else if (diff < 3600) {
-    var minutes = Math.floor(diff / 60);
+    const minutes = Math.floor(diff / 60);
     return minutes + " minute" + (minutes !== 1 ? "s" : "");
   } else if (diff < 86400) {
-    var hours = Math.floor(diff / 3600);
+    const hours = Math.floor(diff / 3600);
     return hours + " hour" + (hours !== 1 ? "s" : "");
   } else {
-    var days = Math.floor(diff / 86400);
+    const days = Math.floor(diff / 86400);
     return days + " day" + (days !== 1 ? "s" : "");
   }
 }
@@ -115,79 +115,80 @@ function init() {
   // enemies
   renderEnemies();
 
-  var breakpointCalculator = document.getElementById("base-6-breakpoints");
+  const breakpointCalculator = document.getElementById("base-6-breakpoints");
   if (breakpointCalculator) {
     initBreakpointCalculator();
   }
 
-  var advisorExplorer = document.getElementById("advisor-explorer");
+  const advisorExplorer = document.getElementById("advisor-explorer");
   if (advisorExplorer) {
     initAdvisorExplorer();
   }
 
   // collapsible cores
-  var cores = document.getElementsByClassName("core-name");
-  for (var i = 0; i < cores.length; i++) {
-    cores[i].addEventListener("click", function (e) {
+  const cores = document.getElementsByClassName("core-name");
+  for (let core of cores) {
+    core.addEventListener("click", function (e) {
       e.target.closest(".core-table").classList.toggle("expanded");
     });
   }
 
   // remove annoying empty paragraphs
-  var emptyParagraphs = document.querySelectorAll(".shard-effects .mw-empty-elt");
-  for (var i = 0; i < emptyParagraphs.length; i++) {
-    emptyParagraphs[i].parentNode.removeChild(emptyParagraphs[i]);
+  const emptyParagraphs = document.querySelectorAll(".shard-effects .mw-empty-elt");
+  for (let paragraph of emptyParagraphs) {
+    paragraph.parentNode.removeChild(paragraph);
   }
 
   // init tabs
-  function switchTab(e) {
-    var tab = e.target;
-    var content = tab.dataset.for;
-    var parent = tab.closest(".js-tabs");
-    var activeTab = parent.querySelector(".tab.active");
-    var activeContent = parent.querySelector(".tab-content.active");
-    var target = parent.querySelector(".tab-content[data-tabid='" + content + "'");
+  const switchTab = (e) => {
+    const tab = e.target;
+    const content = tab.dataset.for;
+    const parent = tab.closest(".js-tabs");
+    const activeTab = parent.querySelector(".tab.active");
+    const activeContent = parent.querySelector(".tab-content.active");
+    const target = parent.querySelector(".tab-content[data-tabid='" + content + "'");
     if (activeTab !== null) activeTab.classList.remove("active");
     if (activeContent !== null) activeContent.classList.remove("active");
     if (tab !== null) tab.classList.add("active");
     if (target !== null) target.classList.add("active");
   }
 
-  var tabs = document.querySelectorAll(".js-tabs .tab");
-  for (var i = 0; i < tabs.length; i++) {
-    tabs[i].addEventListener("click", switchTab);
+  const tabs = document.querySelectorAll(".js-tabs .tab");
+  for (let tab of tabs) {
+    tab.addEventListener("click", switchTab);
 
-    var expanded = window.location.hash.match(/(?:^|#)tab=([^&]+)/);
-    var tabId = tabs[i].dataset.for;
-    var scrollTarget = tabs[i].dataset.scroll;
+    const expanded = window.location.hash.match(/(?:^|#)tab=([^&]+)/);
+    const tabId = tab.dataset.for;
+    const scrollTarget = tab.dataset.scroll;
     if (expanded && expanded[1] === tabId) {
-      switchTab({ target: tabs[i] });
+      switchTab({ target: tab });
 
       if (scrollTarget) {
-        var id = scrollTarget.replaceAll(" ", "_").replaceAll("+", ".2B");
+        const id = scrollTarget.replaceAll(" ", "_").replaceAll("+", ".2B");
         scrollIntoView(document.getElementById(id));
       } else {
-        scrollIntoView(tabs[i]);
+        scrollIntoView(tab);
       }
     }
   }
 
   // spoiler sections
-  var spoilers = document.querySelectorAll(".spoiler-button");
-  for (var i = 0; i < spoilers.length; i++) {
-    spoilers[i].addEventListener("click", function (e) {
+  const spoilers = document.querySelectorAll(".spoiler-button");
+  for (let spoiler of spoilers) {
+    spoiler.addEventListener("click", function (e) {
       e.target.closest(".spoiler-block").classList.add("dismissed");
     });
   }
 
   // move tooltips onscreen
-  function adjustTooltips() {
+  const adjustTooltips = () => {
     var tooltips = document.getElementsByClassName("tooltip");
-    for (var i = 0; i < tooltips.length; i++) {
-      var offset = getHorizontalOffset(tooltips[i]);
-      if (offset > 0) var margin = -(offset + 10) + "px";
-      else var margin = "10px";
-      tooltips[i].style.marginLeft = margin;
+    for (let tooltip of tooltips) {
+      const offset = getHorizontalOffset(tooltips[i]);
+      let margin;
+      if (offset > 0) margin = -(offset + 10) + "px";
+      else margin = "10px";
+      tooltip.style.marginLeft = margin;
     }
   }
 
@@ -195,11 +196,11 @@ function init() {
   adjustTooltips();
 
   // init copy buttons
-  function setCopyText(element) {
+  const setCopyText = (element) => {
     element.innerText = "Copy";
   }
 
-  function copyToClipboard(e) {
+  const copyToClipboard = (e) => {
     navigator.clipboard.writeText(
       e.target.parentNode.querySelector(e.target.dataset.target || "span").innerText
     );
@@ -207,17 +208,17 @@ function init() {
     setTimeout(setCopyText.bind(null, e.target), 1000);
   }
 
-  var copyButtons = document.querySelectorAll(".copy-button");
-  for (var i = 0; i < copyButtons.length; i++) {
-    copyButtons[i].addEventListener("click", copyToClipboard);
+  const copyButtons = document.querySelectorAll(".copy-button");
+  for (let button of copyButtons) {
+    button.addEventListener("click", copyToClipboard);
   }
 
   // save button message & confirm alert
-  var saveArea = document.querySelector(".editOptions:has(#wpSaveWidget)");
+  const saveArea = document.querySelector(".editOptions:has(#wpSaveWidget)");
   if (saveArea) {
-    var saveButton = saveArea.querySelector("#wpSaveWidget input");
+    const saveButton = saveArea.querySelector("#wpSaveWidget input");
     saveButton.removeAttribute("title");
-    saveButton.addEventListener("click", function (e) {
+    saveButton.addEventListener("click", (e) => {
       if (
         localStorage.getItem("preference_confirmSave") === "true" &&
         !window.confirm("Save changes?")
@@ -226,47 +227,57 @@ function init() {
       }
     });
 
-    var confirmCheckbox = createNodeFromHTML(
-      '<label style="margin-left:10px;"><input type="checkbox" \
-      ' + (localStorage.getItem("preference_confirmSave") === "true" ? "checked" : "") + ' \
-      id="confirmSaveCheckbox">Confirm save?</label>'
-    );
+    const confirmCheckbox = createNodeFromHTML(`
+      <label style="margin-left:10px;">
+        <input
+          type="checkbox" ${localStorage.getItem("preference_confirmSave") === "true" ? "checked" : ""}
+          id="confirmSaveCheckbox"
+        >
+        Confirm save?
+      </label>
+    `);
     saveArea.appendChild(confirmCheckbox);
-    document.getElementById("confirmSaveCheckbox").addEventListener("change", function (e) {
+    document.getElementById("confirmSaveCheckbox").addEventListener("change", (e) => {
       localStorage.setItem("preference_confirmSave", e.target.checked.toString());
     });
   }
 
   // welcome message
-  var welcomeMessage = document.getElementById("welcome-message");
-  var username = document.querySelector("#pt-userpage a");
+  const welcomeMessage = document.getElementById("welcome-message");
+  const username = document.querySelector("#pt-userpage a");
   if (welcomeMessage && username) {
-    welcomeMessage.innerText = "Welcome, " + username.innerHTML + "!";
+    welcomeMessage.innerText = `Welcome, ${username.innerHTML}!`;
   }
 
   // download buttons
-  var downloadButtons = document.getElementById("download-buttons");
+  const downloadButtons = document.getElementById("download-buttons");
   if (downloadButtons) {
-    downloadButtons.innerHTML = "" +
-      '<a href="https://store.steampowered.com/app/2471100/Unnamed_Space_Idle/" target="_blank"><img src="https://img-spaceidle.game-vault.net/c/cf/Steam_Badge.png" alt="Download on Steam"></a>' +
-      '<a href="https://play.google.com/store/apps/details?id=com.jdogcorp.unnamedspaceidle" target="_blank"><img src="https://img-spaceidle.game-vault.net/7/7b/Google_Button.png" alt="Download on Steam"></a>' +
-      '<a href="https://apps.apple.com/us/app/unnamed-space-idle/id6483933995" target="_blank"><img src="https://img-spaceidle.game-vault.net/a/a4/AppStore_Button.png" alt="Download on Steam"></a>';
+    downloadButtons.innerHTML = `
+      <a href="https://store.steampowered.com/app/2471100/Unnamed_Space_Idle/" target="_blank">
+        <img src="https://img-spaceidle.game-vault.net/c/cf/Steam_Badge.png" alt="Download on Steam">
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.jdogcorp.unnamedspaceidle" target="_blank">
+        <img src="https://img-spaceidle.game-vault.net/7/7b/Google_Button.png" alt="Download on Steam">
+      </a>
+      <a href="https://apps.apple.com/us/app/unnamed-space-idle/id6483933995" target="_blank">
+        <img src="https://img-spaceidle.game-vault.net/a/a4/AppStore_Button.png" alt="Download on Steam">
+      </a>
+    `;
   }
 
   // rss feed ordering
-  var entries = Array.prototype.slice.call(document.getElementsByClassName("rss-element"));
-  entries.sort(function (a, b) {
-    var dateA = new Date(a.dataset.date);
-    var dateB = new Date(b.dataset.date);
+  const entries = Array.prototype.slice.call(document.getElementsByClassName("rss-element"));
+  entries.sort((a, b) => {
+    const dateA = new Date(a.dataset.date);
+    const dateB = new Date(b.dataset.date);
     return dateB - dateA;
   });
 
-  for (var i = 0; i < entries.length; i++) {
-    entries[i].querySelector(".date").innerText = timerangeToString(
-      new Date(entries[i].dataset.date)
-    ) + " ago";
-    entries[i].querySelector("a").target = "_blank";
-    entries[i].parentElement.appendChild(entries[i]);
+  for (let entry of entries) {
+    const date = new Date(entry.dataset.date);
+    entry.querySelector(".date").innerText = timerangeToString(`${entry} ago`);
+    entry.querySelector("a").target = "_blank";
+    entry.parentElement.appendChild(entry);
   }
 }
 

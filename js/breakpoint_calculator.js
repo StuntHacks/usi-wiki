@@ -197,7 +197,7 @@ function initBreakpointCalculator() {
     var output = document.getElementById("output");
 
     var button = createNodeFromHTML(
-        '<button type="button" id="calculate">' +
+        '<button type="button">' +
         calculate.dataset.text +
         "</button>"
     );
