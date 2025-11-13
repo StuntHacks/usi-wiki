@@ -1,8 +1,18 @@
 #advisor-explorer {
+    max-width: initial;
+    align-items: center;
+
+    p,
+    #galaxy-select,
+    #hazard-select {
+        max-width: 600px;
+    }
+
     #galaxy-select {
         display: flex;
         align-items: center;
         gap: 2rem;
+        align-self: center;
 
         #galaxy-input {
             width: 145px;
@@ -61,6 +71,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        align-self: center;
+        width: 600px;
 
         &:has(input) {
             position: relative;
@@ -110,6 +122,10 @@
 
     .fleet-grid {
         display: flex;
+        align-items: stretch;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-self: center;
 
         .column {
             display: flex;
@@ -126,11 +142,126 @@
                 color: rgba(255, 255, 255, 0.6);
             }
 
+            &.ships::before {
+                left: 3.5rem;
+                width: 100%;
+            }
+
             .slot {
                 background-color: #0D3C3E;
                 height: 50px;
                 width: 100px;
                 margin: 0.5rem;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 130%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+
+                &.corvette::before {
+                    background-image: url("https://raw.githubusercontent.com/StuntHacks/usi-wiki/refs/heads/master/png/fleet_formations/corvette.png");
+                }
+
+                &.frigate::before {
+                    background-image: url("https://raw.githubusercontent.com/StuntHacks/usi-wiki/refs/heads/master/png/fleet_formations/frigate.png");
+                }
+
+                &.fighters::before {
+                    background-image: url("https://raw.githubusercontent.com/StuntHacks/usi-wiki/refs/heads/master/png/fleet_formations/fighters.png");
+                }
+
+                &.cruiser::before {
+                    background-image: url("https://raw.githubusercontent.com/StuntHacks/usi-wiki/refs/heads/master/png/fleet_formations/cruiser.png");
+                }
+
+                &.single_cruiser::before {
+                    background-image: url("https://raw.githubusercontent.com/StuntHacks/usi-wiki/refs/heads/master/png/fleet_formations/single_cruiser.png");
+                }
+
+                &.heavy_cruiser::before {
+                    background-image: url("https://raw.githubusercontent.com/StuntHacks/usi-wiki/refs/heads/master/png/fleet_formations/heavy_cruiser.png");
+                }
+            }
+
+            &.ships {
+                align-items: flex-start;
+                flex-shrink: 0;
+                flex-grow: 1;
+                padding-top: 2.5rem;
+
+                &::before {
+                    margin-left: 5rem;
+                    ;
+                }
+
+                &:has(.ship) {
+                    min-width: 100px;
+                    margin-left: 1rem;
+                }
+
+                &:not(:has(.ship))::before {
+                    display: none;
+                }
+
+                @media screen and (max-width: 640px) {
+                    width: 100%;
+                    order: -1;
+                    align-items: center;
+                    margin: 0;
+                }
+
+                .ship {
+                    margin-bottom: 1rem;
+
+                    .title {
+                        display: flex;
+                        align-items: center;
+
+                        &::after {
+                            content: "";
+                            height: 30px;
+                            width: 100px;
+                            margin-left: 1rem;
+                            background-image: var(--img);
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                        }
+                    }
+
+                    .mods {
+                        font-size: 1rem;
+                        margin-top: 0;
+                    }
+
+                    &.corvette {
+                        --img: url("https://raw.githubusercontent.com/StuntHacks/usi-wiki/refs/heads/master/png/ships/Ship_Basic.png");
+                    }
+
+                    &.frigate {
+                        --img: url("https://raw.githubusercontent.com/StuntHacks/usi-wiki/refs/heads/master/png/ships/Ship_Frigate.png");
+                    }
+
+                    &.fighters {
+                        --img: url("https://raw.githubusercontent.com/StuntHacks/usi-wiki/refs/heads/master/png/ships/Ship_Fighter.png");
+                    }
+
+                    &.cruiser {
+                        --img: url("https://raw.githubusercontent.com/StuntHacks/usi-wiki/refs/heads/master/png/ships/Ship_Cruiser.png");
+                    }
+
+                    &.heavy_cruiser {
+                        --img: url("https://raw.githubusercontent.com/StuntHacks/usi-wiki/refs/heads/master/png/ships/Ship_HeavyCruiser.png");
+                    }
+                }
             }
         }
     }
