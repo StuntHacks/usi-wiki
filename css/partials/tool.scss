@@ -65,4 +65,32 @@
             width: 100%;
         }
     }
+
+    .change-button {
+        background-color: var(--color-primary);
+        display: inline-block;
+        height: 2rem;
+        width: 2rem;
+        text-align: center;
+        color: #FFF;
+        border-radius: 100%;
+        padding-top: 0px;
+        cursor: pointer;
+        transition: background-color 150ms;
+        user-select: none;
+
+        &.disabled {
+            background-color: #999;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        &:hover {
+            background-color: var(--color-primary--hover);
+        }
+
+        &:active {
+            background-color: var(--color-primary--active);
+        }
+    }
 }
