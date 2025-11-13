@@ -34,7 +34,9 @@
             {
                 "name": "B6",
                 "id": "g1_6_b6",
-                "color": "white"
+                "color": "white",
+                "boss": true,
+                "boss": true
             }
         ]
     },
@@ -58,7 +60,9 @@
             {
                 "id": "g2_3_bb1",
                 "name": "BB1",
-                "color": "white"
+                "color": "white",
+                "boss": true,
+                "boss": true
             },
             {
                 "id": "g2_3_b3a",
@@ -108,7 +112,9 @@
             {
                 "id": "g2_10_b9",
                 "name": "B9",
-                "color": "white"
+                "color": "white",
+                "boss": true,
+                "boss": true
             }
         ]
     },
@@ -157,7 +163,9 @@
             {
                 "id": "g3_4_bb1",
                 "name": "BB1",
-                "color": "white"
+                "color": "white",
+                "boss": true,
+                "boss": true
             },
             {
                 "id": "g3_5_b5a",
@@ -202,7 +210,9 @@
             {
                 "id": "g3_9_b10",
                 "name": "B10",
-                "color": "white"
+                "color": "white",
+                "boss": true,
+                "boss": true
             }
         ]
     },
@@ -256,7 +266,9 @@
             {
                 "id": "g4_bb1",
                 "name": "BB1",
-                "color": "white"
+                "color": "white",
+                "boss": true,
+                "boss": true
             },
             {
                 "id": "g4_b9",
@@ -296,7 +308,9 @@
             {
                 "id": "g4_bb2",
                 "name": "BB2",
-                "color": "white"
+                "color": "white",
+                "boss": true,
+                "boss": true
             },
             {
                 "id": "g4_b16",
@@ -336,7 +350,9 @@
             {
                 "id": "g4_b23",
                 "name": "B23",
-                "color": "white"
+                "color": "white",
+                "boss": true,
+                "boss": true
             }
         ]
     },
@@ -361,6 +377,7 @@
                 "id": "g5_bb1",
                 "name": "BB1",
                 "color": "white",
+                "boss": true,
                 "hazard": [
                     {
                         "type": "reinforcements",
@@ -778,6 +795,7 @@
                 "id": "g5_bb3",
                 "name": "BB3",
                 "color": "white",
+                "boss": true,
                 "hazard": [
                     {
                         "type": "damage_per_second",
@@ -877,6 +895,7 @@
                 "id": "g5_b35",
                 "name": "B35",
                 "color": "white",
+                "boss": true,
                 "hazard": [
                     {
                         "type": "laser_volley",
@@ -1228,6 +1247,7 @@
                 "id": "g6_bb2",
                 "name": "BB2",
                 "color": "white",
+                "boss": true,
                 "hazard": [
                     {
                         "type": "laser_volley",
@@ -1481,6 +1501,7 @@
                 "id": "g6_b46",
                 "name": "B46",
                 "color": "white",
+                "boss": true,
                 "hazard": [
                     {
                         "type": "grid_buff",
@@ -1527,6 +1548,7 @@
                 "id": "g7_bb1",
                 "name": "BB1",
                 "color": "white",
+                "boss": true,
                 "hazard": [
                     {
                         "type": "laser_volley",
@@ -1793,6 +1815,7 @@
                 "id": "g8_b17",
                 "name": "B17",
                 "color": "white",
+                "boss": true,
                 "hazard": [
                     {
                         "type": "grid_buff",
