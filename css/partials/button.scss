@@ -12,6 +12,12 @@ button {
     cursor: pointer;
     font-weight: bold;
     letter-spacing: 0.5px;
+    user-select: none;
+
+    &[disabled] {
+        pointer-events: none;
+        background-color: #999;
+    }
 
     &:hover,
     &:focus {
