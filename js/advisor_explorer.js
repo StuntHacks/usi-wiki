@@ -1,7 +1,7 @@
 let galaxies = null;
 let advisors = [];
-document.getElementById("find-advisors").innerHTML = "";
 function initAdvisorExplorer() {
+    document.getElementById("find-advisors").innerHTML = "";
     const displayAdvisors = (data) => {
         advisors = [];
         console.log("Found Advisors: ", data);
