@@ -35,7 +35,6 @@
                 "name": "B6",
                 "id": "g1_6_b6",
                 "color": "white",
-                "boss": true,
                 "boss": true
             }
         ]
@@ -61,7 +60,6 @@
                 "id": "g2_3_bb1",
                 "name": "BB1",
                 "color": "white",
-                "boss": true,
                 "boss": true
             },
             {
@@ -113,7 +111,6 @@
                 "id": "g2_10_b9",
                 "name": "B9",
                 "color": "white",
-                "boss": true,
                 "boss": true
             }
         ]
@@ -164,7 +161,6 @@
                 "id": "g3_4_bb1",
                 "name": "BB1",
                 "color": "white",
-                "boss": true,
                 "boss": true
             },
             {
@@ -211,7 +207,6 @@
                 "id": "g3_9_b10",
                 "name": "B10",
                 "color": "white",
-                "boss": true,
                 "boss": true
             }
         ]
@@ -267,7 +262,6 @@
                 "id": "g4_bb1",
                 "name": "BB1",
                 "color": "white",
-                "boss": true,
                 "boss": true
             },
             {
@@ -309,7 +303,6 @@
                 "id": "g4_bb2",
                 "name": "BB2",
                 "color": "white",
-                "boss": true,
                 "boss": true
             },
             {
@@ -351,7 +344,6 @@
                 "id": "g4_b23",
                 "name": "B23",
                 "color": "white",
-                "boss": true,
                 "boss": true
             }
         ]
