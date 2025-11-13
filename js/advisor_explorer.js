@@ -38,13 +38,11 @@ function initAdvisorExplorer() {
                 fetch("https://api.spaceidle.xyz/suggest_fleet_battle/", {
                     method: "POST",
                     body: JSON.stringify(body),
-                    // …
                 }).then((response => {
                     if (response.status === 404) return false;
                     return response.json();
                 })).then((data => {
                     button.disabled = false;
-                    
                     if (data) {
                         displayAdvisors(data);
                     } else {
@@ -154,7 +152,7 @@ function initAdvisorExplorer() {
             // galaxy selector
             const galaxySelect = document.createElement("select");
             galaxySelect.id = "galaxy-input";
-            galaxySelect.innerHTML = '<option value="" disabled selected>Select galaxy</option>';
+            galaxySelect.innerHTML = '<option value="" disabled selected hidden>Select galaxy</option>';
             for (const galaxy of galaxies) {
                 const option = document.createElement("option");
                 option.value = galaxy.id;

@@ -83,6 +83,7 @@
             cursor: pointer;
             font-weight: bold;
             color: var(--color-primary);
+            user-select: none;
 
             &:hover {
                 color: var(--color-primary--hover)
@@ -90,6 +91,12 @@
 
             &:active {
                 color: var(--color-primary--active)
+            }
+
+            &.selected {
+                color: #aaa;
+                text-decoration: underline;
+                pointer-events: none;
             }
 
             div {
