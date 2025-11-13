@@ -1,4 +1,4 @@
-//let galaxies = null;
+let galaxies = null;
 
 function initAdvisorExplorer() {
     const init = () => {
@@ -86,5 +86,3 @@ function initAdvisorExplorer() {
         return response.json()
     }).then(data => { galaxies = data; init(); });
 }
-
-initAdvisorExplorer();
