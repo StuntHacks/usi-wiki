@@ -54,15 +54,84 @@
     }
 
     #results {
+        flex-wrap: wrap;
+        gap: 3rem;
+
         &:has(.advisor) {
             position: relative;
-            margin-top: 1rem;
+            margin-top: 2rem;
 
             &::before {
                 content: "Found the following advisors:";
                 font-weight: bold;
                 position: absolute;
                 bottom: 100%;
+            }
+        }
+
+        @media screen and (max-width: 640px) {
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .advisor {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 0;
+            max-width: 150px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--color-primary);
+
+            &:hover {
+                color: var(--color-primary--hover)
+            }
+
+            &:active {
+                color: var(--color-primary--active)
+            }
+
+            div {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .ship {
+                    content: "";
+                    height: 30px;
+                    width: 50px;
+                    margin-right: 0.5rem;
+                    background-image: var(--img);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+
+                    .mods {
+                        font-size: 1rem;
+                        margin-top: 0;
+                    }
+
+                    &.corvette {
+                        --img: url("https://raw.githubusercontent.com/StuntHacks/usi-wiki/refs/heads/master/png/ships/Ship_Basic.png");
+                    }
+
+                    &.frigate {
+                        --img: url("https://raw.githubusercontent.com/StuntHacks/usi-wiki/refs/heads/master/png/ships/Ship_Frigate.png");
+                    }
+
+                    &.fighters {
+                        width: 15px;
+                        --img: url("https://raw.githubusercontent.com/StuntHacks/usi-wiki/refs/heads/master/png/ships/Ship_Fighter.png");
+                    }
+
+                    &.cruiser {
+                        --img: url("https://raw.githubusercontent.com/StuntHacks/usi-wiki/refs/heads/master/png/ships/Ship_Cruiser.png");
+                    }
+
+                    &.heavy_cruiser {
+                        --img: url("https://raw.githubusercontent.com/StuntHacks/usi-wiki/refs/heads/master/png/ships/Ship_HeavyCruiser.png");
+                    }
+                }
             }
         }
     }
@@ -200,7 +269,6 @@
 
                 &::before {
                     margin-left: 5rem;
-                    ;
                 }
 
                 &:has(.ship) {
