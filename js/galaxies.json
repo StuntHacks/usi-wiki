@@ -423,6 +423,7 @@
                 "id": "g5a_b6",
                 "name": "B6A",
                 "color": "pink",
+                "boss": true,
                 "hazard": [
                     {
                         "type": "Reinforcements",
@@ -469,6 +470,7 @@
                 "id": "g5a_b11",
                 "name": "B11A",
                 "color": "pink",
+                "boss": true,
                 "hazard": [
                     {
                         "type": "Laser Volley",
@@ -522,6 +524,7 @@
                 "id": "g5b_b6",
                 "name": "B6B",
                 "color": "pink",
+                "boss": true,
                 "hazard": [
                     {
                         "type": "Reinforcements",
@@ -568,6 +571,7 @@
                 "id": "g5b_b11",
                 "name": "B11B",
                 "color": "pink",
+                "boss": true,
                 "hazard": [
                     {
                         "type": "Laser Volley",
@@ -697,6 +701,7 @@
                 "id": "g5_b23",
                 "name": "B23",
                 "color": "pink",
+                "boss": true,
                 "hazard": [
                     {
                         "type": "Laser Volley",
@@ -726,6 +731,7 @@
                 "id": "g5_b25",
                 "name": "B25",
                 "color": "pink",
+                "boss": true,
                 "hazard": [
                     {
                         "type": "Laser Volley",
@@ -765,6 +771,7 @@
                 "id": "g5_b27",
                 "name": "B27",
                 "color": "pink",
+                "boss": true,
                 "hazard": [
                     {
                         "type": "Laser Volley",
@@ -846,6 +853,7 @@
                 "id": "g5_b31",
                 "name": "B31",
                 "color": "pink",
+                "boss": true,
                 "hazard": [
                     {
                         "type": "Reinforcements",
@@ -1011,6 +1019,7 @@
                 "id": "g6_b10",
                 "name": "B10",
                 "color": "pink",
+                "boss": true,
                 "hazard": [
                     {
                         "type": "Reinforcements",
@@ -1103,6 +1112,7 @@
                 "id": "g6_b16",
                 "name": "B16",
                 "color": "pink",
+                "boss": true,
                 "hazard": [
                     {
                         "type": "Reinforcements",
@@ -1154,6 +1164,7 @@
                 "id": "g6_b21",
                 "name": "B21",
                 "color": "pink",
+                "boss": true,
                 "hazard": [
                     {
                         "type": "Laser Volley",
@@ -1171,6 +1182,7 @@
                 "id": "g6_b22",
                 "name": "B22",
                 "color": "pink",
+                "boss": true,
                 "hazard": [
                     {
                         "type": "Reinforcements",
@@ -1342,6 +1354,7 @@
                 "id": "g6_b33",
                 "name": "B33",
                 "color": "pink",
+                "boss": true,
                 "hazard": [
                     {
                         "type": "Grid Buff",
@@ -1432,6 +1445,7 @@
                 "id": "g6_b41",
                 "name": "B41",
                 "color": "pink",
+                "boss": true,
                 "hazard": [
                     {
                         "type": "Grid Buff",
@@ -1466,6 +1480,7 @@
                 "id": "g6_b43",
                 "name": "B43",
                 "color": "pink",
+                "boss": true,
                 "hazard": [
                     {
                         "type": "Grid Buff",
@@ -1619,6 +1634,7 @@
                 "id": "g7_b6",
                 "name": "B6",
                 "color": "pink",
+                "boss": true,
                 "hazard": [
                     {
                         "type": "Reinforcements",
@@ -1677,6 +1693,7 @@
                 "id": "g8_b5",
                 "name": "B5",
                 "color": "pink",
+                "boss": true,
                 "hazard": [
                     {
                         "type": "Laser Volley",
@@ -1735,6 +1752,7 @@
                 "id": "g8_b11",
                 "name": "B11",
                 "color": "pink",
+                "boss": true,
                 "hazard": [
                     {
                         "type": "Damage Per Second",
@@ -1759,6 +1777,7 @@
                 "id": "g8_b13",
                 "name": "B13",
                 "color": "pink",
+                "boss": true,
                 "hazard": [
                     {
                         "type": "Grid Buff",
