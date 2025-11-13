@@ -8,6 +8,7 @@ Select the galaxy and battle, input your combat stats, and available advisors wi
 <div id="hazard-select"></div>
 <div id="find-advisors"></div>
 <div class="template-info-box important hidden" id="no-results">No advisors found for the selected battle & stat combination</div>
+<div id="results"></div>
 <div class="fleet-grid">
 <div class="column" data-col="C">
 <div class="slot" data-pos="2;0"></div>

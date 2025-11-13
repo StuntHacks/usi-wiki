@@ -43,10 +43,36 @@
         }
     }
 
+    #results {
+        &:has(.advisor) {
+            position: relative;
+            margin-top: 1rem;
+
+            &::before {
+                content: "Found the following advisors:";
+                font-weight: bold;
+                position: absolute;
+                bottom: 100%;
+            }
+        }
+    }
+
     #hazard-select {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        &:has(input) {
+            position: relative;
+            margin-top: 1rem;
+
+            &::before {
+                content: "Hazard Selection";
+                font-weight: bold;
+                position: absolute;
+                bottom: 100%;
+            }
+        }
 
         label {
             display: flex;
