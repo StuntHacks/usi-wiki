@@ -1,4 +1,48 @@
 #advisor-explorer {
+    #galaxy-select {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        #galaxy-input {
+            width: 145px;
+            font-size: 1.2rem;
+        }
+
+        #stat-input {
+            width: 80px;
+            text-align: center;
+            margin: 0 10px;
+        }
+
+        #battle-select {
+            width: 65px;
+            font-size: 1.2rem;
+
+            option {
+                color: #000;
+
+                &.red {
+                    background-color: #ff8787;
+                }
+
+                &.pink {
+                    background-color: #ffbaff;
+                }
+
+                &.white {
+                    background-color: #ffffff;
+                }
+            }
+        }
+    }
+
+    #no-results {
+        &.hidden {
+            display: none;
+        }
+    }
+
     .fleet-grid {
         display: flex;
 

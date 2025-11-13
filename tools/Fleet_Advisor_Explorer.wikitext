@@ -5,7 +5,7 @@ Searches for available advisors for the given galaxy & battle.
 Select the galaxy and battle, and available advisors will show up below for you to inspect.
 
 <div id="galaxy-select"></div>
-<div class="template-info-box important" id="no-results">No advisors found for the selected battle & stat combination</div>
+<div class="template-info-box important hidden" id="no-results">No advisors found for the selected battle & stat combination</div>
 <div class="fleet-grid">
 <div class="column" data-col="C">
 <div class="slot" data-pos="2;0"></div>

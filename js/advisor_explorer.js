@@ -3,6 +3,7 @@ let galaxies = null;
 function initAdvisorExplorer() {
     const init = () => {
         const selectContainer = document.getElementById("galaxy-select");
+        selectContainer.innerHTML = "";
 
         const initSelect = () => {
             // battle selector
@@ -23,10 +24,11 @@ function initAdvisorExplorer() {
             // combat stat selector
             const getCombatStatInput = (galaxy) => {
                 const wrapper = document.createElement("div");
+                wrapper.id = "combat-stats";
                 const combatStatInput = document.createElement("input");
+                combatStatInput.id = "stat-input";
                 const glx = galaxies.find((g) => g.id === (galaxy || "g1"));
                 combatStatInput.type = "number";
-                combatStatInput.id = "combat-stats";
                 combatStatInput.value = glx.minStats;
                 combatStatInput.step = glx.step;
                 if (!galaxy) combatStatInput.disabled = true;
@@ -60,6 +62,7 @@ function initAdvisorExplorer() {
 
             // galaxy selector
             const galaxySelect = document.createElement("select");
+            galaxySelect.id = "galaxy-input";
             galaxySelect.innerHTML = '<option value="" disabled selected>Select galaxy</option>';
             for (const galaxy of galaxies) {
                 const option = document.createElement("option");
