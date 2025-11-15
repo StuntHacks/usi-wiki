@@ -220,7 +220,7 @@ function renderAdvisorList() {
     for (const e of elements) {
         e.addEventListener("click", (e) => {
             const target = e.target.closest(".advisor");
-            const all = target.parentElement.getElementsByClassName("advisor");
+            const all = target.closest("#results").getElementsByClassName("advisor");
             for (const advisor of all) {
                 advisor.classList.remove("selected")
             }
@@ -256,8 +256,6 @@ function initAdvisorExplorer() {
         const findAdvisors = () => {
             const button = document.getElementById("find-advisors-button");
             const statInput = document.getElementById("stat-input"); 
-            document.getElementById("no-results").classList.add("hidden");
-            button.disabled = true;
             statInput.value = parseFloat(statInput.value).toFixed(3);
             const body = {
                 combat_stat_level: parseFloat(statInput.value),
@@ -279,9 +277,10 @@ function initAdvisorExplorer() {
             }
             const hash = `${document.getElementById("battle-select").value}_${statInput.value}_${body.has_boss}_${body.hazard_node_list}`;
             if (hash === advisor_hash) {
-                button.disabled = false;
                 return;
             }
+            button.disabled = true;
+            document.getElementById("no-results").classList.add("hidden");
             advisor_hash = hash;
             try {
                 fetch("https://api.spaceidle.xyz/suggest_fleet_battle/", {
