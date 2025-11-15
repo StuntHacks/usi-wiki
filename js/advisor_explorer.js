@@ -143,7 +143,7 @@ function displayAdvisorLayout(advisor) {
             mods = '<ul class="mods">';
 
             for (const mod of ship.mods) {
-                m = modMap[mod];
+                const m = modMap[mod];
                 if (!m) continue;
                 mods += `<li><span class="icon inline" data-icon="${m.icon}"></span> ${m.name}</li>`;
             }
