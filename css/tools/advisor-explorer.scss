@@ -84,6 +84,13 @@
             font-weight: bold;
             color: var(--color-primary);
             user-select: none;
+            align-self: flex-start;
+
+            @media screen and (max-width: 640px) {
+                max-width: 100%;
+                justify-content: center;
+                width: 100%;
+            }
 
             &:hover {
                 color: var(--color-primary--hover)
@@ -95,8 +102,17 @@
 
             &.selected {
                 color: #aaa;
-                text-decoration: underline;
                 pointer-events: none;
+
+                span:not(.boss-damage) {
+                    text-decoration: underline;
+                }
+            }
+
+            .boss-damage {
+                color: #999;
+                font-size: 0.9rem;
+                font-weight: normal;
             }
 
             div {
@@ -221,6 +237,15 @@
             &.ships::before {
                 left: 3.5rem;
                 width: 100%;
+                white-space: nowrap;
+
+                @media screen and (max-width: 640px) {
+                    left: 0;
+                    transform: none;
+                    width: 100%;
+                    text-align: center;
+                    margin-left: 0 !important;
+                }
             }
 
             .slot {

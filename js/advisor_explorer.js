@@ -1,10 +1,217 @@
 let galaxies = null;
 let advisors = [];
+
+const modMap = {
+    "CorvetteChargeLaserMod": {
+        name: "Corvette Charge Laser",
+        icon: "Datacore",
+    },
+    "ShieldMod": {
+        name: "Shield (reduced damage)",
+        icon: "CorvetteShieldMod",
+    },
+    "FrigateMissileMod": {
+        name: "Frigate Missiles",
+        icon: "ArmorPiercing",
+    },
+    "ArmorMod": {
+        name: "Armor (reduced damage)",
+        icon: "ShieldRegenStart",
+    },
+    "FighterMiniRailgunMod": {
+        name: "Fighter Mini Railgun",
+        icon: "ArmorDamageSynergy",
+    },
+    "CruiserSingleArmorTank": {
+        name: "Single Armored Cruiser",
+        icon: "PristineArmor",
+    },
+    "HeavyCruiserBeamMod": {
+        name: "Heavy Cruiser Beam Laser",
+        icon: "PowerMode",
+    },
+}
+
+function parseAdvisor(input) {
+    let v2 = false;
+    if (input.startsWith("V2")) {
+        v2 = true;
+        input = input.substring(2, input.length);
+    }
+    const split = input.split("|");
+    const first = split[0].split(",");
+    const fr_used = parseFloat(first[0]);
+    const fr_committed = parseInt(first[1]);
+    split.shift();
+    split.shift();
+    let boss_damage = undefined;
+    const ships = [];
+
+    for (const ship of split) {
+        if (!ship.includes(";")) {
+            boss_damage = parseFloat(ship);
+            break;
+        }
+
+        const splitShip = ship.split(";");
+
+        if (splitShip[0] === "Null") {
+            continue;
+        }
+
+        const mods = splitShip[1].split(",");
+        const positions = splitShip[2].split(v2 ? "*" : ".");
+
+        for (const p of positions) {
+            const newShip = {
+                name: splitShip[0],
+                position: {
+                    x: parseInt(p.split(",")[0]),
+                    y: parseInt(p.split(",")[1]),
+                },
+                mods: mods,
+            };
+
+            ships.push(newShip);
+        }
+    }
+
+    return { fr_used, fr_committed, boss_damage, ships };
+}
+
+function shipNameToClass(name) {
+    switch (name) {
+        case "Corvette":
+            return "corvette";
+        case "Frigate":
+            return "frigate";
+        case "Fighter":
+            return "fighters";
+        case "Cruiser":
+            return "cruiser";
+        case "HeavyCruiser":
+            return "heavy_cruiser";
+        default:
+            return "";
+    }
+}
+
+function shipNameToDisplayName(name) {
+    switch (name) {
+        case "HeavyCruiser":
+            return "Heavy Cruiser";
+        default:
+            return name;
+    }
+}
+
+function clearAdvisorLayout() {
+    document.getElementById("ships-column").innerHTML = "";
+    const slots = document.querySelectorAll(".fleet-grid .slot");
+    for (const slot of slots) {
+        slot.className = "slot";
+    }
+}
+
+function displayAdvisorLayout(advisor) {
+    clearAdvisorLayout();
+    const ships = [];
+    const shipsColumn = document.getElementById("ships-column");
+
+    for (const ship of advisor.ships) {
+        const slot = document.querySelector(`.fleet-grid .slot[data-pos="${ship.position.x};${ship.position.y}"]`);
+        let name = shipNameToClass(ship.name);
+        if (name === "cruiser" && ship.mods.includes("CruiserSingleArmorTank")) name = "single_cruiser";
+        slot.classList.add(name);
+
+        if (!ships.some(s => s.name === ship.name)) {
+            ships.push({ name: ship.name, mods: ship.mods });
+        }
+    }
+
+    const glxInput = document.getElementById("galaxy-input");
+    const btlInput = document.getElementById("battle-select");
+    const galaxy = glxInput.options[glxInput.selectedIndex].text;
+    const battle = btlInput.options[btlInput.selectedIndex].text;
+    shipsColumn.dataset.col = `${galaxy} ${battle} (${advisor.fr_used.toFixed(2)} used)`;
+
+    let markup = "";
+    for (const ship of ships) {
+        let mods = "";
+
+        if (ship.mods && ship.mods.length > 0) {
+            mods = '<ul class="mods">';
+
+            for (const mod of ship.mods) {
+                m = modMap[mod];
+                if (!m) continue;
+                mods += `<li><span class="icon inline" data-icon="${m.icon}"></span> ${m.name}</li>`;
+            }
+
+            mods += "</ul>"
+        }
+
+        markup += `
+            <div class="ship ${shipNameToClass(ship.name)}">
+                <span class="title">${shipNameToDisplayName(ship.name)}</span>
+                ${mods}
+            </div>
+        `;
+    }
+    shipsColumn.innerHTML = markup;
+    renderSVGs();
+}
+
 function initAdvisorExplorer() {
     document.getElementById("find-advisors").innerHTML = "";
+    document.getElementById("results").innerHTML = "";
+    clearAdvisorLayout();
     const displayAdvisors = (data) => {
         advisors = [];
-        console.log("Found Advisors: ", data);
+        let markup = "";
+        let i = 0;
+        for (const advisor of data) {
+            const parsed = parseAdvisor(advisor);
+            advisors.push(parsed);
+            const leftover = (parsed.fr_committed - parsed.fr_used).toFixed(2);
+
+            let ships = "";
+            const renderedShips = [];
+            const boss = parsed.boss_damage && !isNaN(parsed.boss_damage) ? `<span class="boss-damage">${parsed.boss_damage.toFixed(2)} damage to boss</span>` : "";
+
+            for (const ship of parsed.ships) {
+                if (!renderedShips.includes(ship.name)) {
+                    renderedShips.push(ship.name);
+                    ships += `<span class="ship ${shipNameToClass(ship.name)}"></span>`;
+                }
+            }
+
+            markup += `
+                <div class="advisor" data-index="${i}">
+                    <span>${leftover}/${parsed.fr_committed} FR</span>
+                    <span class="boss-damage">(${parsed.fr_used.toFixed(2)} used)</span>
+                    ${boss}
+                    <div>${ships}</div>
+                </div>
+            `;
+
+            i++;
+        }
+        const results = document.getElementById("results");
+        results.innerHTML = markup;
+        const elements = results.getElementsByClassName("advisor");
+        for (const e of elements) {
+            e.addEventListener("click", (e) => {
+                const target = e.target.closest(".advisor");
+                const all = target.parentElement.getElementsByClassName("advisor");
+                for (advisor of all) {
+                    advisor.classList.remove("selected")
+                }
+                target.classList.add("selected");
+                const index = parseInt(target.dataset.index);
+                displayAdvisorLayout(advisors[index]);
+            });
+        }
     }
     const init = () => {
         const selectContainer = document.getElementById("galaxy-select");
