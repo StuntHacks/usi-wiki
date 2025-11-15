@@ -165,6 +165,11 @@ function displayAdvisorLayout(advisor) {
 }
 
 function renderAdvisorList() {
+    if (advisors.length === 0) {
+        document.getElementById("no-results").classList.remove("hidden");
+        document.getElementById("results").innerHTML = "";
+        return;
+    }
     let i = 0;
     let markup = "";
     for (const parsed of advisors) {
