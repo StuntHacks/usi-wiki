@@ -280,7 +280,8 @@ function init() {
 
   for (let entry of entries) {
     const date = new Date(entry.dataset.date);
-    entry.querySelector(".date").innerText = timerangeToString(`${entry} ago`);
+    console.log({date})
+    entry.querySelector(".date").innerText = timerangeToString(`${date} ago`);
     entry.querySelector("a").target = "_blank";
     entry.parentElement.appendChild(entry);
   }
