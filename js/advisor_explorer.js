@@ -259,7 +259,6 @@ function initAdvisorExplorer() {
             document.getElementById("no-results").classList.add("hidden");
             button.disabled = true;
             statInput.value = parseFloat(statInput.value).toFixed(3);
-            advisor_hash = hash;
             const body = {
                 combat_stat_level: parseFloat(statInput.value),
                 fleet_event_id: document.getElementById("battle-select").value,
@@ -283,6 +282,7 @@ function initAdvisorExplorer() {
                 button.disabled = false;
                 return;
             }
+            advisor_hash = hash;
             try {
                 fetch("https://api.spaceidle.xyz/suggest_fleet_battle/", {
                     method: "POST",
