@@ -257,12 +257,14 @@ function initAdvisorExplorer() {
                     } else {
                         clearAdvisorLayout();
                         document.getElementById("no-results").classList.remove("hidden");
+                        document.getElementById("results").innerHTML = "";
                     }
                 }));
             } catch (e) {
                 button.disabled = false;
                 clearAdvisorLayout();
                 document.getElementById("no-results").classList.remove("hidden");
+                document.getElementById("results").innerHTML = "";
                 console.log(e.message);
             }
         }
