@@ -173,8 +173,10 @@ function initAdvisorExplorer() {
         for (const advisor of data) {
             const parsed = parseAdvisor(advisor);
             advisors.push(parsed);
+        }
+        advisors.sort((a, b) => a.fr_used - b.fr_used);
+        for (const parsed of advisors) {
             const leftover = (parsed.fr_committed - parsed.fr_used).toFixed(2);
-
             let ships = "";
             const renderedShips = [];
             const boss = parsed.boss_damage && !isNaN(parsed.boss_damage) ? `<span class="boss-damage">${parsed.boss_damage.toFixed(2)} damage to boss</span>` : "";
@@ -253,11 +255,13 @@ function initAdvisorExplorer() {
                     if (data) {
                         displayAdvisors(data);
                     } else {
+                        clearAdvisorLayout();
                         document.getElementById("no-results").classList.remove("hidden");
                     }
                 }));
             } catch (e) {
                 button.disabled = false;
+                clearAdvisorLayout();
                 document.getElementById("no-results").classList.remove("hidden");
                 console.log(e.message);
             }
