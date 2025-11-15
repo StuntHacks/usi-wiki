@@ -11,6 +11,30 @@ icons_svgs["UISalvage"] =
 /* {JS_PLACEHOLDER} */
 
 // main usi.js
+function deepEqual(a, b) {
+  if (a === b) return true;
+  if (typeof a !== "object" || typeof b !== "object" || !a || !b) return false;
+
+  const keysA = Object.keys(a);
+  const keysB = Object.keys(b);
+  if (keysA.length !== keysB.length) return false;
+
+  for (const k of keysA) {
+    if (!deepEqual(a[k], b[k])) return false;
+  }
+  return true;
+}
+
+function dedupeObjects(arr) {
+  const result = [];
+  for (const obj of arr) {
+    if (!result.some((o) => deepEqual(o, obj))) {
+      result.push(obj);
+    }
+  }
+  return result;
+}
+
 function createNodeFromHTML(htmlString) {
   const div = document.createElement("div");
   div.innerHTML = htmlString.trim();

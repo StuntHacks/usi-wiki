@@ -231,8 +231,10 @@ function initAdvisorExplorer() {
         advisors = [];
         for (const advisor of data) {
             const parsed = parseAdvisor(advisor);
+            if (parsed.boss_damage && parsed.boss_damage < 0) continue;
             advisors.push(parsed);
         }
+        advisors = dedupeObjects(advisors);
         advisors.sort((a, b) => a.fr_used - b.fr_used);
         selected_advisor = -1;
         renderAdvisorList();
