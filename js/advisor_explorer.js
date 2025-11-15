@@ -204,7 +204,7 @@ function initAdvisorExplorer() {
             e.addEventListener("click", (e) => {
                 const target = e.target.closest(".advisor");
                 const all = target.parentElement.getElementsByClassName("advisor");
-                for (advisor of all) {
+                for (const advisor of all) {
                     advisor.classList.remove("selected")
                 }
                 target.classList.add("selected");
