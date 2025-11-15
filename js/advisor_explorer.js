@@ -202,6 +202,11 @@ function renderAdvisorList() {
     results.innerHTML = markup;
     document.getElementById("advisor-toggle").addEventListener("click", (e) => {
         e.target.parentElement.classList.toggle("collapsed");
+        e.target.innerHTML = `${
+          e.target.parentElement.classList.contains("collapsed")
+            ? "Expand to show"
+            : "Collapse to hide"
+        } ${advisors.length - 5} more`;
     });
     const elements = results.getElementsByClassName("advisor");
     for (const e of elements) {
