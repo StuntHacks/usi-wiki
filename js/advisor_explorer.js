@@ -1,5 +1,7 @@
 let galaxies = null;
 let advisors = [];
+let advisor_hash = "";
+let selected_advisor = -1;
 
 const modMap = {
     "CorvetteChargeLaserMod": {
@@ -162,58 +164,73 @@ function displayAdvisorLayout(advisor) {
     renderSVGs();
 }
 
+function renderAdvisorList() {
+    let i = 0;
+    let markup = "";
+    for (const parsed of advisors) {
+        const leftover = (parsed.fr_committed - parsed.fr_used).toFixed(2);
+        let ships = "";
+        const renderedShips = [];
+        const boss = parsed.boss_damage && !isNaN(parsed.boss_damage) ? `<span class="boss-damage">${parsed.boss_damage.toFixed(2)} damage to boss</span>` : "";
+
+        for (const ship of parsed.ships) {
+            if (!renderedShips.includes(ship.name)) {
+                renderedShips.push(ship.name);
+                ships += `<span class="ship ${shipNameToClass(ship.name)}"></span>`;
+            }
+        }
+
+        markup += `
+            <div class="advisor ${selected_advisor === i ? "selected" : ""}" data-index="${i}">
+                <span>${leftover}/${parsed.fr_committed} FR</span>
+                <span class="boss-damage">(${parsed.fr_used.toFixed(2)} used)</span>
+                ${boss}
+                <div>${ships}</div>
+            </div>
+        `;
+
+        if (i === 4 && advisors.length > 5) {
+            markup += `<div class="collapsible collapsed"><div class="toggle" id="advisor-toggle">Expand to show ${advisors.length - 5} more</div>`;
+        }
+
+        i++;
+    }
+    if (advisors.length > 5) {
+        markup += "</div>";
+    }
+    const results = document.getElementById("results");
+    results.innerHTML = markup;
+    document.getElementById("advisor-toggle").addEventListener("click", (e) => {
+        e.target.parentElement.classList.toggle("collapsed");
+    });
+    const elements = results.getElementsByClassName("advisor");
+    for (const e of elements) {
+        e.addEventListener("click", (e) => {
+            const target = e.target.closest(".advisor");
+            const all = target.parentElement.getElementsByClassName("advisor");
+            for (const advisor of all) {
+                advisor.classList.remove("selected")
+            }
+            target.classList.add("selected");
+            const index = parseInt(target.dataset.index);
+            displayAdvisorLayout(advisors[index]);
+        });
+    }
+}
+
 function initAdvisorExplorer() {
     document.getElementById("find-advisors").innerHTML = "";
     document.getElementById("results").innerHTML = "";
     clearAdvisorLayout();
     const displayAdvisors = (data) => {
         advisors = [];
-        let markup = "";
-        let i = 0;
         for (const advisor of data) {
             const parsed = parseAdvisor(advisor);
             advisors.push(parsed);
         }
         advisors.sort((a, b) => a.fr_used - b.fr_used);
-        for (const parsed of advisors) {
-            const leftover = (parsed.fr_committed - parsed.fr_used).toFixed(2);
-            let ships = "";
-            const renderedShips = [];
-            const boss = parsed.boss_damage && !isNaN(parsed.boss_damage) ? `<span class="boss-damage">${parsed.boss_damage.toFixed(2)} damage to boss</span>` : "";
-
-            for (const ship of parsed.ships) {
-                if (!renderedShips.includes(ship.name)) {
-                    renderedShips.push(ship.name);
-                    ships += `<span class="ship ${shipNameToClass(ship.name)}"></span>`;
-                }
-            }
-
-            markup += `
-                <div class="advisor" data-index="${i}">
-                    <span>${leftover}/${parsed.fr_committed} FR</span>
-                    <span class="boss-damage">(${parsed.fr_used.toFixed(2)} used)</span>
-                    ${boss}
-                    <div>${ships}</div>
-                </div>
-            `;
-
-            i++;
-        }
-        const results = document.getElementById("results");
-        results.innerHTML = markup;
-        const elements = results.getElementsByClassName("advisor");
-        for (const e of elements) {
-            e.addEventListener("click", (e) => {
-                const target = e.target.closest(".advisor");
-                const all = target.parentElement.getElementsByClassName("advisor");
-                for (const advisor of all) {
-                    advisor.classList.remove("selected")
-                }
-                target.classList.add("selected");
-                const index = parseInt(target.dataset.index);
-                displayAdvisorLayout(advisors[index]);
-            });
-        }
+        selected_advisor = -1;
+        renderAdvisorList();
     }
     const init = () => {
         const selectContainer = document.getElementById("galaxy-select");
@@ -223,10 +240,18 @@ function initAdvisorExplorer() {
 
         const findAdvisors = () => {
             const button = document.getElementById("find-advisors-button");
+            const statInput = document.getElementById("stat-input"); 
             document.getElementById("no-results").classList.add("hidden");
             button.disabled = true;
+            statInput.value = parseFloat(statInput.value).toFixed(3);
+            const hash = `${document.getElementById("battle-select").value}_${statInput.value}`;
+            if (hash === advisor_hash) {
+                button.disabled = false;
+                return;
+            }
+            advisor_hash = hash;
             const body = {
-                combat_stat_level: parseFloat(document.getElementById("stat-input").value),
+                combat_stat_level: parseFloat(statInput.value),
                 fleet_event_id: document.getElementById("battle-select").value,
                 version: 99999999,
                 has_boss: false,

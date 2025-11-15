@@ -74,6 +74,50 @@
             gap: 1rem;
         }
 
+        .collapsible {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem 3rem;
+            justify-content: center;
+            width: 100%;
+            flex-shrink: 0;
+
+            &.collapsed {
+                .advisor {
+                    display: none;
+                }
+
+                .toggle::after {
+                    content: "▼";
+                }
+            }
+
+            .toggle {
+                flex-grow: 1;
+                width: 100%;
+                flex-shrink: 0;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                cursor: pointer;
+                color: var(--color-primary);
+                user-select: none;
+
+                &:hover {
+                    color: var(--color-primary--hover);
+                }
+
+                &:active {
+                    color: var(--color-primary--active);
+                }
+
+                &::after {
+                    content: "▲";
+                }
+            }
+        }
+
         .advisor {
             display: flex;
             flex-direction: column;
