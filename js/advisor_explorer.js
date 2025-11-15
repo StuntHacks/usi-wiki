@@ -278,7 +278,7 @@ function initAdvisorExplorer() {
             if (boss && boss.checked) {
                 body.has_boss = true;
             }
-            const hash = `${document.getElementById("battle-select").value}_${statInput.value}_${has_boss}_${body.hazard_node_list}`;
+            const hash = `${document.getElementById("battle-select").value}_${statInput.value}_${body.has_boss}_${body.hazard_node_list}`;
             if (hash === advisor_hash) {
                 button.disabled = false;
                 return;
