@@ -62,7 +62,11 @@ function parseAdvisor(input) {
         }
 
         const mods = splitShip[1].split(",");
-        const positions = splitShip[2].split(v2 ? "*" : ".");
+        const positions = splitShip[2] ? splitShip[2].split(v2 ? "*" : ".") : undefined;
+
+        if (!positions) {
+            continue;
+        }
 
         for (const p of positions) {
             const newShip = {
