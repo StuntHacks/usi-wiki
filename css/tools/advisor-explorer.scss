@@ -263,7 +263,7 @@
         flex-direction: row;
         align-self: center;
 
-        @media screen and (max-width: 400px) {
+        @media screen and (max-width: 404px) {
             gap: 0.1rem;
         }
 
@@ -303,7 +303,7 @@
                 margin: 0.5rem;
                 position: relative;
 
-                @media screen and (max-width: 400px) {
+                @media screen and (max-width: 404px) {
                     margin: 0.1rem;
                 }
 
