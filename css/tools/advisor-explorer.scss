@@ -263,6 +263,10 @@
         flex-direction: row;
         align-self: center;
 
+        @media screen and (max-width: 400px) {
+            gap: 0.1rem;
+        }
+
         .column {
             display: flex;
             flex-direction: column;
@@ -298,6 +302,10 @@
                 width: 100px;
                 margin: 0.5rem;
                 position: relative;
+
+                @media screen and (max-width: 400px) {
+                    margin: 0.1rem;
+                }
 
                 &::before {
                     content: "";
