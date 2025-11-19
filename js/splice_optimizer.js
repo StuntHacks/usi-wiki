@@ -96,7 +96,7 @@ function initSpliceOptimizer() {
         '<input type="number" id="TotalLevels" min="0" max="100" step="1" value="50" />'
     );
     const totalLevelsLabel = createNodeFromHTML(
-        '<label for="TotalLevels">Levels to Distribute: </label>'
+        '<label for="TotalLevels">Points to distribute: </label>'
     );
 
     const validateLevels = () => {

@@ -328,10 +328,11 @@ function initAdvisorExplorer() {
                     for (const hazard of battleData.hazard) {
                         const checkbox = document.createElement("input");
                         checkbox.type = "checkbox";
-                        checkbox.id = `hazard-${hazard.id}`;
+                        const hazardId = `hazard-${hazard.id}-${hazard.type.replaceAll(" ", "_")}`;
+                        checkbox.id = hazardId;
                         checkbox.value = hazard.id;
                         const label = document.createElement("label");
-                        label.htmlFor = `hazard-${hazard.id}`;
+                        label.htmlFor = hazardId;
                         label.innerHTML = `<span class="hazard">${hazard.node}<span>(${hazard.type})</span></span>`;
                         label.appendChild(checkbox);
                         hazardContainer.appendChild(label);
