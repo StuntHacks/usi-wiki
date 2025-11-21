@@ -198,3 +198,7 @@ ul.tile-icons .tile-item.buffer:hover {
         background: linear-gradient(to right, #131a20, transparent);
     }
 }
+
+div.mw-collapsible span.mw-collapsible-toggle {
+    position: static;
+}
