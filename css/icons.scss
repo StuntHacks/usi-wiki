@@ -58,7 +58,8 @@
     }
 }
 
-.icon {
+.icon,
+.icontext {
     --color: #FFF;
 
     &:not([data-icon="UISalvage"]):not([data-icon="UIVoidMatter"]) {
@@ -317,4 +318,8 @@
             }
         }
     }
+}
+
+.icontext {
+    color: var(--color);
 }
