@@ -199,6 +199,19 @@ ul.tile-icons .tile-item.buffer:hover {
     }
 }
 
-div.mw-collapsible span.mw-collapsible-toggle {
-    position: static;
+span.mw-collapsible-toggle.mw-collapsible-toggle-default {
+    z-index: 21;
+    right: 1em;
+    position: sticky;
+}
+
+@media screen and (max-width: 720px) {
+    .mw-body, .parsoid-body {
+        overflow-x: visible;
+    }
+}
+
+div.mw-collapsible.mw-made-collapsible {
+    display: inline-block;
+    min-width: 100%;
 }
