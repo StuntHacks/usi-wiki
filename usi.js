@@ -131,6 +131,49 @@ function timerangeToString(date) {
   }
 }
 
+function synthFix() {
+  let synth__header = document.querySelector("header");
+  let synth__main = document.querySelector("main");
+  let synth__observer = new ResizeObserver(() => {
+    let w = synth__main.scrollWidth;
+    let s = getComputedStyle(synth__header);
+    synth__header.style.minWidth =
+      w - parseFloat(s.paddingLeft) - parseFloat(s.paddingRight) + "px";
+  });
+
+  if (mw && mw.config && mw.config.get("wgPageName") === "Synth") {
+    synth__observer.observe(document.querySelector(".js-tabs"));
+  }
+
+  // This part will probably be good anywhere
+  let listeners = [];
+  let buttons = document.querySelectorAll(".mw-collapsible-toggle");
+  let collapsibleBuffers = Array(buttons.length).fill(Array(2).fill(null));
+
+  buttons.forEach((btn, i) => {
+    function fooNction() {
+      // If 'Expand'
+      if (btn.textContent === "Collapse") {
+        console.log(`${btn.textContent} | expanded`);
+        collapsibleBuffers[i][0] = btn.parentElement.offsetHeight;
+        collapsibleBuffers[i][1] = window.scrollY;
+      }
+      // If 'Collapse'
+      else {
+        // window.scrollTo({ top: collapsibleBuffers[i][1], behavior: 'auto' });
+        btn.parentElement.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+        collapsibleBuffers[i] = Array(2).fill(null);
+      }
+    }
+    listeners.push(fooNction);
+    btn.addEventListener("click", fooNction);
+    btn.addEventListener("keypress", fooNction);
+  });
+}
+
 function init() {
   // imgs
   renderImages();
@@ -309,6 +352,8 @@ function init() {
     entry.querySelector("a").target = "_blank";
     entry.parentElement.appendChild(entry);
   }
+
+  synthFix();
 }
 
 if (document.readyState !== "loading") {
