@@ -353,6 +353,11 @@ function init() {
     entry.parentElement.appendChild(entry);
   }
 
+  // set viewport
+  const viewport = document.querySelector("meta[name=viewport]");
+  viewport.setAttribute("content", "width=device-width, initial-scale=1.0, minimum-scale=1.0");
+
+
   synthFix();
 }
 
