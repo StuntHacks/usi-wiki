@@ -131,7 +131,7 @@ function timerangeToString(date) {
   }
 }
 
-function synthFix() {
+function synthHeaderFix() {
   let synth__header = document.querySelector("header");
   let synth__main = document.querySelector("main");
   let synth__observer = new ResizeObserver(() => {
@@ -144,19 +144,21 @@ function synthFix() {
   if (mw && mw.config && mw.config.get("wgPageName") === "Synth") {
     synth__observer.observe(document.querySelector(".js-tabs"));
   }
+}
 
-  // This part should good anywhere
-  function fooNction(event, x) {
-      if (x.textContent === 'Collapse') {
-          x.parentElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+function collapsibleTogglesFix(event) {
+  var t = event.target;
+  // var t can be child <a> OR parent <span>
+  var x = t && t.closest && t.closest(".mw-collapsible-toggle");
+
+  if (x && x.textContent === "Collapse") {
+    x.parentElement.scrollIntoView({ behavior: "smooth", block: "start" });
   }
-  
-  document.addEventListener('click', function (event) {
-      var t = event.target;
-      var x = t && t.closest && t.closest('.mw-collapsible-toggle')
-      if (x) { fooNction(event, x); }
-  }, true);
+}
+
+function documentClickHandler(event) {
+  // This thing should be good anywhere
+  collapsibleTogglesFix(event);
 }
 
 function init() {
@@ -343,7 +345,9 @@ function init() {
   viewport.setAttribute("content", "width=device-width, initial-scale=1.0, minimum-scale=1.0");
 
 
-  synthFix();
+  synthHeaderFix();
+  document.addEventListener("click", documentClickHandler, true);
+  document.addEventListener("keypress", documentClickHandler, true);
 }
 
 if (document.readyState !== "loading") {
