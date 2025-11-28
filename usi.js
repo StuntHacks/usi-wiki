@@ -131,7 +131,7 @@ function timerangeToString(date) {
   }
 }
 
-function synthFix() {
+function synthHeaderFix() {
   let synth__header = document.querySelector("header");
   let synth__main = document.querySelector("main");
   let synth__observer = new ResizeObserver(() => {
@@ -144,34 +144,21 @@ function synthFix() {
   if (mw && mw.config && mw.config.get("wgPageName") === "Synth") {
     synth__observer.observe(document.querySelector(".js-tabs"));
   }
+}
 
-  // This part will probably be good anywhere
-  let listeners = [];
-  let buttons = document.querySelectorAll(".mw-collapsible-toggle");
-  let collapsibleBuffers = Array(buttons.length).fill(Array(2).fill(null));
+function collapsibleTogglesFix(event) {
+  var t = event.target;
+  // var t can be child <a> OR parent <span>
+  var x = t && t.closest && t.closest(".mw-collapsible-toggle");
 
-  buttons.forEach((btn, i) => {
-    function fooNction() {
-      // If 'Expand'
-      if (btn.textContent === "Collapse") {
-        console.log(`${btn.textContent} | expanded`);
-        collapsibleBuffers[i][0] = btn.parentElement.offsetHeight;
-        collapsibleBuffers[i][1] = window.scrollY;
-      }
-      // If 'Collapse'
-      else {
-        // window.scrollTo({ top: collapsibleBuffers[i][1], behavior: 'auto' });
-        btn.parentElement.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-        collapsibleBuffers[i] = Array(2).fill(null);
-      }
-    }
-    listeners.push(fooNction);
-    btn.addEventListener("click", fooNction);
-    btn.addEventListener("keypress", fooNction);
-  });
+  if (x && x.textContent === "Collapse") {
+    x.parentElement.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+}
+
+function documentClickHandler(event) {
+  // This thing should be good anywhere
+  collapsibleTogglesFix(event);
 }
 
 function init() {
@@ -358,7 +345,9 @@ function init() {
   viewport.setAttribute("content", "width=device-width, initial-scale=1.0, minimum-scale=1.0");
 
 
-  synthFix();
+  synthHeaderFix();
+  document.addEventListener("click", documentClickHandler, true);
+  document.addEventListener("keypress", documentClickHandler, true);
 }
 
 if (document.readyState !== "loading") {
@@ -366,3 +355,4 @@ if (document.readyState !== "loading") {
 } else {
   document.addEventListener("DOMContentLoaded", init);
 }
+
