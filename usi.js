@@ -145,33 +145,18 @@ function synthFix() {
     synth__observer.observe(document.querySelector(".js-tabs"));
   }
 
-  // This part will probably be good anywhere
-  let listeners = [];
-  let buttons = document.querySelectorAll(".mw-collapsible-toggle");
-  let collapsibleBuffers = Array(buttons.length).fill(Array(2).fill(null));
-
-  buttons.forEach((btn, i) => {
-    function fooNction() {
-      // If 'Expand'
-      if (btn.textContent === "Collapse") {
-        console.log(`${btn.textContent} | expanded`);
-        collapsibleBuffers[i][0] = btn.parentElement.offsetHeight;
-        collapsibleBuffers[i][1] = window.scrollY;
+  // This part should good anywhere
+  function fooNction(event, x) {
+      if (x.textContent === 'Collapse') {
+          x.parentElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-      // If 'Collapse'
-      else {
-        // window.scrollTo({ top: collapsibleBuffers[i][1], behavior: 'auto' });
-        btn.parentElement.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-        collapsibleBuffers[i] = Array(2).fill(null);
-      }
-    }
-    listeners.push(fooNction);
-    btn.addEventListener("click", fooNction);
-    btn.addEventListener("keypress", fooNction);
-  });
+  }
+  
+  document.addEventListener('click', function (event) {
+      var t = event.target;
+      var x = t && t.closest && t.closest('.mw-collapsible-toggle')
+      if (x) { fooNction(event, x); }
+  }, true);
 }
 
 function init() {
@@ -366,3 +351,4 @@ if (document.readyState !== "loading") {
 } else {
   document.addEventListener("DOMContentLoaded", init);
 }
+
