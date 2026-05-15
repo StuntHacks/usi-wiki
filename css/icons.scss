@@ -207,6 +207,10 @@
         --color: #FF00FF;
     }
 
+    &.shard-tier-13 {
+        --color: #00ffcc;
+    }
+
     &.synth-tier-1 {
         --color: #FFF;
     }
@@ -276,7 +280,11 @@
     }
 
     &.synth-tier-18 {
-        --color: #38154D;
+        --color: #632587;
+    }
+
+     &.synth-tier-19 {
+        --color: #CCCCFF;
     }
 
     &.module {
