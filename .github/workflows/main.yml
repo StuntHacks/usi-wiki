@@ -26,7 +26,41 @@ jobs:
         run: |
           gem install uglifier mediawiki_api dotenv
 
+      # Reports whether the wiki is reachable from this runner. The wiki sits
+      # behind Cloudflare, which blocks datacenter IPs (GitHub-hosted runners
+      # included) unless the request carries the bypass header. Informational
+      # only: it never fails the job and never prints the secret itself.
+      - name: Checking wiki reachability
+        continue-on-error: true
+        env:
+          GAMEVAULT_BOT_TOKEN: ${{ secrets.GAMEVAULT_BOT_TOKEN }}
+        run: |
+          host="https://spaceidle.game-vault.net"
+          paths=(
+            "/w/api.php?action=query&meta=siteinfo&format=json"
+            "/w/index.php?action=raw&title=MediaWiki:Common.css"
+          )
+
+          args=(--silent --show-error --max-time 20 --output /dev/null --dump-header -)
+          args+=(--user-agent "IconBot/1.0 (https://github.com/StuntHacks/usi-wiki)")
+
+          if [ -n "$GAMEVAULT_BOT_TOKEN" ]; then
+            echo "Cloudflare bypass header: present"
+            args+=(--header "X-GameVault-Bot-Auth: $GAMEVAULT_BOT_TOKEN")
+          else
+            echo "Cloudflare bypass header: MISSING - set the GAMEVAULT_BOT_TOKEN secret"
+          fi
+
+          echo "Runner egress IP: $(curl --silent --max-time 10 https://api.ipify.org || echo unknown)"
+
+          for path in "${paths[@]}"; do
+            echo "--- ${path%%[?]*}"
+            curl "${args[@]}" --write-out 'HTTP %{http_code}' "$host$path" 2>&1 | grep -i -E '^(cf-ray|cf-mitigated|server):|^HTTP [0-9]' || true
+            echo
+          done
+
       - name: Running build script
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          GAMEVAULT_BOT_TOKEN: ${{ secrets.GAMEVAULT_BOT_TOKEN }}
         run: ruby build.rb
