@@ -14,9 +14,6 @@ local = ENV["LOCAL_RUN"] == "true"
 wikiUrl = ENV["WIKI_API_URL"] || "https://spaceidle.game-vault.net/w/api.php"
 client = MediawikiApi::Client.new wikiUrl
 
-# Cloudflare fronts the wiki and blocks datacenter IPs (such as GitHub Actions
-# runners) with a 403 before the request ever reaches MediaWiki. The site owner
-# added a WAF skip rule keyed on the header below.
 conn = client.instance_variable_get(:@conn)
 conn.headers["User-Agent"] = "IconBot/1.0 (https://github.com/StuntHacks/usi-wiki; me@stunthacks.eu)"
 conn.headers["X-GameVault-Bot-Auth"] = ENV["GAMEVAULT_BOT_TOKEN"] if ENV["GAMEVAULT_BOT_TOKEN"]
@@ -24,9 +21,6 @@ conn.headers["X-GameVault-Bot-Auth"] = ENV["GAMEVAULT_BOT_TOKEN"] if ENV["GAMEVA
 begin
     client.log_in "Stunthacks@IconBot", ENV["BOT_TOKEN"]
 rescue MediawikiApi::HttpError => e
-    # A 403 here is Cloudflare rejecting the request before it ever reaches
-    # MediaWiki, so it is not a login failure. Requests from datacenter IPs
-    # need the bypass header set above.
     warn "Could not reach #{wikiUrl}: #{e.message}"
     warn "GAMEVAULT_BOT_TOKEN is #{ENV["GAMEVAULT_BOT_TOKEN"] ? "set" : "NOT set"}."
     warn "A 403 means Cloudflare blocked the request, not that the login was wrong."
